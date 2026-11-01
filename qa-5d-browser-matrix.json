@@ -1,0 +1,1824 @@
+{
+  "checkpoint": "5D",
+  "testedStyles": [
+    "blueprint",
+    "bauhaus",
+    "y2k",
+    "pastel",
+    "academic"
+  ],
+  "fixtures": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "D-no-project"
+  ],
+  "viewports": [
+    {
+      "id": "desktop",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "id": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "renderCases": [
+    {
+      "templateId": "blueprint",
+      "fixture": "A",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "bauhaus",
+      "fixture": "A",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "y2k",
+      "fixture": "A",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "pastel",
+      "fixture": "A",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 3,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "academic",
+      "fixture": "A",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "blueprint",
+      "fixture": "A",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "bauhaus",
+      "fixture": "A",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "y2k",
+      "fixture": "A",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "pastel",
+      "fixture": "A",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 3,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "academic",
+      "fixture": "A",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "blueprint",
+      "fixture": "B",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "bauhaus",
+      "fixture": "B",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "y2k",
+      "fixture": "B",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "pastel",
+      "fixture": "B",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 5,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "academic",
+      "fixture": "B",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "blueprint",
+      "fixture": "B",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "bauhaus",
+      "fixture": "B",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "y2k",
+      "fixture": "B",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "pastel",
+      "fixture": "B",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 5,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "academic",
+      "fixture": "B",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "blueprint",
+      "fixture": "C",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "bauhaus",
+      "fixture": "C",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "y2k",
+      "fixture": "C",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "pastel",
+      "fixture": "C",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 11,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "academic",
+      "fixture": "C",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "blueprint",
+      "fixture": "C",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "bauhaus",
+      "fixture": "C",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "y2k",
+      "fixture": "C",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "pastel",
+      "fixture": "C",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 11,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "academic",
+      "fixture": "C",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "blueprint",
+      "fixture": "D",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "bauhaus",
+      "fixture": "D",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "y2k",
+      "fixture": "D",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "pastel",
+      "fixture": "D",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "academic",
+      "fixture": "D",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "blueprint",
+      "fixture": "D",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "bauhaus",
+      "fixture": "D",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "y2k",
+      "fixture": "D",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "pastel",
+      "fixture": "D",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "academic",
+      "fixture": "D",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "blueprint",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "bauhaus",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "y2k",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "pastel",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 1,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "academic",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "blueprint",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "bauhaus",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "y2k",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "pastel",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 1,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    },
+    {
+      "templateId": "academic",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0
+    }
+  ],
+  "behaviorChecks": {
+    "links": {
+      "blueprint": {
+        "linkCount": 10,
+        "safeNewTabs": true,
+        "projectUrl": true,
+        "projectEntryCount": 2,
+        "localLinksWork": true,
+        "links": [
+          {
+            "href": "#portfolio-blueprint-section-about",
+            "target": "",
+            "rel": "",
+            "label": "01About"
+          },
+          {
+            "href": "#portfolio-blueprint-section-education",
+            "target": "",
+            "rel": "",
+            "label": "02Education"
+          },
+          {
+            "href": "#portfolio-blueprint-section-skills",
+            "target": "",
+            "rel": "",
+            "label": "03Skills"
+          },
+          {
+            "href": "#portfolio-blueprint-section-projects",
+            "target": "",
+            "rel": "",
+            "label": "04Project notes"
+          },
+          {
+            "href": "#portfolio-blueprint-section-highlights",
+            "target": "",
+            "rel": "",
+            "label": "05Highlights"
+          },
+          {
+            "href": "#portfolio-blueprint-section-contact",
+            "target": "",
+            "rel": "",
+            "label": "06Links"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "View Library-hours map project"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": "",
+            "rel": "",
+            "label": "Email ↗"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "GitHub ↗"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "Notes ↗"
+          }
+        ]
+      },
+      "bauhaus": {
+        "linkCount": 10,
+        "safeNewTabs": true,
+        "projectUrl": true,
+        "projectEntryCount": 2,
+        "localLinksWork": true,
+        "links": [
+          {
+            "href": "#portfolio-bauhaus-section-about",
+            "target": "",
+            "rel": "",
+            "label": "01About"
+          },
+          {
+            "href": "#portfolio-bauhaus-section-education",
+            "target": "",
+            "rel": "",
+            "label": "02Education"
+          },
+          {
+            "href": "#portfolio-bauhaus-section-skills",
+            "target": "",
+            "rel": "",
+            "label": "03Skills"
+          },
+          {
+            "href": "#portfolio-bauhaus-section-projects",
+            "target": "",
+            "rel": "",
+            "label": "04Projects"
+          },
+          {
+            "href": "#portfolio-bauhaus-section-highlights",
+            "target": "",
+            "rel": "",
+            "label": "05Highlights"
+          },
+          {
+            "href": "#portfolio-bauhaus-section-contact",
+            "target": "",
+            "rel": "",
+            "label": "06Links"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "View Library-hours map project"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": "",
+            "rel": "",
+            "label": "Email ↗"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "GitHub ↗"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "Notes ↗"
+          }
+        ]
+      },
+      "y2k": {
+        "linkCount": 10,
+        "safeNewTabs": true,
+        "projectUrl": true,
+        "projectEntryCount": 2,
+        "localLinksWork": true,
+        "links": [
+          {
+            "href": "#portfolio-y2k-section-about",
+            "target": "",
+            "rel": "",
+            "label": "About"
+          },
+          {
+            "href": "#portfolio-y2k-section-education",
+            "target": "",
+            "rel": "",
+            "label": "Education"
+          },
+          {
+            "href": "#portfolio-y2k-section-skills",
+            "target": "",
+            "rel": "",
+            "label": "Skills"
+          },
+          {
+            "href": "#portfolio-y2k-section-projects",
+            "target": "",
+            "rel": "",
+            "label": "Projects"
+          },
+          {
+            "href": "#portfolio-y2k-section-highlights",
+            "target": "",
+            "rel": "",
+            "label": "Highlights"
+          },
+          {
+            "href": "#portfolio-y2k-section-contact",
+            "target": "",
+            "rel": "",
+            "label": "Links"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "View Library-hours map project"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": "",
+            "rel": "",
+            "label": "Email ↗"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "GitHub ↗"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "Notes ↗"
+          }
+        ]
+      },
+      "pastel": {
+        "linkCount": 11,
+        "safeNewTabs": true,
+        "projectUrl": true,
+        "projectEntryCount": 2,
+        "localLinksWork": true,
+        "links": [
+          {
+            "href": "#portfolio-pastel-top",
+            "target": "",
+            "rel": "",
+            "label": "PERSONAL PORTFOLIO"
+          },
+          {
+            "href": "#portfolio-pastel-section-about",
+            "target": "",
+            "rel": "",
+            "label": "About"
+          },
+          {
+            "href": "#portfolio-pastel-section-education",
+            "target": "",
+            "rel": "",
+            "label": "Education"
+          },
+          {
+            "href": "#portfolio-pastel-section-skills",
+            "target": "",
+            "rel": "",
+            "label": "Skills"
+          },
+          {
+            "href": "#portfolio-pastel-section-projects",
+            "target": "",
+            "rel": "",
+            "label": "Projects"
+          },
+          {
+            "href": "#portfolio-pastel-section-highlights",
+            "target": "",
+            "rel": "",
+            "label": "Highlights"
+          },
+          {
+            "href": "#portfolio-pastel-section-contact",
+            "target": "",
+            "rel": "",
+            "label": "Links"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "View Library-hours map project"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": "",
+            "rel": "",
+            "label": "Email ↗"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "GitHub ↗"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "Notes ↗"
+          }
+        ]
+      },
+      "academic": {
+        "linkCount": 10,
+        "safeNewTabs": true,
+        "projectUrl": true,
+        "projectEntryCount": 2,
+        "localLinksWork": true,
+        "links": [
+          {
+            "href": "#portfolio-academic-section-about",
+            "target": "",
+            "rel": "",
+            "label": "01About"
+          },
+          {
+            "href": "#portfolio-academic-section-education",
+            "target": "",
+            "rel": "",
+            "label": "02Education"
+          },
+          {
+            "href": "#portfolio-academic-section-skills",
+            "target": "",
+            "rel": "",
+            "label": "03Skills"
+          },
+          {
+            "href": "#portfolio-academic-section-projects",
+            "target": "",
+            "rel": "",
+            "label": "04Selected projects"
+          },
+          {
+            "href": "#portfolio-academic-section-highlights",
+            "target": "",
+            "rel": "",
+            "label": "05Highlights"
+          },
+          {
+            "href": "#portfolio-academic-section-contact",
+            "target": "",
+            "rel": "",
+            "label": "06Links"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "View Library-hours map project"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": "",
+            "rel": "",
+            "label": "Email ↗"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "GitHub ↗"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "Notes ↗"
+          }
+        ]
+      }
+    },
+    "hiddenProjects": {
+      "blueprint": {
+        "section": false,
+        "projectCount": 0,
+        "hasProjectAnchor": false,
+        "navTargetsResolve": true,
+        "passed": true
+      },
+      "bauhaus": {
+        "section": false,
+        "projectCount": 0,
+        "hasProjectAnchor": false,
+        "navTargetsResolve": true,
+        "passed": true
+      },
+      "y2k": {
+        "section": false,
+        "projectCount": 0,
+        "hasProjectAnchor": false,
+        "navTargetsResolve": true,
+        "passed": true
+      },
+      "pastel": {
+        "section": false,
+        "projectCount": 0,
+        "hasProjectAnchor": false,
+        "navTargetsResolve": true,
+        "passed": true
+      },
+      "academic": {
+        "section": false,
+        "projectCount": 0,
+        "hasProjectAnchor": false,
+        "navTargetsResolve": true,
+        "passed": true
+      }
+    },
+    "reorderedSections": {
+      "blueprint": {
+        "sections": [
+          "contact",
+          "highlights",
+          "projects",
+          "skills",
+          "education",
+          "about"
+        ],
+        "navMatchesSections": true,
+        "passed": true
+      },
+      "bauhaus": {
+        "sections": [
+          "contact",
+          "highlights",
+          "projects",
+          "skills",
+          "education",
+          "about"
+        ],
+        "navMatchesSections": true,
+        "passed": true
+      },
+      "y2k": {
+        "sections": [
+          "contact",
+          "highlights",
+          "projects",
+          "skills",
+          "education",
+          "about"
+        ],
+        "navMatchesSections": true,
+        "passed": true
+      },
+      "pastel": {
+        "sections": [
+          "contact",
+          "highlights",
+          "projects",
+          "skills",
+          "education",
+          "about"
+        ],
+        "navMatchesSections": true,
+        "passed": true
+      },
+      "academic": {
+        "sections": [
+          "contact",
+          "highlights",
+          "projects",
+          "skills",
+          "education",
+          "about"
+        ],
+        "navMatchesSections": true,
+        "passed": true
+      }
+    },
+    "accessibility": {
+      "blueprint": {
+        "focus": {
+          "focused": true,
+          "visible": true,
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        },
+        "reducedMotion": {
+          "matches": true,
+          "transitionDuration": "1e-05s"
+        },
+        "minTargetHeight": 44,
+        "maxTargetHeight": 44,
+        "targetCheck": true,
+        "focusCheck": true,
+        "passed": true
+      },
+      "bauhaus": {
+        "focus": {
+          "focused": true,
+          "visible": true,
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        },
+        "reducedMotion": {
+          "matches": true,
+          "transitionDuration": "1e-05s"
+        },
+        "minTargetHeight": 44,
+        "maxTargetHeight": 44,
+        "targetCheck": true,
+        "focusCheck": true,
+        "passed": true
+      },
+      "y2k": {
+        "focus": {
+          "focused": true,
+          "visible": true,
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        },
+        "reducedMotion": {
+          "matches": true,
+          "transitionDuration": "1e-05s"
+        },
+        "minTargetHeight": 44,
+        "maxTargetHeight": 44,
+        "targetCheck": true,
+        "focusCheck": true,
+        "passed": true
+      },
+      "pastel": {
+        "focus": {
+          "focused": true,
+          "visible": true,
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        },
+        "reducedMotion": {
+          "matches": true,
+          "transitionDuration": "1e-05s"
+        },
+        "minTargetHeight": 44,
+        "maxTargetHeight": 44,
+        "targetCheck": true,
+        "focusCheck": true,
+        "passed": true
+      },
+      "academic": {
+        "focus": {
+          "focused": true,
+          "visible": true,
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        },
+        "reducedMotion": {
+          "matches": true,
+          "transitionDuration": "1e-05s"
+        },
+        "minTargetHeight": 44,
+        "maxTargetHeight": 44,
+        "targetCheck": true,
+        "focusCheck": true,
+        "passed": true
+      }
+    },
+    "emptyAndMissingData": {
+      "A-blueprint": {
+        "hasProjectsSection": false,
+        "projectCount": 0,
+        "hasContact": false,
+        "hasEducation": true,
+        "educationExpectation": true,
+        "imageCount": 0,
+        "passed": true
+      },
+      "A-bauhaus": {
+        "hasProjectsSection": false,
+        "projectCount": 0,
+        "hasContact": false,
+        "hasEducation": true,
+        "educationExpectation": true,
+        "imageCount": 0,
+        "passed": true
+      },
+      "A-y2k": {
+        "hasProjectsSection": false,
+        "projectCount": 0,
+        "hasContact": false,
+        "hasEducation": true,
+        "educationExpectation": true,
+        "imageCount": 0,
+        "passed": true
+      },
+      "A-pastel": {
+        "hasProjectsSection": false,
+        "projectCount": 0,
+        "hasContact": false,
+        "hasEducation": true,
+        "educationExpectation": true,
+        "imageCount": 0,
+        "passed": true
+      },
+      "A-academic": {
+        "hasProjectsSection": false,
+        "projectCount": 0,
+        "hasContact": false,
+        "hasEducation": true,
+        "educationExpectation": true,
+        "imageCount": 0,
+        "passed": true
+      },
+      "D-no-project-blueprint": {
+        "hasProjectsSection": false,
+        "projectCount": 0,
+        "hasContact": false,
+        "hasEducation": false,
+        "educationExpectation": true,
+        "imageCount": 0,
+        "passed": true
+      },
+      "D-no-project-bauhaus": {
+        "hasProjectsSection": false,
+        "projectCount": 0,
+        "hasContact": false,
+        "hasEducation": false,
+        "educationExpectation": true,
+        "imageCount": 0,
+        "passed": true
+      },
+      "D-no-project-y2k": {
+        "hasProjectsSection": false,
+        "projectCount": 0,
+        "hasContact": false,
+        "hasEducation": false,
+        "educationExpectation": true,
+        "imageCount": 0,
+        "passed": true
+      },
+      "D-no-project-pastel": {
+        "hasProjectsSection": false,
+        "projectCount": 0,
+        "hasContact": false,
+        "hasEducation": false,
+        "educationExpectation": true,
+        "imageCount": 0,
+        "passed": true
+      },
+      "D-no-project-academic": {
+        "hasProjectsSection": false,
+        "projectCount": 0,
+        "hasContact": false,
+        "hasEducation": false,
+        "educationExpectation": true,
+        "imageCount": 0,
+        "passed": true
+      }
+    },
+    "structuralCollisionPairs": {
+      "blueprint": {
+        "status": "Distinct",
+        "expectedClosest": "Notebook / terminal",
+        "quickAudit": "Closest: Notebook / terminal 6/6 structural · 4/4 visible",
+        "passed": true
+      },
+      "bauhaus": {
+        "status": "Distinct",
+        "expectedClosest": "Neo-brutalist",
+        "quickAudit": "Closest: Neo-brutalist / direct 6/6 structural · 4/4 visible",
+        "passed": true
+      },
+      "y2k": {
+        "status": "Distinct",
+        "expectedClosest": "Pinboard / visual",
+        "quickAudit": "Closest: Pinboard / visual 6/6 structural · 4/4 visible",
+        "passed": true
+      },
+      "pastel": {
+        "status": "Distinct",
+        "expectedClosest": "Botanical / organic",
+        "quickAudit": "Closest: Botanical / organic 6/6 structural · 4/4 visible",
+        "passed": true
+      },
+      "academic": {
+        "status": "Distinct",
+        "expectedClosest": "Newsprint / field notes",
+        "quickAudit": "Closest: Newsprint / field notes 6/6 structural · 4/4 visible",
+        "passed": true
+      }
+    }
+  },
+  "audits": {
+    "axeWcag": {
+      "blueprint": [],
+      "bauhaus": [],
+      "y2k": [],
+      "pastel": [],
+      "academic": []
+    },
+    "blueprint-desktop": {
+      "screenshot": "qa-5d-blueprint-desktop.png",
+      "contentHeight": 1670
+    },
+    "bauhaus-desktop": {
+      "screenshot": "qa-5d-bauhaus-desktop.png",
+      "contentHeight": 1367
+    },
+    "y2k-desktop": {
+      "screenshot": "qa-5d-y2k-desktop.png",
+      "contentHeight": 1496
+    },
+    "pastel-desktop": {
+      "screenshot": "qa-5d-pastel-desktop.png",
+      "contentHeight": 1393
+    },
+    "academic-desktop": {
+      "screenshot": "qa-5d-academic-desktop.png",
+      "contentHeight": 1456
+    },
+    "blueprint-mobile": {
+      "screenshot": "qa-5d-blueprint-mobile.png",
+      "contentHeight": 2472
+    },
+    "bauhaus-mobile": {
+      "screenshot": "qa-5d-bauhaus-mobile.png",
+      "contentHeight": 1987
+    },
+    "y2k-mobile": {
+      "screenshot": "qa-5d-y2k-mobile.png",
+      "contentHeight": 1991
+    },
+    "pastel-mobile": {
+      "screenshot": "qa-5d-pastel-mobile.png",
+      "contentHeight": 2099
+    },
+    "academic-mobile": {
+      "screenshot": "qa-5d-academic-mobile.png",
+      "contentHeight": 1865
+    },
+    "grayscaleComparisonPanel": "qa-5d-grayscale-compare-panel-desktop.png",
+    "grayscaleComparison": "qa-5d-grayscale-comparison-desktop.png"
+  },
+  "browserErrors": [],
+  "failedChecks": [],
+  "summary": {
+    "renderCasesPassed": 50,
+    "renderCasesTotal": 50,
+    "failedChecks": 0,
+    "browserErrors": 0,
+    "axeViolations": 0,
+    "extraChecks": {
+      "links": 5,
+      "hiddenProjects": 5,
+      "reorderedSections": 5,
+      "accessibility": 5,
+      "emptyAndMissingData": 10,
+      "structuralCollisionPairs": 5
+    }
+  }
+}

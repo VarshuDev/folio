@@ -1,0 +1,103 @@
+{
+  "project": "Folio",
+  "branchName": "ralph/project-intelligence",
+  "description": "Project Intelligence — Live GitHub Sync & Case-Study Drawer",
+  "userStories": [
+    {
+      "id": "US-001",
+      "title": "Project Schema Extensions for GitHub Stats and Case Studies",
+      "description": "As a developer, I need ProjectSchema in lib/profile-schema.ts extended with backwards-compatible optional fields for GitHub metadata and case-study details so that all existing profiles continue to parse safely.",
+      "acceptanceCriteria": [
+        "Extend ProjectSchema with optional githubUrl, githubStats, and caseStudy schemas with safe defaults",
+        "Export ProjectCaseStudy and ProjectGithubStats TypeScript types",
+        "createEmptyProfile and all existing profile fixture tests continue to parse without errors",
+        "Typecheck passes",
+        "Tests pass"
+      ],
+      "priority": 1,
+      "passes": true,
+      "notes": "Added ProjectGithubStatsSchema and ProjectCaseStudySchema with backwards-compatible optional fields to ProjectSchema."
+    },
+    {
+      "id": "US-002",
+      "title": "In-Memory GitHub Repository Stats Service & API Route",
+      "description": "As a user or viewer, I want the portfolio to fetch repository metrics from GitHub via a server-side cached endpoint so that rate limits are respected and GitHub tokens are not exposed to the client.",
+      "acceptanceCriteria": [
+        "Create lib/github/cache.ts providing an in-memory TTL cache with URL normalization for github.com/:owner/:repo",
+        "Create API route GET /api/portfolio/github-stats?repo=owner/repo returning stars, forks, language, updatedAt, or cached snapshot",
+        "Provide graceful fallback when GitHub API is rate-limited, offline, or returns 404",
+        "Typecheck passes",
+        "Tests pass"
+      ],
+      "priority": 2,
+      "passes": true,
+      "notes": "Implemented lib/github/cache.ts with in-memory TTL caching and rate-limit fallbacks, app/api/portfolio/github-stats/route.ts, and test suite."
+    },
+    {
+      "id": "US-003",
+      "title": "GitHub Live Metrics Badges on Project Cards",
+      "description": "As a portfolio visitor, I want to see GitHub stars, primary language, and update freshness on project cards so that I can quickly gauge project activity.",
+      "acceptanceCriteria": [
+        "Render compact GitHub badge bar on project cards in both core-portfolio.tsx and portfolio-renderer.tsx when repo info is available",
+        "Badges display star count with star icon, forks count, primary language with color dot, and freshness label",
+        "Badges adapt to active theme palette and link securely to GitHub repository",
+        "Typecheck passes",
+        "Tests pass",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 3,
+      "passes": true,
+      "notes": "Built components/github-stats-badge.tsx and integrated across core-portfolio.tsx and portfolio-renderer.tsx."
+    },
+    {
+      "id": "US-004",
+      "title": "Interactive Case-Study Slide-Over Drawer Component",
+      "description": "As a recruiter or hiring manager, I want to click View Case Study or the project card to open an interactive slide-over drawer detailing problem, architecture, takeaways, and metrics.",
+      "acceptanceCriteria": [
+        "Implement components/case-study-drawer.tsx with slide-over animation, keyboard Escape to close, and backdrop blur",
+        "Drawer displays project title, tools badges, problem statement, solution & architecture overview, key takeaways bullet list, and metrics highlight",
+        "Include action buttons: Visit Live Demo and View Source Code",
+        "Accessible ARIA attributes (role=dialog, aria-modal=true)",
+        "Seamless integration into core-portfolio.tsx and portfolio-renderer.tsx",
+        "Typecheck passes",
+        "Tests pass",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 4,
+      "passes": true,
+      "notes": "Built components/case-study-drawer.tsx with CaseStudyProvider and integrated trigger button in core-portfolio.tsx and portfolio-renderer.tsx."
+    },
+    {
+      "id": "US-005",
+      "title": "Builder Project Intelligence Controls in Step 4",
+      "description": "As a creator using the Folio Builder, I want to edit case-study sections and toggle GitHub live sync for each project so that I can present rich technical stories.",
+      "acceptanceCriteria": [
+        "In components/builder.tsx Step 4 (Projects & practice), add an expandable Technical Case Study & GitHub Sync panel for each project",
+        "Inputs for githubUrl, problem, solution, architecture, metrics, and multi-item takeaways",
+        "Instant preview button to open and review the Case-Study Drawer directly within the builder interface",
+        "Changes persist to the active draft and local storage immediately",
+        "Typecheck passes",
+        "Tests pass",
+        "Verify in browser using dev-browser skill"
+      ],
+      "priority": 5,
+      "passes": true,
+      "notes": "Added expandable Technical Case Study & GitHub Sync accordion in Step 4 of components/builder.tsx with live preview modal and takeaways manager."
+    },
+    {
+      "id": "US-006",
+      "title": "Comprehensive Automated Test Suite & Build Verification",
+      "description": "As an engineer, I need automated tests verifying schema parsing, cache eviction/freshness, API error handling, and component rendering so that regressions are prevented.",
+      "acceptanceCriteria": [
+        "Unit tests for ProjectSchema and ProjectCaseStudySchema parsing and backward compatibility in tests/projects/case-study.test.ts",
+        "Unit tests for GitHub cache normalization, rate-limit fallback, and API endpoint behavior in tests/github/github-sync.test.ts",
+        "All test suites pass completely",
+        "TypeScript typecheck passes with 0 errors",
+        "Production build passes cleanly"
+      ],
+      "priority": 6,
+      "passes": true,
+      "notes": "Added tests/projects/case-study.test.ts and tests/github/github-sync.test.ts; all 190 tests pass, typecheck passes with 0 errors, and next build succeeds."
+    }
+  ]
+}

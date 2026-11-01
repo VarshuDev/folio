@@ -1,0 +1,44 @@
+{
+  "name": "folio-portfolio-builder",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Portfolio Studio & Publishing Platform engineered by VarshuDev",
+  "author": "VarshuDev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VarshuDev/folio.git"
+  },
+  "homepage": "https://github.com/VarshuDev/folio#readme",
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "next start --hostname 0.0.0.0",
+    "typecheck": "tsc --noEmit",
+    "test:ai": "tsx --test tests/ai/*.test.ts",
+    "test:publishing": "tsx --test tests/publishing/*.test.ts",
+    "test:credits": "tsx --test tests/credits/*.test.ts",
+    "test:analytics": "tsx --test tests/analytics/*.test.ts",
+    "test:export": "tsx --test tests/export/*.test.ts",
+    "test:qr": "tsx --test tests/qr/*.test.ts",
+    "test:contact": "tsx --test tests/contact/*.test.ts",
+    "test:github": "tsx --test tests/github/*.test.ts",
+    "test:projects": "tsx --test tests/projects/*.test.ts",
+    "test": "npm run test:ai && npm run test:publishing && npm run test:credits && npm run test:analytics && npm run test:export && npm run test:qr && npm run test:contact && npm run test:github && npm run test:projects"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.50.0",
+    "next": "^16.3.8",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "axe-core": "4.13.0",
+    "playwright": "1.63.0",
+    "tsx": "4.20.6",
+    "typescript": "^5.8.0"
+  }
+}

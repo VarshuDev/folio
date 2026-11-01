@@ -1,0 +1,58 @@
+/* Checkpoint 7B: restrained, inline copy-improvement controls inside the editor. */
+.studio .ai-copy-tool { display: grid; justify-items: start; gap: 9px; min-width: 0; margin-top: 8px; }
+.studio .ai-copy-trigger { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 7px 11px; border: 1px solid #b9c8b9; border-radius: 6px; color: #31513f; background: #f5f8f3; font: inherit; font-size: 13px; font-weight: 650; cursor: pointer; transition: all 0.15s ease; }
+.studio .ai-copy-trigger svg { color: var(--apricot, #c8795d); flex-shrink: 0; }
+.studio .ai-copy-trigger:hover { background: #edf3ea; border-color: #a4b8a4; transform: translateY(-1px); }
+.studio .ai-copy-panel { display: grid; gap: 11px; width: 100%; min-width: 0; padding: 14px; border: 1px solid #ccd8c9; border-radius: 8px; background: #f8faf6; color: var(--studio-ink); }
+.studio .ai-copy-panel h3 { margin: 0; color: var(--studio-ink); font-size: 16px; line-height: 1.4; }
+.studio .ai-copy-panel > p { margin: 0; color: #4e5a50; font-size: 13px; line-height: 1.55; }
+.studio .ai-copy-panel > p strong { color: #32483a; }
+.studio .ai-copy-action-list { display: grid; gap: 7px; margin: 0; padding: 11px 12px 12px; border: 1px solid #dce3da; border-radius: 7px; background: #fffefa; }
+.studio .ai-copy-action-list legend { padding: 0 5px; color: #48564c; font-size: 12px; font-weight: 650; }
+.studio .ai-copy-action-list label { display: flex; align-items: center; gap: 9px; min-height: 38px; color: #303d33; font-size: 14px; cursor: pointer; }
+.studio .ai-copy-action-list input { width: 18px; height: 18px; margin: 0; accent-color: #41674b; }
+.studio .ai-copy-hint { color: #526057 !important; font-size: 12px !important; }
+.studio .ai-copy-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; padding-top: 3px; }
+.studio .ai-copy-actions .button { min-height: 44px; }
+.studio .ai-copy-source-preview,
+.studio .ai-copy-source-reference-details { min-width: 0; color: #44564a; font-size: 12px; line-height: 1.5; }
+.studio .ai-copy-source-preview summary,
+.studio .ai-copy-source-reference-details summary { width: fit-content; min-height: 40px; display: flex; align-items: center; color: #31513f; font-weight: 650; cursor: pointer; }
+.studio .ai-copy-source-preview blockquote,
+.studio .ai-copy-source-reference-details blockquote,
+.studio .ai-copy-source-reference blockquote { max-height: 180px; overflow: auto; margin: 2px 0 0; padding: 9px 11px; border-left: 3px solid #afc4ac; color: #35463a; background: #fffefa; white-space: pre-wrap; overflow-wrap: anywhere; }
+.studio .ai-copy-error { margin: 0; padding: 9px 10px; border: 1px solid #e0c1b4; border-radius: 6px; color: #683f2e !important; background: #fbf1eb; font-size: 12px !important; }
+.studio .ai-copy-processing { display: flex; align-items: center; min-height: 34px; color: #344d3d !important; }
+.studio .ai-copy-results { gap: 12px; }
+.studio .ai-copy-results-head,
+.studio .ai-copy-option-heading { display: flex; align-items: center; justify-content: space-between; gap: 10px; min-width: 0; }
+.studio .ai-copy-review-state { flex: 0 0 auto; padding: 4px 8px; border: 1px solid #e3d9bd; border-radius: 999px; color: #655536; background: #faf5e9; font-size: 10px; font-weight: 700; }
+.studio .ai-copy-source-reference { display: grid; gap: 3px; padding: 9px 10px; border: 1px solid #dfe5dc; border-radius: 6px; color: #4b5d50; background: #f1f5ef; }
+.studio .ai-copy-source-reference > span { color: #5b675e; font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.studio .ai-copy-source-reference blockquote { max-height: 120px; margin-top: 0; }
+.studio .ai-copy-option { display: grid; gap: 8px; min-width: 0; padding: 12px; border: 1px solid #d9e1d7; border-radius: 7px; background: #fffefa; }
+.studio .ai-copy-option.is-resolved { background: #f6f8f4; }
+.studio .ai-copy-option-heading h4 { margin: 0; color: #26392d; font-size: 14px; }
+.studio .ai-copy-option-heading > span { color: #536156; font-size: 10px; font-weight: 650; text-align: right; }
+.studio .ai-copy-proposed-text { margin: 0; color: #26352b !important; font-size: 14px !important; line-height: 1.6 !important; white-space: pre-wrap; overflow-wrap: anywhere; }
+.studio .ai-copy-reason { color: #526057 !important; font-size: 12px !important; }
+.studio .ai-copy-reason strong { display: inline-block; margin-left: 4px; color: #5b5139; font-weight: 650; }
+.studio .ai-copy-edit-form { display: grid; gap: 8px; }
+.studio .ai-copy-edit-form label { color: #35483a; font-size: 12px; font-weight: 650; }
+.studio .ai-copy-edit-form textarea { width: 100%; min-width: 0; min-height: 96px; padding: 10px 12px; border: 1px solid #aab9aa; border-radius: 6px; color: #26352b; background: #fff; font: inherit; font-size: 16px; line-height: 1.5; resize: vertical; }
+.studio .ai-copy-dismiss-all { justify-self: start; }
+.studio .ai-copy-announcement { margin: 0; color: #3d5944 !important; font-size: 12px !important; line-height: 1.5 !important; }
+.studio .ai-copy-close { justify-self: start; }
+.studio .ai-copy-panel :is(button, input, textarea, summary):focus-visible,
+.studio .ai-copy-trigger:focus-visible { outline: 3px solid var(--studio-focus); outline-offset: 2px; }
+
+@media (max-width: 700px) {
+  .studio .ai-copy-tool,
+  .studio .ai-copy-panel { width: 100%; }
+  .studio .ai-copy-panel { padding: 12px; }
+  .studio .ai-copy-actions { display: grid; grid-template-columns: 1fr; }
+  .studio .ai-copy-actions .button { width: 100%; }
+  .studio .ai-copy-results-head,
+  .studio .ai-copy-option-heading { align-items: flex-start; flex-direction: column; }
+  .studio .ai-copy-option-heading > span { text-align: left; }
+}

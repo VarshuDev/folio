@@ -1,0 +1,49 @@
+{
+  "checkpoint": "7B",
+  "checks": {
+    "keyboardFocus": true,
+    "escapeRestoresFocus": true,
+    "declineSendsNoRequest": true,
+    "aboutRequestSourceOnly": true,
+    "originalUnchangedBeforeApproval": true,
+    "dismissPreservesAbout": true,
+    "acceptedAboutUsesNormalEditor": true,
+    "aboutDraftReload": true,
+    "aboutReloaded": true,
+    "mobileCopyNoOverflow": true,
+    "projectRequestSourceOnly": true,
+    "projectOriginalUnchangedBeforeApproval": true,
+    "rejectedProjectPreserves": true,
+    "acceptedProjectUsesNormalEditor": true,
+    "projectFieldsPreserved": true,
+    "mobileDraftResume": true,
+    "projectReloaded": true,
+    "editProposalRequiresApproval": true,
+    "editedAboutApplied": true,
+    "templateDemosUnaffected": true,
+    "unavailableManualFallback": true
+  },
+  "browserErrors": [],
+  "axeViolations": [
+    {
+      "label": "About alternatives on desktop",
+      "violations": []
+    },
+    {
+      "label": "Project alternatives at 390px",
+      "violations": []
+    },
+    {
+      "label": "Edited alternative form",
+      "violations": []
+    }
+  ],
+  "failedChecks": [],
+  "summary": {
+    "checksPassed": 21,
+    "checksTotal": 21,
+    "axeViolations": 0,
+    "browserErrors": 0,
+    "failedChecks": 0
+  }
+}

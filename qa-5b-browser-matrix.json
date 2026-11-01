@@ -1,0 +1,633 @@
+{
+  "summary": {
+    "cases": 50,
+    "passed": 50,
+    "failed": 0,
+    "hiddenProjectCases": 10,
+    "reversedOrderCases": 10,
+    "keyboardFocusStyles": 5,
+    "reducedMotionStyles": 5,
+    "navigationClicks": 20,
+    "errors": [],
+    "fixtures": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "D0"
+    ],
+    "styles": [
+      "retro",
+      "pinboard",
+      "arcade",
+      "after-hours",
+      "swiss"
+    ],
+    "viewports": [
+      "1440x900",
+      "390x844"
+    ]
+  },
+  "results": [
+    {
+      "style": "retro",
+      "fixture": "A",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,education,skills",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "retro",
+      "fixture": "A",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,education,skills",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "retro",
+      "fixture": "B",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,education,skills,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "retro",
+      "fixture": "B",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,education,skills,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "retro",
+      "fixture": "C",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,education,skills,projects,highlights,contact",
+      "projects": 2,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "retro",
+      "fixture": "C",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,education,skills,projects,highlights,contact",
+      "projects": 2,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "retro",
+      "fixture": "D",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "retro",
+      "fixture": "D",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "retro",
+      "fixture": "D0",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "retro",
+      "fixture": "D0",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "pinboard",
+      "fixture": "A",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,education,skills",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "pinboard",
+      "fixture": "A",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,education,skills",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "pinboard",
+      "fixture": "B",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,education,skills,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "pinboard",
+      "fixture": "B",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,education,skills,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "pinboard",
+      "fixture": "C",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,education,skills,projects,highlights,contact",
+      "projects": 2,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "pinboard",
+      "fixture": "C",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,education,skills,projects,highlights,contact",
+      "projects": 2,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "pinboard",
+      "fixture": "D",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "pinboard",
+      "fixture": "D",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "pinboard",
+      "fixture": "D0",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "pinboard",
+      "fixture": "D0",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "arcade",
+      "fixture": "A",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,education,skills",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "arcade",
+      "fixture": "A",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,education,skills",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "arcade",
+      "fixture": "B",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,education,skills,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "arcade",
+      "fixture": "B",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,education,skills,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "arcade",
+      "fixture": "C",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,education,skills,projects,highlights,contact",
+      "projects": 2,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "arcade",
+      "fixture": "C",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,education,skills,projects,highlights,contact",
+      "projects": 2,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "arcade",
+      "fixture": "D",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "arcade",
+      "fixture": "D",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "arcade",
+      "fixture": "D0",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "arcade",
+      "fixture": "D0",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "after-hours",
+      "fixture": "A",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,education,skills",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "after-hours",
+      "fixture": "A",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,education,skills",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "after-hours",
+      "fixture": "B",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,education,skills,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "after-hours",
+      "fixture": "B",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,education,skills,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "after-hours",
+      "fixture": "C",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,education,skills,projects,highlights,contact",
+      "projects": 2,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "after-hours",
+      "fixture": "C",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,education,skills,projects,highlights,contact",
+      "projects": 2,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "after-hours",
+      "fixture": "D",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "after-hours",
+      "fixture": "D",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "after-hours",
+      "fixture": "D0",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "after-hours",
+      "fixture": "D0",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "swiss",
+      "fixture": "A",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,education,skills",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "swiss",
+      "fixture": "A",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,education,skills",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "swiss",
+      "fixture": "B",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,education,skills,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "swiss",
+      "fixture": "B",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,education,skills,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "swiss",
+      "fixture": "C",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,education,skills,projects,highlights,contact",
+      "projects": 2,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "swiss",
+      "fixture": "C",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,education,skills,projects,highlights,contact",
+      "projects": 2,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "swiss",
+      "fixture": "D",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "swiss",
+      "fixture": "D",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about,projects",
+      "projects": 1,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "swiss",
+      "fixture": "D0",
+      "viewport": "desktop",
+      "ok": true,
+      "sections": "about",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    },
+    {
+      "style": "swiss",
+      "fixture": "D0",
+      "viewport": "mobile",
+      "ok": true,
+      "sections": "about",
+      "projects": 0,
+      "overflow": [
+        0,
+        0
+      ]
+    }
+  ]
+}

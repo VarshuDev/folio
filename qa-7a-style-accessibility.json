@@ -1,0 +1,765 @@
+{
+  "checkpoint": "7A all-style accessibility",
+  "styles": [
+    {
+      "id": "minimal",
+      "name": "Minimal"
+    },
+    {
+      "id": "editorial",
+      "name": "Editorial"
+    },
+    {
+      "id": "project",
+      "name": "Project-focused"
+    },
+    {
+      "id": "retro",
+      "name": "Retro / print-inspired"
+    },
+    {
+      "id": "pinboard",
+      "name": "Pinboard / visual"
+    },
+    {
+      "id": "arcade",
+      "name": "Gaming / arcade"
+    },
+    {
+      "id": "after-hours",
+      "name": "Gen Z dark / after hours"
+    },
+    {
+      "id": "swiss",
+      "name": "Swiss grid / studio"
+    },
+    {
+      "id": "newsprint",
+      "name": "Newsprint / field notes"
+    },
+    {
+      "id": "brutalist",
+      "name": "Neo-brutalist / direct"
+    },
+    {
+      "id": "botanical",
+      "name": "Botanical / organic"
+    },
+    {
+      "id": "gallery",
+      "name": "White-cube / gallery"
+    },
+    {
+      "id": "terminal",
+      "name": "Notebook / terminal"
+    },
+    {
+      "id": "blueprint",
+      "name": "Blueprint / workshop"
+    },
+    {
+      "id": "bauhaus",
+      "name": "Bauhaus / geometric"
+    },
+    {
+      "id": "y2k",
+      "name": "Y2K / internet diary"
+    },
+    {
+      "id": "pastel",
+      "name": "Soft pastel / friendly"
+    },
+    {
+      "id": "academic",
+      "name": "Academic / reading room"
+    },
+    {
+      "id": "zine",
+      "name": "Cut-and-paste / zine"
+    },
+    {
+      "id": "documentary",
+      "name": "Documentary / photo essay"
+    },
+    {
+      "id": "community",
+      "name": "Community / local impact"
+    },
+    {
+      "id": "case-study",
+      "name": "Product case study"
+    }
+  ],
+  "cases": [
+    {
+      "style": "minimal",
+      "name": "Minimal",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "minimal",
+        "h1Count": 1,
+        "mainCount": 0,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "editorial",
+      "name": "Editorial",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "editorial",
+        "h1Count": 1,
+        "mainCount": 0,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "project",
+      "name": "Project-focused",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "project",
+        "h1Count": 1,
+        "mainCount": 0,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "retro",
+      "name": "Retro / print-inspired",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "retro",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "pinboard",
+      "name": "Pinboard / visual",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "pinboard",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "arcade",
+      "name": "Gaming / arcade",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "arcade",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "after-hours",
+      "name": "Gen Z dark / after hours",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "after-hours",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "swiss",
+      "name": "Swiss grid / studio",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "swiss",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "newsprint",
+      "name": "Newsprint / field notes",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "newsprint",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "brutalist",
+      "name": "Neo-brutalist / direct",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "brutalist",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "botanical",
+      "name": "Botanical / organic",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "botanical",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "gallery",
+      "name": "White-cube / gallery",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "gallery",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "terminal",
+      "name": "Notebook / terminal",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "terminal",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "blueprint",
+      "name": "Blueprint / workshop",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "blueprint",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "bauhaus",
+      "name": "Bauhaus / geometric",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "bauhaus",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "y2k",
+      "name": "Y2K / internet diary",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "y2k",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "pastel",
+      "name": "Soft pastel / friendly",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "pastel",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "academic",
+      "name": "Academic / reading room",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "academic",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "zine",
+      "name": "Cut-and-paste / zine",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "zine",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "documentary",
+      "name": "Documentary / photo essay",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "documentary",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "community",
+      "name": "Community / local impact",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "community",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "case-study",
+      "name": "Product case study",
+      "viewport": "desktop",
+      "metrics": {
+        "template": "case-study",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 1440,
+        "scrollWidth": 1440,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "minimal",
+      "name": "Minimal",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "minimal",
+        "h1Count": 1,
+        "mainCount": 0,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "editorial",
+      "name": "Editorial",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "editorial",
+        "h1Count": 1,
+        "mainCount": 0,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "project",
+      "name": "Project-focused",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "project",
+        "h1Count": 1,
+        "mainCount": 0,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "retro",
+      "name": "Retro / print-inspired",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "retro",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "pinboard",
+      "name": "Pinboard / visual",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "pinboard",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "arcade",
+      "name": "Gaming / arcade",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "arcade",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "after-hours",
+      "name": "Gen Z dark / after hours",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "after-hours",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "swiss",
+      "name": "Swiss grid / studio",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "swiss",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "newsprint",
+      "name": "Newsprint / field notes",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "newsprint",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "brutalist",
+      "name": "Neo-brutalist / direct",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "brutalist",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "botanical",
+      "name": "Botanical / organic",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "botanical",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "gallery",
+      "name": "White-cube / gallery",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "gallery",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "terminal",
+      "name": "Notebook / terminal",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "terminal",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "blueprint",
+      "name": "Blueprint / workshop",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "blueprint",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "bauhaus",
+      "name": "Bauhaus / geometric",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "bauhaus",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "y2k",
+      "name": "Y2K / internet diary",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "y2k",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "pastel",
+      "name": "Soft pastel / friendly",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "pastel",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "academic",
+      "name": "Academic / reading room",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "academic",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "zine",
+      "name": "Cut-and-paste / zine",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "zine",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "documentary",
+      "name": "Documentary / photo essay",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "documentary",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "community",
+      "name": "Community / local impact",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "community",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    },
+    {
+      "style": "case-study",
+      "name": "Product case study",
+      "viewport": "mobile",
+      "metrics": {
+        "template": "case-study",
+        "h1Count": 1,
+        "mainCount": 1,
+        "width": 390,
+        "scrollWidth": 390,
+        "sectionCount": 6
+      },
+      "axeViolations": [],
+      "passed": true
+    }
+  ],
+  "browserErrors": [],
+  "failedChecks": [],
+  "summary": {
+    "styles": 22,
+    "casesPassed": 44,
+    "casesTotal": 44,
+    "axeViolations": 0,
+    "browserErrors": 0,
+    "failedChecks": 0
+  }
+}

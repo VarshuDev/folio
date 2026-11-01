@@ -1,0 +1,106 @@
+{
+  "checkpoint": "7A",
+  "flows": {
+    "A": {
+      "passed": true,
+      "details": {
+        "requestCount": 1,
+        "requestKeys": [
+          "operation",
+          "sourceText"
+        ],
+        "sourceMatches": true,
+        "cardCount": 3,
+        "alreadyPresent": true,
+        "nameWarnsBeforeReplace": true,
+        "nameBeforeKeep": "Mira Existing",
+        "projectWarning": true,
+        "finalName": "Mira New",
+        "finalSkills": [
+          "Rust and C++"
+        ],
+        "finalProject": {
+          "id": "intake-tried",
+          "title": "Weather app.",
+          "description": "Built with Python.",
+          "tools": "",
+          "link": ""
+        },
+        "finalGitHub": "github.com/varshan",
+        "originalNotesMatch": true,
+        "acceptedSource": "From your note\nName: Mira New",
+        "mobileWidth": {
+          "width": 390,
+          "scrollWidth": 390
+        },
+        "axeDesktop": 0,
+        "axeMobile": 0
+      }
+    },
+    "B": {
+      "passed": true,
+      "details": {
+        "requests": 0,
+        "hasName": true,
+        "originalPreserved": "Name: Manual Fallback\nLearning: HTML and CSS"
+      }
+    },
+    "C": {
+      "passed": true,
+      "details": {
+        "requests": 2,
+        "failureText": "AI assistance is temporarily unavailable. Your notes are unchanged; continue manually.",
+        "originalPreserved": "Name: Failure Fallback\nLearning: Python"
+      }
+    },
+    "D": {
+      "passed": true,
+      "details": {
+        "emptyText": "We couldn’t find much to organize yet. Add a little more detail, or continue manually. Your notes are still here.\n\nOne thing to consider: What topic would you like to explore?\n\nAdd more details\nContinue manually",
+        "notesBeforeEdit": "I like AI.",
+        "originalAfterManual": "I like AI. Learning Python."
+      }
+    },
+    "E": {
+      "passed": true,
+      "details": {
+        "fixtureSuggestionCards": 0,
+        "userMessage": "AI suggestions are not available right now. Your notes are unchanged; continue manually."
+      }
+    },
+    "F": {
+      "passed": true,
+      "details": {
+        "status": 503,
+        "code": "unavailable"
+      }
+    },
+    "G": {
+      "passed": true,
+      "details": {
+        "testExit": 0,
+        "testSummary": "# tests 44\n# suites 0\n# pass 44\n# fail 0",
+        "browserErrors": []
+      }
+    }
+  },
+  "browserErrors": [],
+  "axeViolations": [
+    {
+      "label": "flow A review at 1365px",
+      "violations": []
+    },
+    {
+      "label": "flow A review at 390px",
+      "violations": []
+    }
+  ],
+  "failedChecks": [],
+  "summary": {
+    "passedFlows": 7,
+    "totalFlows": 7,
+    "axeViolations": 0,
+    "browserErrors": 0,
+    "failedChecks": 0
+  }
+}

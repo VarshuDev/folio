@@ -1,0 +1,1584 @@
+{
+  "checkpoint": "5E",
+  "testedStyles": [
+    "zine",
+    "documentary",
+    "community",
+    "case-study"
+  ],
+  "fixtures": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "D-no-project"
+  ],
+  "viewports": [
+    {
+      "id": "desktop",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "id": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "renderCases": [
+    {
+      "templateId": "zine",
+      "fixture": "A",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    },
+    {
+      "templateId": "documentary",
+      "fixture": "A",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    },
+    {
+      "templateId": "community",
+      "fixture": "A",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    },
+    {
+      "templateId": "case-study",
+      "fixture": "A",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 4,
+      "anchors": 5,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    },
+    {
+      "templateId": "zine",
+      "fixture": "A",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    },
+    {
+      "templateId": "documentary",
+      "fixture": "A",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    },
+    {
+      "templateId": "community",
+      "fixture": "A",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    },
+    {
+      "templateId": "case-study",
+      "fixture": "A",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 4,
+      "anchors": 5,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    },
+    {
+      "templateId": "zine",
+      "fixture": "B",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "documentary",
+      "fixture": "B",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "community",
+      "fixture": "B",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "case-study",
+      "fixture": "B",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 5,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "zine",
+      "fixture": "B",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "documentary",
+      "fixture": "B",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "community",
+      "fixture": "B",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "case-study",
+      "fixture": "B",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 4,
+      "anchors": 5,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "zine",
+      "fixture": "C",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "documentary",
+      "fixture": "C",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "community",
+      "fixture": "C",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "case-study",
+      "fixture": "C",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 11,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "zine",
+      "fixture": "C",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "documentary",
+      "fixture": "C",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "community",
+      "fixture": "C",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "case-study",
+      "fixture": "C",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "projectCount": 2,
+      "navigationLinks": 6,
+      "anchors": 11,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "zine",
+      "fixture": "D",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "documentary",
+      "fixture": "D",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "community",
+      "fixture": "D",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "case-study",
+      "fixture": "D",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "zine",
+      "fixture": "D",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "documentary",
+      "fixture": "D",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "community",
+      "fixture": "D",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "case-study",
+      "fixture": "D",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 1,
+      "navigationLinks": 2,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": false
+    },
+    {
+      "templateId": "zine",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    },
+    {
+      "templateId": "documentary",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    },
+    {
+      "templateId": "community",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    },
+    {
+      "templateId": "case-study",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 2,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    },
+    {
+      "templateId": "zine",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    },
+    {
+      "templateId": "documentary",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    },
+    {
+      "templateId": "community",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    },
+    {
+      "templateId": "case-study",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "projectCount": 0,
+      "navigationLinks": 2,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "clippedTextNodes": 0,
+      "imageAndVideoElements": 0,
+      "emptyProjectState": true
+    }
+  ],
+  "behaviorChecks": {
+    "links": {
+      "zine": {
+        "linkCount": 10,
+        "safeNewTabs": true,
+        "projectUrl": true,
+        "contactLinks": true,
+        "projectEntryCount": 2,
+        "localLinksWork": true,
+        "links": [
+          {
+            "href": "#portfolio-zine-section-about",
+            "target": "",
+            "rel": "",
+            "label": "About"
+          },
+          {
+            "href": "#portfolio-zine-section-education",
+            "target": "",
+            "rel": "",
+            "label": "Education"
+          },
+          {
+            "href": "#portfolio-zine-section-skills",
+            "target": "",
+            "rel": "",
+            "label": "Skills"
+          },
+          {
+            "href": "#portfolio-zine-section-projects",
+            "target": "",
+            "rel": "",
+            "label": "Projects"
+          },
+          {
+            "href": "#portfolio-zine-section-highlights",
+            "target": "",
+            "rel": "",
+            "label": "Highlights"
+          },
+          {
+            "href": "#portfolio-zine-section-contact",
+            "target": "",
+            "rel": "",
+            "label": "Links"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "View Library-hours map project"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": "",
+            "rel": "",
+            "label": "Email ↗"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "GitHub ↗"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "Notes ↗"
+          }
+        ],
+        "passed": true
+      },
+      "documentary": {
+        "linkCount": 10,
+        "safeNewTabs": true,
+        "projectUrl": true,
+        "contactLinks": true,
+        "projectEntryCount": 2,
+        "localLinksWork": true,
+        "links": [
+          {
+            "href": "#portfolio-documentary-section-about",
+            "target": "",
+            "rel": "",
+            "label": "01About"
+          },
+          {
+            "href": "#portfolio-documentary-section-education",
+            "target": "",
+            "rel": "",
+            "label": "02Education"
+          },
+          {
+            "href": "#portfolio-documentary-section-skills",
+            "target": "",
+            "rel": "",
+            "label": "03Skills"
+          },
+          {
+            "href": "#portfolio-documentary-section-projects",
+            "target": "",
+            "rel": "",
+            "label": "04Project sequence"
+          },
+          {
+            "href": "#portfolio-documentary-section-highlights",
+            "target": "",
+            "rel": "",
+            "label": "05Highlights"
+          },
+          {
+            "href": "#portfolio-documentary-section-contact",
+            "target": "",
+            "rel": "",
+            "label": "06Links"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "View Library-hours map project"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": "",
+            "rel": "",
+            "label": "Email ↗"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "GitHub ↗"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "Notes ↗"
+          }
+        ],
+        "passed": true
+      },
+      "community": {
+        "linkCount": 10,
+        "safeNewTabs": true,
+        "projectUrl": true,
+        "contactLinks": true,
+        "projectEntryCount": 2,
+        "localLinksWork": true,
+        "links": [
+          {
+            "href": "#portfolio-community-section-about",
+            "target": "",
+            "rel": "",
+            "label": "About"
+          },
+          {
+            "href": "#portfolio-community-section-education",
+            "target": "",
+            "rel": "",
+            "label": "Education"
+          },
+          {
+            "href": "#portfolio-community-section-skills",
+            "target": "",
+            "rel": "",
+            "label": "Skills"
+          },
+          {
+            "href": "#portfolio-community-section-projects",
+            "target": "",
+            "rel": "",
+            "label": "Projects"
+          },
+          {
+            "href": "#portfolio-community-section-highlights",
+            "target": "",
+            "rel": "",
+            "label": "Highlights & activities"
+          },
+          {
+            "href": "#portfolio-community-section-contact",
+            "target": "",
+            "rel": "",
+            "label": "Links"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "View Library-hours map project"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": "",
+            "rel": "",
+            "label": "Email ↗"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "GitHub ↗"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "Notes ↗"
+          }
+        ],
+        "passed": true
+      },
+      "case-study": {
+        "linkCount": 11,
+        "safeNewTabs": true,
+        "projectUrl": true,
+        "contactLinks": true,
+        "projectEntryCount": 2,
+        "localLinksWork": true,
+        "links": [
+          {
+            "href": "#portfolio-case-study-top",
+            "target": "",
+            "rel": "",
+            "label": "Varshan Gowda"
+          },
+          {
+            "href": "#portfolio-case-study-section-about",
+            "target": "",
+            "rel": "",
+            "label": "01About"
+          },
+          {
+            "href": "#portfolio-case-study-section-education",
+            "target": "",
+            "rel": "",
+            "label": "02Education"
+          },
+          {
+            "href": "#portfolio-case-study-section-skills",
+            "target": "",
+            "rel": "",
+            "label": "03Skills"
+          },
+          {
+            "href": "#portfolio-case-study-section-projects",
+            "target": "",
+            "rel": "",
+            "label": "04Projects"
+          },
+          {
+            "href": "#portfolio-case-study-section-highlights",
+            "target": "",
+            "rel": "",
+            "label": "05Highlights"
+          },
+          {
+            "href": "#portfolio-case-study-section-contact",
+            "target": "",
+            "rel": "",
+            "label": "06Links"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "View Library-hours map project"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": "",
+            "rel": "",
+            "label": "Email ↗"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "GitHub ↗"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "Notes ↗"
+          }
+        ],
+        "passed": true
+      }
+    },
+    "hiddenProjects": {
+      "zine": {
+        "section": false,
+        "projectCount": 0,
+        "hasProjectAnchor": false,
+        "hasProjectShortcut": false,
+        "navTargetsResolve": true,
+        "passed": true
+      },
+      "documentary": {
+        "section": false,
+        "projectCount": 0,
+        "hasProjectAnchor": false,
+        "hasProjectShortcut": false,
+        "navTargetsResolve": true,
+        "passed": true
+      },
+      "community": {
+        "section": false,
+        "projectCount": 0,
+        "hasProjectAnchor": false,
+        "hasProjectShortcut": false,
+        "navTargetsResolve": true,
+        "passed": true
+      },
+      "case-study": {
+        "section": false,
+        "projectCount": 0,
+        "hasProjectAnchor": false,
+        "hasProjectShortcut": false,
+        "navTargetsResolve": true,
+        "passed": true
+      }
+    },
+    "reorderedSections": {
+      "zine": {
+        "sections": [
+          "contact",
+          "highlights",
+          "projects",
+          "skills",
+          "education",
+          "about"
+        ],
+        "navMatchesSections": true,
+        "passed": true
+      },
+      "documentary": {
+        "sections": [
+          "contact",
+          "highlights",
+          "projects",
+          "skills",
+          "education",
+          "about"
+        ],
+        "navMatchesSections": true,
+        "passed": true
+      },
+      "community": {
+        "sections": [
+          "contact",
+          "highlights",
+          "projects",
+          "skills",
+          "education",
+          "about"
+        ],
+        "navMatchesSections": true,
+        "passed": true
+      },
+      "case-study": {
+        "sections": [
+          "contact",
+          "highlights",
+          "projects",
+          "skills",
+          "education",
+          "about"
+        ],
+        "navMatchesSections": true,
+        "passed": true
+      }
+    },
+    "accessibility": {
+      "zine": {
+        "focus": {
+          "focused": true,
+          "visible": true,
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        },
+        "reducedMotion": {
+          "matches": true,
+          "transitionDuration": "1e-05s",
+          "animationDuration": "1e-05s"
+        },
+        "reducedMotionCheck": true,
+        "minTargetHeight": 44,
+        "maxTargetHeight": 44,
+        "targetCheck": true,
+        "focusCheck": true,
+        "passed": true
+      },
+      "documentary": {
+        "focus": {
+          "focused": true,
+          "visible": true,
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        },
+        "reducedMotion": {
+          "matches": true,
+          "transitionDuration": "1e-05s",
+          "animationDuration": "1e-05s"
+        },
+        "reducedMotionCheck": true,
+        "minTargetHeight": 44,
+        "maxTargetHeight": 44,
+        "targetCheck": true,
+        "focusCheck": true,
+        "passed": true
+      },
+      "community": {
+        "focus": {
+          "focused": true,
+          "visible": true,
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        },
+        "reducedMotion": {
+          "matches": true,
+          "transitionDuration": "1e-05s",
+          "animationDuration": "1e-05s"
+        },
+        "reducedMotionCheck": true,
+        "minTargetHeight": 44,
+        "maxTargetHeight": 44,
+        "targetCheck": true,
+        "focusCheck": true,
+        "passed": true
+      },
+      "case-study": {
+        "focus": {
+          "focused": true,
+          "visible": true,
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        },
+        "reducedMotion": {
+          "matches": true,
+          "transitionDuration": "1e-05s",
+          "animationDuration": "1e-05s"
+        },
+        "reducedMotionCheck": true,
+        "minTargetHeight": 44,
+        "maxTargetHeight": 44,
+        "targetCheck": true,
+        "focusCheck": true,
+        "passed": true
+      }
+    },
+    "emptyAndMissingData": {
+      "A-zine": {
+        "hasProjectsSection": true,
+        "projectCount": 0,
+        "emptyProjectState": "No projects added yet. You can add projects later.",
+        "hasContact": false,
+        "hasEducation": true,
+        "expectedEducation": true,
+        "imageCount": 0,
+        "passed": true
+      },
+      "A-documentary": {
+        "hasProjectsSection": true,
+        "projectCount": 0,
+        "emptyProjectState": "No projects added yet. You can add projects later.",
+        "hasContact": false,
+        "hasEducation": true,
+        "expectedEducation": true,
+        "imageCount": 0,
+        "passed": true
+      },
+      "A-community": {
+        "hasProjectsSection": true,
+        "projectCount": 0,
+        "emptyProjectState": "No projects added yet. You can add projects later.",
+        "hasContact": false,
+        "hasEducation": true,
+        "expectedEducation": true,
+        "imageCount": 0,
+        "passed": true
+      },
+      "A-case-study": {
+        "hasProjectsSection": true,
+        "projectCount": 0,
+        "emptyProjectState": "No projects added yet. You can add projects later.",
+        "hasContact": false,
+        "hasEducation": true,
+        "expectedEducation": true,
+        "imageCount": 0,
+        "passed": true
+      },
+      "D-no-project-zine": {
+        "hasProjectsSection": true,
+        "projectCount": 0,
+        "emptyProjectState": "No projects added yet. You can add projects later.",
+        "hasContact": false,
+        "hasEducation": false,
+        "expectedEducation": false,
+        "imageCount": 0,
+        "passed": true
+      },
+      "D-no-project-documentary": {
+        "hasProjectsSection": true,
+        "projectCount": 0,
+        "emptyProjectState": "No projects added yet. You can add projects later.",
+        "hasContact": false,
+        "hasEducation": false,
+        "expectedEducation": false,
+        "imageCount": 0,
+        "passed": true
+      },
+      "D-no-project-community": {
+        "hasProjectsSection": true,
+        "projectCount": 0,
+        "emptyProjectState": "No projects added yet. You can add projects later.",
+        "hasContact": false,
+        "hasEducation": false,
+        "expectedEducation": false,
+        "imageCount": 0,
+        "passed": true
+      },
+      "D-no-project-case-study": {
+        "hasProjectsSection": true,
+        "projectCount": 0,
+        "emptyProjectState": "No projects added yet. You can add projects later.",
+        "hasContact": false,
+        "hasEducation": false,
+        "expectedEducation": false,
+        "imageCount": 0,
+        "passed": true
+      }
+    },
+    "focusedComparison": {
+      "cards": 4,
+      "compareIds": [
+        "zine",
+        "documentary",
+        "community",
+        "case-study"
+      ],
+      "compareOrder": true,
+      "desktopFrames": 0,
+      "mobileFrames": 4,
+      "passed": true
+    },
+    "grayscaleComparison": {
+      "filters": [
+        "grayscale(1)",
+        "grayscale(1)",
+        "grayscale(1)",
+        "grayscale(1)"
+      ],
+      "passed": true
+    },
+    "structuralCollisionPairs": {
+      "zine": {
+        "status": "Distinct",
+        "expectedClosest": "Pinboard / visual",
+        "quickAudit": "Closest: Pinboard / visual 5/6 structural · 4/4 visible",
+        "passed": true
+      },
+      "documentary": {
+        "status": "Distinct",
+        "expectedClosest": "White-cube / gallery",
+        "quickAudit": "Closest: White-cube / gallery 5/6 structural · 4/4 visible",
+        "passed": true
+      },
+      "community": {
+        "status": "Distinct",
+        "expectedClosest": "Project-focused",
+        "quickAudit": "Closest: Project-focused 6/6 structural · 4/4 visible",
+        "passed": true
+      },
+      "case-study": {
+        "status": "Distinct",
+        "expectedClosest": "Project-focused",
+        "quickAudit": "Closest: Project-focused 6/6 structural · 4/4 visible",
+        "passed": true
+      }
+    }
+  },
+  "audits": {
+    "axeWcag": {
+      "zine": [],
+      "documentary": [],
+      "community": [],
+      "case-study": []
+    },
+    "screenshots": {
+      "zine-desktop": {
+        "screenshot": "qa-5e-zine-desktop.png",
+        "contentHeight": 1560
+      },
+      "documentary-desktop": {
+        "screenshot": "qa-5e-documentary-desktop.png",
+        "contentHeight": 2326
+      },
+      "community-desktop": {
+        "screenshot": "qa-5e-community-desktop.png",
+        "contentHeight": 1513
+      },
+      "case-study-desktop": {
+        "screenshot": "qa-5e-case-study-desktop.png",
+        "contentHeight": 1430
+      },
+      "zine-mobile": {
+        "screenshot": "qa-5e-zine-mobile.png",
+        "contentHeight": 2298
+      },
+      "documentary-mobile": {
+        "screenshot": "qa-5e-documentary-mobile.png",
+        "contentHeight": 2758
+      },
+      "community-mobile": {
+        "screenshot": "qa-5e-community-mobile.png",
+        "contentHeight": 1959
+      },
+      "case-study-mobile": {
+        "screenshot": "qa-5e-case-study-mobile.png",
+        "contentHeight": 2004
+      }
+    },
+    "grayscaleComparisonPanel": "qa-5e-grayscale-compare-panel-mobile.png",
+    "grayscaleComparisonPanelDesktop": "qa-5e-grayscale-compare-panel-desktop.png",
+    "grayscaleComparison": "qa-5e-grayscale-comparison-desktop.png"
+  },
+  "browserErrors": [],
+  "failedChecks": [],
+  "summary": {
+    "renderCasesPassed": 40,
+    "renderCasesTotal": 40,
+    "failedChecks": 0,
+    "browserErrors": 0,
+    "axeViolations": 0,
+    "extraChecks": {
+      "links": 4,
+      "hiddenProjects": 4,
+      "reorderedSections": 4,
+      "accessibility": 4,
+      "emptyAndMissingData": 8,
+      "focusedComparison": 2,
+      "grayscaleComparison": 1,
+      "structuralCollisionPairs": 4
+    }
+  }
+}

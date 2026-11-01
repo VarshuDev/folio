@@ -1,0 +1,3412 @@
+{
+  "checkpoint": "5C",
+  "testedStyles": [
+    "newsprint",
+    "brutalist",
+    "botanical",
+    "gallery",
+    "terminal"
+  ],
+  "fixtures": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "D-no-project"
+  ],
+  "viewports": [
+    {
+      "id": "desktop",
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "id": "mobile",
+      "width": 390,
+      "height": 844
+    }
+  ],
+  "renderCases": [
+    {
+      "templateId": "newsprint",
+      "fixture": "A",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": "2"
+    },
+    {
+      "templateId": "brutalist",
+      "fixture": "A",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "botanical",
+      "fixture": "A",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "gallery",
+      "fixture": "A",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "terminal",
+      "fixture": "A",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "newsprint",
+      "fixture": "A",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": "1"
+    },
+    {
+      "templateId": "brutalist",
+      "fixture": "A",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "botanical",
+      "fixture": "A",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "gallery",
+      "fixture": "A",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "terminal",
+      "fixture": "A",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills"
+      ],
+      "navigationLinks": 3,
+      "anchors": 3,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "newsprint",
+      "fixture": "B",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": "2"
+    },
+    {
+      "templateId": "brutalist",
+      "fixture": "B",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "botanical",
+      "fixture": "B",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "gallery",
+      "fixture": "B",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "terminal",
+      "fixture": "B",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "newsprint",
+      "fixture": "B",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": "1"
+    },
+    {
+      "templateId": "brutalist",
+      "fixture": "B",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "botanical",
+      "fixture": "B",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "gallery",
+      "fixture": "B",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "terminal",
+      "fixture": "B",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects"
+      ],
+      "navigationLinks": 4,
+      "anchors": 4,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "newsprint",
+      "fixture": "C",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": "2"
+    },
+    {
+      "templateId": "brutalist",
+      "fixture": "C",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "botanical",
+      "fixture": "C",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "gallery",
+      "fixture": "C",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "terminal",
+      "fixture": "C",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "newsprint",
+      "fixture": "C",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": "1"
+    },
+    {
+      "templateId": "brutalist",
+      "fixture": "C",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "botanical",
+      "fixture": "C",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "gallery",
+      "fixture": "C",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "terminal",
+      "fixture": "C",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "education",
+        "skills",
+        "projects",
+        "highlights",
+        "contact"
+      ],
+      "navigationLinks": 6,
+      "anchors": 10,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "newsprint",
+      "fixture": "D",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": "2"
+    },
+    {
+      "templateId": "brutalist",
+      "fixture": "D",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "botanical",
+      "fixture": "D",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "gallery",
+      "fixture": "D",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "terminal",
+      "fixture": "D",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "newsprint",
+      "fixture": "D",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": "1"
+    },
+    {
+      "templateId": "brutalist",
+      "fixture": "D",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "botanical",
+      "fixture": "D",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "gallery",
+      "fixture": "D",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "terminal",
+      "fixture": "D",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about",
+        "projects"
+      ],
+      "navigationLinks": 2,
+      "anchors": 2,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "newsprint",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": "2"
+    },
+    {
+      "templateId": "brutalist",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "botanical",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "gallery",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "terminal",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "desktop",
+        "width": 1440,
+        "height": 900
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "newsprint",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": "1"
+    },
+    {
+      "templateId": "brutalist",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "botanical",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "gallery",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    },
+    {
+      "templateId": "terminal",
+      "fixture": "D-no-project",
+      "viewport": {
+        "id": "mobile",
+        "width": 390,
+        "height": 844
+      },
+      "passed": true,
+      "sections": [
+        "about"
+      ],
+      "navigationLinks": 1,
+      "anchors": 1,
+      "horizontalOverflow": false,
+      "imageElements": 0,
+      "aboutColumnCount": null
+    }
+  ],
+  "behaviorChecks": {
+    "links": {
+      "newsprint": {
+        "linkCount": 10,
+        "validTargets": true,
+        "localAnchorsResolve": true,
+        "includesProjectUrl": true,
+        "links": [
+          {
+            "href": "#portfolio-newsprint-section-about",
+            "target": "",
+            "rel": "",
+            "label": "About"
+          },
+          {
+            "href": "#portfolio-newsprint-section-education",
+            "target": "",
+            "rel": "",
+            "label": "Education"
+          },
+          {
+            "href": "#portfolio-newsprint-section-skills",
+            "target": "",
+            "rel": "",
+            "label": "Skills"
+          },
+          {
+            "href": "#portfolio-newsprint-section-projects",
+            "target": "",
+            "rel": "",
+            "label": "Work"
+          },
+          {
+            "href": "#portfolio-newsprint-section-highlights",
+            "target": "",
+            "rel": "",
+            "label": "Highlights"
+          },
+          {
+            "href": "#portfolio-newsprint-section-contact",
+            "target": "",
+            "rel": "",
+            "label": "Links"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "View Library-hours map project"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": "",
+            "rel": "",
+            "label": "Email ↗"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "GitHub ↗"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "Notes ↗"
+          }
+        ]
+      },
+      "brutalist": {
+        "linkCount": 10,
+        "validTargets": true,
+        "localAnchorsResolve": true,
+        "includesProjectUrl": true,
+        "links": [
+          {
+            "href": "#portfolio-brutalist-section-about",
+            "target": "",
+            "rel": "",
+            "label": "About"
+          },
+          {
+            "href": "#portfolio-brutalist-section-education",
+            "target": "",
+            "rel": "",
+            "label": "Education"
+          },
+          {
+            "href": "#portfolio-brutalist-section-skills",
+            "target": "",
+            "rel": "",
+            "label": "Skills"
+          },
+          {
+            "href": "#portfolio-brutalist-section-projects",
+            "target": "",
+            "rel": "",
+            "label": "Work"
+          },
+          {
+            "href": "#portfolio-brutalist-section-highlights",
+            "target": "",
+            "rel": "",
+            "label": "Highlights"
+          },
+          {
+            "href": "#portfolio-brutalist-section-contact",
+            "target": "",
+            "rel": "",
+            "label": "Links"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "View Library-hours map project"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": "",
+            "rel": "",
+            "label": "Email ↗"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "GitHub ↗"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "Notes ↗"
+          }
+        ]
+      },
+      "botanical": {
+        "linkCount": 10,
+        "validTargets": true,
+        "localAnchorsResolve": true,
+        "includesProjectUrl": true,
+        "links": [
+          {
+            "href": "#portfolio-botanical-section-about",
+            "target": "",
+            "rel": "",
+            "label": "About"
+          },
+          {
+            "href": "#portfolio-botanical-section-education",
+            "target": "",
+            "rel": "",
+            "label": "Education"
+          },
+          {
+            "href": "#portfolio-botanical-section-skills",
+            "target": "",
+            "rel": "",
+            "label": "Skills"
+          },
+          {
+            "href": "#portfolio-botanical-section-projects",
+            "target": "",
+            "rel": "",
+            "label": "Field notes"
+          },
+          {
+            "href": "#portfolio-botanical-section-highlights",
+            "target": "",
+            "rel": "",
+            "label": "Highlights"
+          },
+          {
+            "href": "#portfolio-botanical-section-contact",
+            "target": "",
+            "rel": "",
+            "label": "Links"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "View Library-hours map project"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": "",
+            "rel": "",
+            "label": "Email ↗"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "GitHub ↗"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "Notes ↗"
+          }
+        ]
+      },
+      "gallery": {
+        "linkCount": 10,
+        "validTargets": true,
+        "localAnchorsResolve": true,
+        "includesProjectUrl": true,
+        "links": [
+          {
+            "href": "#portfolio-gallery-section-about",
+            "target": "",
+            "rel": "",
+            "label": "01About"
+          },
+          {
+            "href": "#portfolio-gallery-section-education",
+            "target": "",
+            "rel": "",
+            "label": "02Education"
+          },
+          {
+            "href": "#portfolio-gallery-section-skills",
+            "target": "",
+            "rel": "",
+            "label": "03Skills"
+          },
+          {
+            "href": "#portfolio-gallery-section-projects",
+            "target": "",
+            "rel": "",
+            "label": "04Work"
+          },
+          {
+            "href": "#portfolio-gallery-section-highlights",
+            "target": "",
+            "rel": "",
+            "label": "05Highlights"
+          },
+          {
+            "href": "#portfolio-gallery-section-contact",
+            "target": "",
+            "rel": "",
+            "label": "06Links"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "View Library-hours map project"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": "",
+            "rel": "",
+            "label": "Email ↗"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "GitHub ↗"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "Notes ↗"
+          }
+        ]
+      },
+      "terminal": {
+        "linkCount": 10,
+        "validTargets": true,
+        "localAnchorsResolve": true,
+        "includesProjectUrl": true,
+        "links": [
+          {
+            "href": "#portfolio-terminal-section-about",
+            "target": "",
+            "rel": "",
+            "label": "01About"
+          },
+          {
+            "href": "#portfolio-terminal-section-education",
+            "target": "",
+            "rel": "",
+            "label": "02Education"
+          },
+          {
+            "href": "#portfolio-terminal-section-skills",
+            "target": "",
+            "rel": "",
+            "label": "03Skills"
+          },
+          {
+            "href": "#portfolio-terminal-section-projects",
+            "target": "",
+            "rel": "",
+            "label": "04Builds"
+          },
+          {
+            "href": "#portfolio-terminal-section-highlights",
+            "target": "",
+            "rel": "",
+            "label": "05Highlights"
+          },
+          {
+            "href": "#portfolio-terminal-section-contact",
+            "target": "",
+            "rel": "",
+            "label": "06Links"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "View Library-hours map project"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": "",
+            "rel": "",
+            "label": "Email ↗"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "GitHub ↗"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "label": "Notes ↗"
+          }
+        ]
+      }
+    },
+    "hiddenProjects": {
+      "newsprint": {
+        "section": false,
+        "projectNav": false,
+        "navTargetsResolve": true
+      },
+      "brutalist": {
+        "section": false,
+        "projectNav": false,
+        "navTargetsResolve": true
+      },
+      "botanical": {
+        "section": false,
+        "projectNav": false,
+        "navTargetsResolve": true
+      },
+      "gallery": {
+        "section": false,
+        "projectNav": false,
+        "navTargetsResolve": true
+      },
+      "terminal": {
+        "section": false,
+        "projectNav": false,
+        "navTargetsResolve": true
+      }
+    },
+    "reversedOrder": {
+      "newsprint": {
+        "sections": [
+          "contact",
+          "highlights",
+          "projects",
+          "skills",
+          "education",
+          "about"
+        ],
+        "navTargets": [
+          {
+            "href": "#portfolio-newsprint-section-contact",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-newsprint-section-highlights",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-newsprint-section-projects",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-newsprint-section-skills",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-newsprint-section-education",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-newsprint-section-about",
+            "exists": true
+          }
+        ],
+        "passed": true
+      },
+      "brutalist": {
+        "sections": [
+          "contact",
+          "highlights",
+          "projects",
+          "skills",
+          "education",
+          "about"
+        ],
+        "navTargets": [
+          {
+            "href": "#portfolio-brutalist-section-contact",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-brutalist-section-highlights",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-brutalist-section-projects",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-brutalist-section-skills",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-brutalist-section-education",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-brutalist-section-about",
+            "exists": true
+          }
+        ],
+        "passed": true
+      },
+      "botanical": {
+        "sections": [
+          "contact",
+          "highlights",
+          "projects",
+          "skills",
+          "education",
+          "about"
+        ],
+        "navTargets": [
+          {
+            "href": "#portfolio-botanical-section-contact",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-botanical-section-highlights",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-botanical-section-projects",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-botanical-section-skills",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-botanical-section-education",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-botanical-section-about",
+            "exists": true
+          }
+        ],
+        "passed": true
+      },
+      "gallery": {
+        "sections": [
+          "contact",
+          "highlights",
+          "projects",
+          "skills",
+          "education",
+          "about"
+        ],
+        "navTargets": [
+          {
+            "href": "#portfolio-gallery-section-contact",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-gallery-section-highlights",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-gallery-section-projects",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-gallery-section-skills",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-gallery-section-education",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-gallery-section-about",
+            "exists": true
+          }
+        ],
+        "passed": true
+      },
+      "terminal": {
+        "sections": [
+          "contact",
+          "highlights",
+          "projects",
+          "skills",
+          "education",
+          "about"
+        ],
+        "navTargets": [
+          {
+            "href": "#portfolio-terminal-section-contact",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-terminal-section-highlights",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-terminal-section-projects",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-terminal-section-skills",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-terminal-section-education",
+            "exists": true
+          },
+          {
+            "href": "#portfolio-terminal-section-about",
+            "exists": true
+          }
+        ],
+        "passed": true
+      }
+    },
+    "accessibility": {
+      "newsprint": {
+        "focus": {
+          "focused": true,
+          "visible": true,
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        },
+        "motion": {
+          "reduced": true,
+          "transitionDuration": "1e-05s"
+        },
+        "minTargetHeight": 44,
+        "maxTargetHeight": 44,
+        "targetsOk": true,
+        "focusOk": true,
+        "motionOk": true
+      },
+      "brutalist": {
+        "focus": {
+          "focused": true,
+          "visible": true,
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        },
+        "motion": {
+          "reduced": true,
+          "transitionDuration": "1e-05s"
+        },
+        "minTargetHeight": 44,
+        "maxTargetHeight": 44,
+        "targetsOk": true,
+        "focusOk": true,
+        "motionOk": true
+      },
+      "botanical": {
+        "focus": {
+          "focused": true,
+          "visible": true,
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        },
+        "motion": {
+          "reduced": true,
+          "transitionDuration": "1e-05s"
+        },
+        "minTargetHeight": 44,
+        "maxTargetHeight": 44,
+        "targetsOk": true,
+        "focusOk": true,
+        "motionOk": true
+      },
+      "gallery": {
+        "focus": {
+          "focused": true,
+          "visible": true,
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        },
+        "motion": {
+          "reduced": true,
+          "transitionDuration": "1e-05s"
+        },
+        "minTargetHeight": 44,
+        "maxTargetHeight": 44,
+        "targetsOk": true,
+        "focusOk": true,
+        "motionOk": true
+      },
+      "terminal": {
+        "focus": {
+          "focused": true,
+          "visible": true,
+          "outlineWidth": "3px",
+          "outlineStyle": "solid"
+        },
+        "motion": {
+          "reduced": true,
+          "transitionDuration": "1e-05s"
+        },
+        "minTargetHeight": 44,
+        "maxTargetHeight": 44,
+        "targetsOk": true,
+        "focusOk": true,
+        "motionOk": true
+      }
+    },
+    "longCopy": {
+      "newsprint": {
+        "longAbout": true,
+        "longProject": true,
+        "imageCount": 0
+      },
+      "brutalist": {
+        "longAbout": true,
+        "longProject": true,
+        "imageCount": 0
+      },
+      "botanical": {
+        "longAbout": true,
+        "longProject": true,
+        "imageCount": 0
+      },
+      "gallery": {
+        "longAbout": true,
+        "longProject": true,
+        "imageCount": 0
+      },
+      "terminal": {
+        "longAbout": true,
+        "longProject": true,
+        "imageCount": 0
+      }
+    },
+    "noProjectAndMissingImage": {
+      "newsprint": {
+        "sectionOrder": [
+          "about"
+        ],
+        "projects": false,
+        "navLabels": [
+          "About"
+        ],
+        "images": 0,
+        "passed": true
+      },
+      "brutalist": {
+        "sectionOrder": [
+          "about"
+        ],
+        "projects": false,
+        "navLabels": [
+          "About"
+        ],
+        "images": 0,
+        "passed": true
+      },
+      "botanical": {
+        "sectionOrder": [
+          "about"
+        ],
+        "projects": false,
+        "navLabels": [
+          "About"
+        ],
+        "images": 0,
+        "passed": true
+      },
+      "gallery": {
+        "sectionOrder": [
+          "about"
+        ],
+        "projects": false,
+        "navLabels": [
+          "01About"
+        ],
+        "images": 0,
+        "passed": true
+      },
+      "terminal": {
+        "sectionOrder": [
+          "about"
+        ],
+        "projects": false,
+        "navLabels": [
+          "01About"
+        ],
+        "images": 0,
+        "passed": true
+      }
+    },
+    "structuralCollisionPairs": {
+      "newsprint": {
+        "status": "Distinct",
+        "expectedClosest": "Retro / print-inspired",
+        "quickAudit": "Closest: Retro / print-inspired\n6/6 structural · 4/4 visible",
+        "passed": true
+      },
+      "brutalist": {
+        "status": "Distinct",
+        "expectedClosest": "Swiss grid / studio",
+        "quickAudit": "Closest: Swiss grid / studio\n5/6 structural · 4/4 visible",
+        "passed": true
+      },
+      "botanical": {
+        "status": "Distinct",
+        "expectedClosest": "Editorial",
+        "quickAudit": "Closest: Editorial\n6/6 structural · 4/4 visible",
+        "passed": true
+      },
+      "gallery": {
+        "status": "Distinct",
+        "expectedClosest": "Editorial",
+        "quickAudit": "Closest: Editorial\n6/6 structural · 4/4 visible",
+        "passed": true
+      },
+      "terminal": {
+        "status": "Distinct",
+        "expectedClosest": "Gaming / arcade",
+        "quickAudit": "Closest: Gaming / arcade\n6/6 structural · 4/4 visible",
+        "passed": true
+      }
+    }
+  },
+  "audits": {
+    "newsprint-desktop": {
+      "screenshot": "qa-5c-newsprint-desktop.png",
+      "metrics": {
+        "template": "newsprint",
+        "h1Count": 1,
+        "mainCount": 1,
+        "sectionOrder": [
+          "about",
+          "education",
+          "skills",
+          "projects",
+          "highlights",
+          "contact"
+        ],
+        "navLinks": [
+          {
+            "href": "#portfolio-newsprint-section-about",
+            "label": "About",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-newsprint-section-education",
+            "label": "Education",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-newsprint-section-skills",
+            "label": "Skills",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-newsprint-section-projects",
+            "label": "Work",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-newsprint-section-highlights",
+            "label": "Highlights",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-newsprint-section-contact",
+            "label": "Links",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          }
+        ],
+        "anchors": [
+          {
+            "href": "#portfolio-newsprint-section-about",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-newsprint-section-education",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-newsprint-section-skills",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-newsprint-section-projects",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-newsprint-section-highlights",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-newsprint-section-contact",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "inline-flex"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          }
+        ],
+        "imgCount": 0,
+        "rootWidth": 1440,
+        "rootScrollWidth": 1440,
+        "mainWidth": 1136,
+        "mainScrollWidth": 1136,
+        "hasProjectsSection": true,
+        "projectCount": 2,
+        "aboutColumnCount": "2",
+        "galleryArtFirst": null,
+        "galleryArtHeight": null,
+        "notebookBackground": null,
+        "notebookRootFont": null,
+        "notebookBodyFont": null,
+        "notebookHasPre": false,
+        "highlightItemDisplay": "list-item",
+        "highlightItemGridColumns": "28px minmax(0px, 1fr)",
+        "text": "PORTFOLIO\nFIELD NOTES\nVarshan Gowda\n\nComputer science student exploring civic technology\n\nBengaluru, India\nAbout\nEducation\nSkills\nWork\nHighlights\nLinks\nAbout\n\nI enjoy working across research, interface design, and small web builds. My current focus is making useful information easier to find and understand.\n\nBased in Bengaluru, India\nEducation\nBachelor of Science · Computer Science\n\nNorthstar Learning Collective (fictional) · Expected 2027 · Coursework in human-computer interaction, data structures, and web development.\n\nSkills\nTypeScript\nReact\nFigma\nAccessibility reviews\nCivic data\nPublic libraries\nClear writing\n\nI am practicing accessible component patterns and concise project writing.\n\nWork\nLibrary-hours map\n\nA student project that organizes opening-hour information from a small set of fictional community libraries. The prototype focuses on clear labels and a useful mobile reading order.\n\nTypeScript, React, CSS\n\nView project\n↗\nPlain-language form study\n\nA coursework study comparing two fictional signup-form drafts and documenting where participants hesitated.\n\nFigma, moderated study, notes\n\nHighlights\nPeer mentor for an introductory web workshop\nShortlisted class project in a fictional campus showcase\nHelped review keyboard navigation for a student club page\nLinks\nEmail ↗\nGitHub ↗\nNotes ↗\nfolio"
+      }
+    },
+    "brutalist-desktop": {
+      "screenshot": "qa-5c-brutalist-desktop.png",
+      "metrics": {
+        "template": "brutalist",
+        "h1Count": 1,
+        "mainCount": 1,
+        "sectionOrder": [
+          "about",
+          "education",
+          "skills",
+          "projects",
+          "highlights",
+          "contact"
+        ],
+        "navLinks": [
+          {
+            "href": "#portfolio-brutalist-section-about",
+            "label": "About",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-brutalist-section-education",
+            "label": "Education",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-brutalist-section-skills",
+            "label": "Skills",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-brutalist-section-projects",
+            "label": "Work",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-brutalist-section-highlights",
+            "label": "Highlights",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-brutalist-section-contact",
+            "label": "Links",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          }
+        ],
+        "anchors": [
+          {
+            "href": "#portfolio-brutalist-section-about",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-brutalist-section-education",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-brutalist-section-skills",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-brutalist-section-projects",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-brutalist-section-highlights",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-brutalist-section-contact",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "inline-flex"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          }
+        ],
+        "imgCount": 0,
+        "rootWidth": 1440,
+        "rootScrollWidth": 1440,
+        "mainWidth": 1100,
+        "mainScrollWidth": 1100,
+        "hasProjectsSection": true,
+        "projectCount": 2,
+        "aboutColumnCount": null,
+        "galleryArtFirst": null,
+        "galleryArtHeight": null,
+        "notebookBackground": null,
+        "notebookRootFont": null,
+        "notebookBodyFont": null,
+        "notebookHasPre": false,
+        "highlightItemDisplay": "block",
+        "highlightItemGridColumns": "28px minmax(0px, 1fr)",
+        "text": "PORTFOLIO / PROFILE\nVARSHAN GOWDA\n\nComputer science student exploring civic technology\n\nABOUT\nEDUCATION\nSKILLS\nWORK\nHIGHLIGHTS\nLINKS\nABOUT\n\nI enjoy working across research, interface design, and small web builds. My current focus is making useful information easier to find and understand.\n\nBased in Bengaluru, India\nEDUCATION\nBachelor of Science · Computer Science\n\nNorthstar Learning Collective (fictional) · Expected 2027 · Coursework in human-computer interaction, data structures, and web development.\n\nSKILLS\nTypeScript\nReact\nFigma\nAccessibility reviews\nCivic data\nPublic libraries\nClear writing\n\nI am practicing accessible component patterns and concise project writing.\n\nWORK\nLIBRARY-HOURS MAP\n\nA student project that organizes opening-hour information from a small set of fictional community libraries. The prototype focuses on clear labels and a useful mobile reading order.\n\nTypeScript, React, CSS\n\nView project\n↗\nPLAIN-LANGUAGE FORM STUDY\n\nA coursework study comparing two fictional signup-form drafts and documenting where participants hesitated.\n\nFigma, moderated study, notes\n\nHIGHLIGHTS\nPeer mentor for an introductory web workshop\nShortlisted class project in a fictional campus showcase\nHelped review keyboard navigation for a student club page\nLINKS\nEmail ↗\nGitHub ↗\nNotes ↗\nfolio"
+      }
+    },
+    "botanical-desktop": {
+      "screenshot": "qa-5c-botanical-desktop.png",
+      "metrics": {
+        "template": "botanical",
+        "h1Count": 1,
+        "mainCount": 1,
+        "sectionOrder": [
+          "about",
+          "education",
+          "skills",
+          "projects",
+          "highlights",
+          "contact"
+        ],
+        "navLinks": [
+          {
+            "href": "#portfolio-botanical-section-about",
+            "label": "About",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-botanical-section-education",
+            "label": "Education",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-botanical-section-skills",
+            "label": "Skills",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-botanical-section-projects",
+            "label": "Field notes",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-botanical-section-highlights",
+            "label": "Highlights",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-botanical-section-contact",
+            "label": "Links",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          }
+        ],
+        "anchors": [
+          {
+            "href": "#portfolio-botanical-section-about",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-botanical-section-education",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-botanical-section-skills",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-botanical-section-projects",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-botanical-section-highlights",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-botanical-section-contact",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "inline-flex"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          }
+        ],
+        "imgCount": 0,
+        "rootWidth": 1440,
+        "rootScrollWidth": 1440,
+        "mainWidth": 880,
+        "mainScrollWidth": 880,
+        "hasProjectsSection": true,
+        "projectCount": 2,
+        "aboutColumnCount": null,
+        "galleryArtFirst": null,
+        "galleryArtHeight": null,
+        "notebookBackground": null,
+        "notebookRootFont": null,
+        "notebookBodyFont": null,
+        "notebookHasPre": false,
+        "highlightItemDisplay": "block",
+        "highlightItemGridColumns": "28px minmax(0px, 1fr)",
+        "text": "FIELD JOURNAL\nVarshan Gowda\n\nComputer science student exploring civic technology\n\nBengaluru, India\nAbout\nEducation\nSkills\nField notes\nHighlights\nLinks\nAbout\n\nI enjoy working across research, interface design, and small web builds. My current focus is making useful information easier to find and understand.\n\nBased in Bengaluru, India\nEducation\nBachelor of Science · Computer Science\n\nNorthstar Learning Collective (fictional) · Expected 2027 · Coursework in human-computer interaction, data structures, and web development.\n\nSkills\nTypeScript\nReact\nFigma\nAccessibility reviews\nCivic data\nPublic libraries\nClear writing\n\nI am practicing accessible component patterns and concise project writing.\n\nField notes\n01\nLibrary-hours map\n\nA student project that organizes opening-hour information from a small set of fictional community libraries. The prototype focuses on clear labels and a useful mobile reading order.\n\nTypeScript, React, CSS\n\nView project\n↗\n02\nPlain-language form study\n\nA coursework study comparing two fictional signup-form drafts and documenting where participants hesitated.\n\nFigma, moderated study, notes\n\nHighlights\nPeer mentor for an introductory web workshop\nShortlisted class project in a fictional campus showcase\nHelped review keyboard navigation for a student club page\nLinks\nEmail ↗\nGitHub ↗\nNotes ↗\nfolio"
+      }
+    },
+    "gallery-desktop": {
+      "screenshot": "qa-5c-gallery-desktop.png",
+      "metrics": {
+        "template": "gallery",
+        "h1Count": 1,
+        "mainCount": 1,
+        "sectionOrder": [
+          "about",
+          "education",
+          "skills",
+          "projects",
+          "highlights",
+          "contact"
+        ],
+        "navLinks": [
+          {
+            "href": "#portfolio-gallery-section-about",
+            "label": "01About",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-gallery-section-education",
+            "label": "02Education",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-gallery-section-skills",
+            "label": "03Skills",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-gallery-section-projects",
+            "label": "04Work",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-gallery-section-highlights",
+            "label": "05Highlights",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-gallery-section-contact",
+            "label": "06Links",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          }
+        ],
+        "anchors": [
+          {
+            "href": "#portfolio-gallery-section-about",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-gallery-section-education",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-gallery-section-skills",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-gallery-section-projects",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-gallery-section-highlights",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-gallery-section-contact",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "inline-flex"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          }
+        ],
+        "imgCount": 0,
+        "rootWidth": 1440,
+        "rootScrollWidth": 1440,
+        "mainWidth": 1280,
+        "mainScrollWidth": 1280,
+        "hasProjectsSection": true,
+        "projectCount": 2,
+        "aboutColumnCount": null,
+        "galleryArtFirst": true,
+        "galleryArtHeight": 470,
+        "notebookBackground": null,
+        "notebookRootFont": null,
+        "notebookBodyFont": null,
+        "notebookHasPre": false,
+        "highlightItemDisplay": "block",
+        "highlightItemGridColumns": "28px minmax(0px, 1fr)",
+        "text": "PORTFOLIO\nVarshan Gowda\n\nComputer science student exploring civic technology\n\n01\nAbout\n02\nEducation\n03\nSkills\n04\nWork\n05\nHighlights\n06\nLinks\nAbout\n\nI enjoy working across research, interface design, and small web builds. My current focus is making useful information easier to find and understand.\n\nBased in Bengaluru, India\nEducation\nBachelor of Science · Computer Science\n\nNorthstar Learning Collective (fictional) · Expected 2027 · Coursework in human-computer interaction, data structures, and web development.\n\nSkills\nTypeScript\nReact\nFigma\nAccessibility reviews\nCivic data\nPublic libraries\nClear writing\n\nI am practicing accessible component patterns and concise project writing.\n\nWork\nLibrary-hours map\n\nA student project that organizes opening-hour information from a small set of fictional community libraries. The prototype focuses on clear labels and a useful mobile reading order.\n\nTypeScript, React, CSS\n\nView project\n↗\nPlain-language form study\n\nA coursework study comparing two fictional signup-form drafts and documenting where participants hesitated.\n\nFigma, moderated study, notes\n\nHighlights\nPeer mentor for an introductory web workshop\nShortlisted class project in a fictional campus showcase\nHelped review keyboard navigation for a student club page\nLinks\nEmail ↗\nGitHub ↗\nNotes ↗\nfolio"
+      }
+    },
+    "terminal-desktop": {
+      "screenshot": "qa-5c-terminal-desktop.png",
+      "metrics": {
+        "template": "terminal",
+        "h1Count": 1,
+        "mainCount": 1,
+        "sectionOrder": [
+          "about",
+          "education",
+          "skills",
+          "projects",
+          "highlights",
+          "contact"
+        ],
+        "navLinks": [
+          {
+            "href": "#portfolio-terminal-section-about",
+            "label": "01About",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-terminal-section-education",
+            "label": "02Education",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-terminal-section-skills",
+            "label": "03Skills",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-terminal-section-projects",
+            "label": "04Builds",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-terminal-section-highlights",
+            "label": "05Highlights",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-terminal-section-contact",
+            "label": "06Links",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          }
+        ],
+        "anchors": [
+          {
+            "href": "#portfolio-terminal-section-about",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-terminal-section-education",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-terminal-section-skills",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-terminal-section-projects",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-terminal-section-highlights",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-terminal-section-contact",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "inline-flex"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          }
+        ],
+        "imgCount": 0,
+        "rootWidth": 1440,
+        "rootScrollWidth": 1440,
+        "mainWidth": 918,
+        "mainScrollWidth": 918,
+        "hasProjectsSection": true,
+        "projectCount": 2,
+        "aboutColumnCount": null,
+        "galleryArtFirst": null,
+        "galleryArtHeight": null,
+        "notebookBackground": "rgb(251, 250, 245)",
+        "notebookRootFont": "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "notebookBodyFont": "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "notebookHasPre": false,
+        "highlightItemDisplay": "block",
+        "highlightItemGridColumns": "28px minmax(0px, 1fr)",
+        "text": "NOTEBOOK / LEARNING LOG\nVarshan Gowda\n\nComputer science student exploring civic technology\n\n01\nAbout\n02\nEducation\n03\nSkills\n04\nBuilds\n05\nHighlights\n06\nLinks\n01\nAbout\n\nI enjoy working across research, interface design, and small web builds. My current focus is making useful information easier to find and understand.\n\nBased in Bengaluru, India\n02\nEducation\nBachelor of Science · Computer Science\n\nNorthstar Learning Collective (fictional) · Expected 2027 · Coursework in human-computer interaction, data structures, and web development.\n\n03\nSkills\nTypeScript\nReact\nFigma\nAccessibility reviews\nCivic data\nPublic libraries\nClear writing\n\nI am practicing accessible component patterns and concise project writing.\n\n04\nBuilds\n01\nPROJECT\nLibrary-hours map\n\nA student project that organizes opening-hour information from a small set of fictional community libraries. The prototype focuses on clear labels and a useful mobile reading order.\n\nBuilt with TypeScript, React, CSS\n\nView project\n↗\n02\nPROJECT\nPlain-language form study\n\nA coursework study comparing two fictional signup-form drafts and documenting where participants hesitated.\n\nBuilt with Figma, moderated study, notes\n\n05\nHighlights\nPeer mentor for an introductory web workshop\nShortlisted class project in a fictional campus showcase\nHelped review keyboard navigation for a student club page\n06\nLinks\nEmail ↗\nGitHub ↗\nNotes ↗\nfolio"
+      }
+    },
+    "newsprint-mobile": {
+      "screenshot": "qa-5c-newsprint-mobile.png",
+      "metrics": {
+        "template": "newsprint",
+        "h1Count": 1,
+        "mainCount": 1,
+        "sectionOrder": [
+          "about",
+          "education",
+          "skills",
+          "projects",
+          "highlights",
+          "contact"
+        ],
+        "navLinks": [
+          {
+            "href": "#portfolio-newsprint-section-about",
+            "label": "About",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-newsprint-section-education",
+            "label": "Education",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-newsprint-section-skills",
+            "label": "Skills",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-newsprint-section-projects",
+            "label": "Work",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-newsprint-section-highlights",
+            "label": "Highlights",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-newsprint-section-contact",
+            "label": "Links",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          }
+        ],
+        "anchors": [
+          {
+            "href": "#portfolio-newsprint-section-about",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-newsprint-section-education",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-newsprint-section-skills",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-newsprint-section-projects",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-newsprint-section-highlights",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-newsprint-section-contact",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "inline-flex"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          }
+        ],
+        "imgCount": 0,
+        "rootWidth": 390,
+        "rootScrollWidth": 390,
+        "mainWidth": 328,
+        "mainScrollWidth": 328,
+        "hasProjectsSection": true,
+        "projectCount": 2,
+        "aboutColumnCount": "1",
+        "galleryArtFirst": null,
+        "galleryArtHeight": null,
+        "notebookBackground": null,
+        "notebookRootFont": null,
+        "notebookBodyFont": null,
+        "notebookHasPre": false,
+        "highlightItemDisplay": "list-item",
+        "highlightItemGridColumns": "28px minmax(0px, 1fr)",
+        "text": "PORTFOLIO\nFIELD NOTES\nVarshan Gowda\n\nComputer science student exploring civic technology\n\nBengaluru, India\nAbout\nEducation\nSkills\nWork\nHighlights\nLinks\nAbout\n\nI enjoy working across research, interface design, and small web builds. My current focus is making useful information easier to find and understand.\n\nBased in Bengaluru, India\nEducation\nBachelor of Science · Computer Science\n\nNorthstar Learning Collective (fictional) · Expected 2027 · Coursework in human-computer interaction, data structures, and web development.\n\nSkills\nTypeScript\nReact\nFigma\nAccessibility reviews\nCivic data\nPublic libraries\nClear writing\n\nI am practicing accessible component patterns and concise project writing.\n\nWork\nLibrary-hours map\n\nA student project that organizes opening-hour information from a small set of fictional community libraries. The prototype focuses on clear labels and a useful mobile reading order.\n\nTypeScript, React, CSS\n\nView project\n↗\nPlain-language form study\n\nA coursework study comparing two fictional signup-form drafts and documenting where participants hesitated.\n\nFigma, moderated study, notes\n\nHighlights\nPeer mentor for an introductory web workshop\nShortlisted class project in a fictional campus showcase\nHelped review keyboard navigation for a student club page\nLinks\nEmail ↗\nGitHub ↗\nNotes ↗\nfolio"
+      }
+    },
+    "brutalist-mobile": {
+      "screenshot": "qa-5c-brutalist-mobile.png",
+      "metrics": {
+        "template": "brutalist",
+        "h1Count": 1,
+        "mainCount": 1,
+        "sectionOrder": [
+          "about",
+          "education",
+          "skills",
+          "projects",
+          "highlights",
+          "contact"
+        ],
+        "navLinks": [
+          {
+            "href": "#portfolio-brutalist-section-about",
+            "label": "About",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-brutalist-section-education",
+            "label": "Education",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-brutalist-section-skills",
+            "label": "Skills",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-brutalist-section-projects",
+            "label": "Work",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-brutalist-section-highlights",
+            "label": "Highlights",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-brutalist-section-contact",
+            "label": "Links",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          }
+        ],
+        "anchors": [
+          {
+            "href": "#portfolio-brutalist-section-about",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-brutalist-section-education",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-brutalist-section-skills",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-brutalist-section-projects",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-brutalist-section-highlights",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-brutalist-section-contact",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "inline-flex"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          }
+        ],
+        "imgCount": 0,
+        "rootWidth": 390,
+        "rootScrollWidth": 390,
+        "mainWidth": 359,
+        "mainScrollWidth": 359,
+        "hasProjectsSection": true,
+        "projectCount": 2,
+        "aboutColumnCount": null,
+        "galleryArtFirst": null,
+        "galleryArtHeight": null,
+        "notebookBackground": null,
+        "notebookRootFont": null,
+        "notebookBodyFont": null,
+        "notebookHasPre": false,
+        "highlightItemDisplay": "block",
+        "highlightItemGridColumns": "28px minmax(0px, 1fr)",
+        "text": "PORTFOLIO / PROFILE\nVARSHAN GOWDA\n\nComputer science student exploring civic technology\n\nABOUT\nEDUCATION\nSKILLS\nWORK\nHIGHLIGHTS\nLINKS\nABOUT\n\nI enjoy working across research, interface design, and small web builds. My current focus is making useful information easier to find and understand.\n\nBased in Bengaluru, India\nEDUCATION\nBachelor of Science · Computer Science\n\nNorthstar Learning Collective (fictional) · Expected 2027 · Coursework in human-computer interaction, data structures, and web development.\n\nSKILLS\nTypeScript\nReact\nFigma\nAccessibility reviews\nCivic data\nPublic libraries\nClear writing\n\nI am practicing accessible component patterns and concise project writing.\n\nWORK\nLIBRARY-HOURS MAP\n\nA student project that organizes opening-hour information from a small set of fictional community libraries. The prototype focuses on clear labels and a useful mobile reading order.\n\nTypeScript, React, CSS\n\nView project\n↗\nPLAIN-LANGUAGE FORM STUDY\n\nA coursework study comparing two fictional signup-form drafts and documenting where participants hesitated.\n\nFigma, moderated study, notes\n\nHIGHLIGHTS\nPeer mentor for an introductory web workshop\nShortlisted class project in a fictional campus showcase\nHelped review keyboard navigation for a student club page\nLINKS\nEmail ↗\nGitHub ↗\nNotes ↗\nfolio"
+      }
+    },
+    "botanical-mobile": {
+      "screenshot": "qa-5c-botanical-mobile.png",
+      "metrics": {
+        "template": "botanical",
+        "h1Count": 1,
+        "mainCount": 1,
+        "sectionOrder": [
+          "about",
+          "education",
+          "skills",
+          "projects",
+          "highlights",
+          "contact"
+        ],
+        "navLinks": [
+          {
+            "href": "#portfolio-botanical-section-about",
+            "label": "About",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-botanical-section-education",
+            "label": "Education",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-botanical-section-skills",
+            "label": "Skills",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-botanical-section-projects",
+            "label": "Field notes",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-botanical-section-highlights",
+            "label": "Highlights",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-botanical-section-contact",
+            "label": "Links",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          }
+        ],
+        "anchors": [
+          {
+            "href": "#portfolio-botanical-section-about",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-botanical-section-education",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-botanical-section-skills",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-botanical-section-projects",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-botanical-section-highlights",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-botanical-section-contact",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "inline-flex"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          }
+        ],
+        "imgCount": 0,
+        "rootWidth": 390,
+        "rootScrollWidth": 390,
+        "mainWidth": 354,
+        "mainScrollWidth": 354,
+        "hasProjectsSection": true,
+        "projectCount": 2,
+        "aboutColumnCount": null,
+        "galleryArtFirst": null,
+        "galleryArtHeight": null,
+        "notebookBackground": null,
+        "notebookRootFont": null,
+        "notebookBodyFont": null,
+        "notebookHasPre": false,
+        "highlightItemDisplay": "block",
+        "highlightItemGridColumns": "28px minmax(0px, 1fr)",
+        "text": "FIELD JOURNAL\nVarshan Gowda\n\nComputer science student exploring civic technology\n\nBengaluru, India\nAbout\nEducation\nSkills\nField notes\nHighlights\nLinks\nAbout\n\nI enjoy working across research, interface design, and small web builds. My current focus is making useful information easier to find and understand.\n\nBased in Bengaluru, India\nEducation\nBachelor of Science · Computer Science\n\nNorthstar Learning Collective (fictional) · Expected 2027 · Coursework in human-computer interaction, data structures, and web development.\n\nSkills\nTypeScript\nReact\nFigma\nAccessibility reviews\nCivic data\nPublic libraries\nClear writing\n\nI am practicing accessible component patterns and concise project writing.\n\nField notes\n01\nLibrary-hours map\n\nA student project that organizes opening-hour information from a small set of fictional community libraries. The prototype focuses on clear labels and a useful mobile reading order.\n\nTypeScript, React, CSS\n\nView project\n↗\n02\nPlain-language form study\n\nA coursework study comparing two fictional signup-form drafts and documenting where participants hesitated.\n\nFigma, moderated study, notes\n\nHighlights\nPeer mentor for an introductory web workshop\nShortlisted class project in a fictional campus showcase\nHelped review keyboard navigation for a student club page\nLinks\nEmail ↗\nGitHub ↗\nNotes ↗\nfolio"
+      }
+    },
+    "gallery-mobile": {
+      "screenshot": "qa-5c-gallery-mobile.png",
+      "metrics": {
+        "template": "gallery",
+        "h1Count": 1,
+        "mainCount": 1,
+        "sectionOrder": [
+          "about",
+          "education",
+          "skills",
+          "projects",
+          "highlights",
+          "contact"
+        ],
+        "navLinks": [
+          {
+            "href": "#portfolio-gallery-section-about",
+            "label": "01About",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-gallery-section-education",
+            "label": "02Education",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-gallery-section-skills",
+            "label": "03Skills",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-gallery-section-projects",
+            "label": "04Work",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-gallery-section-highlights",
+            "label": "05Highlights",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-gallery-section-contact",
+            "label": "06Links",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          }
+        ],
+        "anchors": [
+          {
+            "href": "#portfolio-gallery-section-about",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-gallery-section-education",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-gallery-section-skills",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-gallery-section-projects",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-gallery-section-highlights",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-gallery-section-contact",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "inline-flex"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          }
+        ],
+        "imgCount": 0,
+        "rootWidth": 390,
+        "rootScrollWidth": 390,
+        "mainWidth": 354,
+        "mainScrollWidth": 354,
+        "hasProjectsSection": true,
+        "projectCount": 2,
+        "aboutColumnCount": null,
+        "galleryArtFirst": true,
+        "galleryArtHeight": 230.09375,
+        "notebookBackground": null,
+        "notebookRootFont": null,
+        "notebookBodyFont": null,
+        "notebookHasPre": false,
+        "highlightItemDisplay": "block",
+        "highlightItemGridColumns": "28px minmax(0px, 1fr)",
+        "text": "PORTFOLIO\nVarshan Gowda\n\nComputer science student exploring civic technology\n\n01\nAbout\n02\nEducation\n03\nSkills\n04\nWork\n05\nHighlights\n06\nLinks\nAbout\n\nI enjoy working across research, interface design, and small web builds. My current focus is making useful information easier to find and understand.\n\nBased in Bengaluru, India\nEducation\nBachelor of Science · Computer Science\n\nNorthstar Learning Collective (fictional) · Expected 2027 · Coursework in human-computer interaction, data structures, and web development.\n\nSkills\nTypeScript\nReact\nFigma\nAccessibility reviews\nCivic data\nPublic libraries\nClear writing\n\nI am practicing accessible component patterns and concise project writing.\n\nWork\nLibrary-hours map\n\nA student project that organizes opening-hour information from a small set of fictional community libraries. The prototype focuses on clear labels and a useful mobile reading order.\n\nTypeScript, React, CSS\n\nView project\n↗\nPlain-language form study\n\nA coursework study comparing two fictional signup-form drafts and documenting where participants hesitated.\n\nFigma, moderated study, notes\n\nHighlights\nPeer mentor for an introductory web workshop\nShortlisted class project in a fictional campus showcase\nHelped review keyboard navigation for a student club page\nLinks\nEmail ↗\nGitHub ↗\nNotes ↗\nfolio"
+      }
+    },
+    "terminal-mobile": {
+      "screenshot": "qa-5c-terminal-mobile.png",
+      "metrics": {
+        "template": "terminal",
+        "h1Count": 1,
+        "mainCount": 1,
+        "sectionOrder": [
+          "about",
+          "education",
+          "skills",
+          "projects",
+          "highlights",
+          "contact"
+        ],
+        "navLinks": [
+          {
+            "href": "#portfolio-terminal-section-about",
+            "label": "01About",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-terminal-section-education",
+            "label": "02Education",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-terminal-section-skills",
+            "label": "03Skills",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-terminal-section-projects",
+            "label": "04Builds",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-terminal-section-highlights",
+            "label": "05Highlights",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          },
+          {
+            "href": "#portfolio-terminal-section-contact",
+            "label": "06Links",
+            "minHeight": 44,
+            "height": 44,
+            "targetExists": true
+          }
+        ],
+        "anchors": [
+          {
+            "href": "#portfolio-terminal-section-about",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-terminal-section-education",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-terminal-section-skills",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-terminal-section-projects",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-terminal-section-highlights",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "#portfolio-terminal-section-contact",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://library-map.example.test/",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "inline-flex"
+          },
+          {
+            "href": "mailto:varshan@example.test",
+            "target": null,
+            "rel": "",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://code.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          },
+          {
+            "href": "https://notes.example.test/varshan",
+            "target": "_blank",
+            "rel": "noopener noreferrer",
+            "height": 44,
+            "minHeight": 44,
+            "display": "flex"
+          }
+        ],
+        "imgCount": 0,
+        "rootWidth": 390,
+        "rootScrollWidth": 390,
+        "mainWidth": 336,
+        "mainScrollWidth": 336,
+        "hasProjectsSection": true,
+        "projectCount": 2,
+        "aboutColumnCount": null,
+        "galleryArtFirst": null,
+        "galleryArtHeight": null,
+        "notebookBackground": "rgb(251, 250, 245)",
+        "notebookRootFont": "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "notebookBodyFont": "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, \"Segoe UI\", sans-serif",
+        "notebookHasPre": false,
+        "highlightItemDisplay": "block",
+        "highlightItemGridColumns": "28px minmax(0px, 1fr)",
+        "text": "NOTEBOOK / LEARNING LOG\nVarshan Gowda\n\nComputer science student exploring civic technology\n\n01\nAbout\n02\nEducation\n03\nSkills\n04\nBuilds\n05\nHighlights\n06\nLinks\n01\nAbout\n\nI enjoy working across research, interface design, and small web builds. My current focus is making useful information easier to find and understand.\n\nBased in Bengaluru, India\n02\nEducation\nBachelor of Science · Computer Science\n\nNorthstar Learning Collective (fictional) · Expected 2027 · Coursework in human-computer interaction, data structures, and web development.\n\n03\nSkills\nTypeScript\nReact\nFigma\nAccessibility reviews\nCivic data\nPublic libraries\nClear writing\n\nI am practicing accessible component patterns and concise project writing.\n\n04\nBuilds\n01\nPROJECT\nLibrary-hours map\n\nA student project that organizes opening-hour information from a small set of fictional community libraries. The prototype focuses on clear labels and a useful mobile reading order.\n\nBuilt with TypeScript, React, CSS\n\nView project\n↗\n02\nPROJECT\nPlain-language form study\n\nA coursework study comparing two fictional signup-form drafts and documenting where participants hesitated.\n\nBuilt with Figma, moderated study, notes\n\n05\nHighlights\nPeer mentor for an introductory web workshop\nShortlisted class project in a fictional campus showcase\nHelped review keyboard navigation for a student club page\n06\nLinks\nEmail ↗\nGitHub ↗\nNotes ↗\nfolio"
+      }
+    },
+    "grayscaleComparison": "qa-5c-grayscale-comparison-desktop.png"
+  },
+  "browserErrors": [],
+  "failedChecks": [],
+  "summary": {
+    "renderCasesPassed": 50,
+    "renderCasesTotal": 50,
+    "failedChecks": 0,
+    "browserErrors": 0,
+    "extraChecks": {
+      "links": 5,
+      "hiddenProjects": 5,
+      "reversedOrder": 5,
+      "accessibility": 5,
+      "longCopy": 5,
+      "noProjectAndMissingImage": 5,
+      "structuralCollisionPairs": 5
+    }
+  }
+}

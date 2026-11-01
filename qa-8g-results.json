@@ -1,0 +1,16 @@
+{
+  "checkpoint": "8G",
+  "checks": {},
+  "browserErrors": [],
+  "axeViolations": [
+    {
+      "label": "Account Page (Advanced mode)",
+      "violations": []
+    },
+    {
+      "label": "Studio Advanced Workspace",
+      "violations": []
+    }
+  ],
+  "failedChecks": []
+}

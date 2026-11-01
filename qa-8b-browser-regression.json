@@ -1,0 +1,48 @@
+{
+  "checkpoint": "8B",
+  "checks": {
+    "securityUnauthPublishRejected": true,
+    "securityUnauthUnpublishRejected": true,
+    "flowA_initialStatusUnpublished": true,
+    "flowA_modalOpened": true,
+    "flowA_devAuthSucceeded": true,
+    "flowA_liveSuccessModal": true,
+    "flowA_publicUrlVerified": true,
+    "flowA_studioStatusPublished": true,
+    "flowA_headerButtonPublished": true,
+    "flowA_publicContentRenders": true,
+    "flowA_notesSanitized": true,
+    "flowB_studioReportsUnpublishedChanges": true,
+    "flowB_headerButtonPublishUpdates": true,
+    "flowB_publicPageRetainsOldSnapshot": true,
+    "flowC_publicPageReflectsNewSnapshot": true,
+    "flowD_slugConflictHandled": true,
+    "flowD_draftPreserved": true,
+    "flowE_confirmationPrompt": true,
+    "flowE_studioShowsUnpublished": true,
+    "flowE_publicRouteReturns404": true,
+    "flowE_draftPreserved": true,
+    "flowF_networkErrorHandled": true,
+    "flowF_buttonReenabled": true,
+    "flowF_retrySucceeded": true,
+    "flowG_axeZeroViolations": true,
+    "flowG_escapeDismissal": true,
+    "flowG_studioMobileNoOverflow": true,
+    "flowG_publicMobileNoOverflow": true
+  },
+  "browserErrors": [],
+  "axeViolations": [
+    {
+      "label": "Publish modal",
+      "violations": []
+    }
+  ],
+  "failedChecks": [],
+  "summary": {
+    "checksPassed": 28,
+    "checksTotal": 28,
+    "axeViolations": 0,
+    "browserErrors": 0,
+    "failedChecks": 0
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "checkpoint": "8D",
+  "checks": {},
+  "browserErrors": [],
+  "axeViolations": [
+    {
+      "label": "Anonymous /account",
+      "violations": []
+    },
+    {
+      "label": "Studio Shell",
+      "violations": []
+    },
+    {
+      "label": "Authenticated /account with Dev Credits",
+      "violations": []
+    },
+    {
+      "label": "Landing Page",
+      "violations": []
+    },
+    {
+      "label": "Public Portfolio /p/[slug]",
+      "violations": []
+    }
+  ],
+  "failedChecks": []
+}

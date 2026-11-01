@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f6f1" />
+  <title>folio — your first portfolio, made simple</title>
+  <style>
+    :root {
+      --paper: #f7f6f1;
+      --paper-deep: #efeee7;
+      --surface: #fffefa;
+      --ink: #252d29;
+      --muted: #69736d;
+      --quiet: #929a94;
+      --line: #e4e5dc;
+      --line-dark: #d6d9cf;
+      --green: #365d4a;
+      --green-dark: #284a39;
+      --green-soft: #e8efe9;
+      --apricot: #c8795d;
+      --apricot-soft: #f5e9e0;
+      --blue-soft: #e9eef1;
+      --shadow: 0 24px 70px rgba(40, 55, 46, .08);
+      --shadow-soft: 0 8px 28px rgba(40, 55, 46, .055);
+      --serif: "Iowan Old Style", "Baskerville", "Palatino Linotype", Georgia, serif;
+      --sans: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color-scheme: light;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    button, input, textarea, select { font: inherit; }
+    button { cursor: pointer; }
+    a { color: inherit; }
+    .hidden { display: none !important; }
+    .serif { font-family: var(--serif); font-weight: 400; }
+    .eyebrow { color: var(--green); font-size: 10px; line-height: 1.3; font-weight: 750; text-transform: uppercase; letter-spacing: .14em; }
+    .logo { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); font-size: 20px; letter-spacing: -.06em; font-weight: 760; text-decoration: none; }
+    .logo-mark { width: 25px; height: 25px; display: inline-grid; place-items: center; color: #fff; background: var(--green); border-radius: 8px 8px 8px 3px; transform: rotate(-4deg); }
+    .logo-mark svg { width: 15px; height: 15px; transform: rotate(4deg); }
+    .topbar { height: 74px; display: flex; align-items: center; justify-content: space-between; padding: 0 clamp(22px, 6vw, 88px); border-bottom: 1px solid rgba(42, 54, 47, .08); background: rgba(247,246,241,.86); position: relative; z-index: 5; }
+    .nav-links { display: flex; align-items: center; gap: 32px; color: #5c665f; font-size: 12px; font-weight: 560; }
+    .nav-links a { text-decoration: none; transition: color .2s; }
+    .nav-links a:hover { color: var(--green); }
+    .nav-actions { display: flex; align-items: center; gap: 15px; }
+    .text-button { border: 0; background: none; color: #59635d; padding: 9px 4px; font-weight: 650; font-size: 12px; }
+    .text-button:hover { color: var(--green); }
+    .button { display: inline-flex; justify-content: center; align-items: center; gap: 10px; border: 1px solid transparent; border-radius: 9px; padding: 13px 18px; min-height: 44px; color: white; background: var(--green); font-size: 12px; font-weight: 700; letter-spacing: -.01em; text-decoration: none; box-shadow: 0 5px 12px rgba(42, 79, 59, .12); transition: transform .18s, background .18s, box-shadow .18s; }
+    .button:hover { transform: translateY(-1px); background: var(--green-dark); box-shadow: 0 8px 18px rgba(42, 79, 59, .17); }
+    .button:active { transform: translateY(0); }
+    .button svg { width: 15px; height: 15px; }
+    .button.secondary { background: transparent; border-color: var(--line-dark); color: var(--ink); box-shadow: none; }
+    .button.secondary:hover { background: #fffefa; border-color: #b9c5bb; box-shadow: none; }
+    .button.small { min-height: 37px; padding: 9px 13px; font-size: 11px; border-radius: 8px; }
+    .button.light { background: #fffefa; color: var(--green); box-shadow: none; }
+    .button.light:hover { background: #f5f7f2; }
+    .button.subtle { background: transparent; color: var(--muted); box-shadow: none; border-color: transparent; }
+    .button.subtle:hover { background: var(--paper-deep); color: var(--ink); box-shadow: none; transform: none; }
+
+    /* Landing page */
+    .landing { overflow: hidden; }
+    .hero-wrap { max-width: 1260px; margin: 0 auto; padding: 66px 38px 53px; }
+    .hero-grid { min-height: 475px; display: grid; grid-template-columns: minmax(370px, .92fr) minmax(440px, 1.08fr); align-items: center; gap: clamp(42px, 8vw, 110px); }
+    .hero-copy { padding: 15px 0 32px; max-width: 525px; }
+    .hero-kicker { display: inline-flex; align-items: center; gap: 9px; border: 1px solid #dce3dc; border-radius: 99px; padding: 7px 11px; color: var(--green); background: rgba(255,255,255,.43); font-size: 10px; text-transform: uppercase; letter-spacing: .12em; font-weight: 750; }
+    .kicker-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--apricot); }
+    .hero-copy h1 { max-width: 550px; margin: 23px 0 18px; font-family: var(--serif); font-size: clamp(45px, 5.7vw, 74px); line-height: .99; font-weight: 400; letter-spacing: -.065em; }
+    .hero-copy h1 em { color: var(--green); font-style: italic; }
+    .hero-copy > p { max-width: 445px; margin: 0; color: #657069; font-size: 15px; line-height: 1.78; }
+    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 15px; margin-top: 28px; }
+    .hero-actions .button { min-height: 49px; padding: 14px 20px; }
+    .hero-note { margin-top: 18px; color: #89918b; font-size: 10px; display: flex; align-items: center; gap: 7px; }
+    .hero-note svg { width: 13px; height: 13px; color: var(--green); }
+    .hero-art { position: relative; min-height: 420px; display: flex; align-items: center; justify-content: center; }
+    .art-wash { position: absolute; width: 83%; height: 78%; right: 0; top: 9%; background: #ebeee7; border-radius: 48% 52% 40% 60% / 51% 42% 58% 49%; transform: rotate(-4deg); }
+    .folio-sample { position: relative; width: min(100%, 525px); min-height: 376px; z-index: 1; background: #fffefa; border: 1px solid rgba(49,65,54,.11); border-radius: 12px; box-shadow: 0 24px 62px rgba(32,49,39,.13); transform: rotate(1.5deg); overflow: hidden; }
+    .sample-browser { height: 35px; display: flex; align-items: center; gap: 5px; padding: 0 14px; border-bottom: 1px solid #eeeee8; background: rgba(249,248,243,.75); }
+    .browser-dot { width: 6px; height: 6px; border-radius: 50%; background: #d4d5cf; }
+    .sample-url { margin: 0 auto; color: #9ba19a; font-size: 8px; letter-spacing: .03em; }
+    .sample-page { padding: 29px 38px 30px; }
+    .sample-topline { display: flex; align-items: center; justify-content: space-between; padding-bottom: 17px; border-bottom: 1px solid #e8e8df; color: #788079; font-size: 8px; letter-spacing: .1em; text-transform: uppercase; }
+    .sample-availability { display: flex; align-items: center; gap: 6px; color: var(--green); letter-spacing: .02em; text-transform: none; }
+    .sample-availability i { width: 5px; height: 5px; background: #5f906e; border-radius: 50%; }
+    .sample-hero { display: grid; grid-template-columns: 1fr 85px; gap: 20px; align-items: center; padding: 28px 0 24px; }
+    .sample-hero .eyebrow { font-size: 8px; letter-spacing: .13em; }
+    .sample-hero h2 { margin: 8px 0 8px; font-family: var(--serif); font-size: 42px; line-height: .95; letter-spacing: -.06em; font-weight: 400; }
+    .sample-hero p { max-width: 300px; margin: 0; color: #68736c; font-size: 10px; line-height: 1.6; }
+    .sample-avatar { width: 77px; height: 88px; border-radius: 45% 45% 7px 7px; display: grid; place-items: center; color: #fff; background: #b7c4b5; font-family: var(--serif); font-size: 26px; position: relative; overflow: hidden; }
+    .sample-avatar:before { content: ""; position: absolute; inset: 8px 10px 0; border: 1px solid rgba(255,255,255,.48); border-radius: 45% 45% 5px 5px; }
+    .sample-facts { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 14px; }
+    .sample-facts span { border: 1px solid #e5e7df; border-radius: 99px; padding: 5px 8px; color: #67716a; font-size: 8px; }
+    .sample-rule { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; border-top: 1px solid #e8e8df; padding-top: 18px; }
+    .sample-rule h3 { margin: 0 0 7px; font-size: 9px; font-weight: 700; }
+    .sample-rule p { margin: 0; color: #828981; font-size: 8px; line-height: 1.6; }
+    .sample-project { background: #f4f3ec; min-height: 66px; padding: 12px; border-radius: 5px; }
+    .sample-project small { display: block; margin-bottom: 5px; color: #9b775d; font-size: 7px; text-transform: uppercase; letter-spacing: .08em; }
+    .sample-project strong { font-family: var(--serif); font-size: 12px; font-weight: 400; }
+    .float-note { position: absolute; z-index: 2; display: flex; align-items: center; gap: 9px; padding: 11px 13px; border: 1px solid rgba(46,65,52,.09); border-radius: 9px; background: rgba(255,254,250,.94); box-shadow: var(--shadow-soft); color: #5f6962; font-size: 9px; line-height: 1.35; }
+    .float-note strong { display: block; color: var(--ink); font-size: 10px; margin-bottom: 2px; }
+    .float-icon { width: 25px; height: 25px; display: grid; place-items: center; color: var(--green); background: var(--green-soft); border-radius: 7px; }
+    .float-icon svg { width: 14px; height: 14px; }
+    .float-note.note-one { left: -23px; bottom: 27px; }
+    .float-note.note-two { top: 31px; right: -16px; }
+    .float-note.note-two .float-icon { color: var(--apricot); background: var(--apricot-soft); }
+    .hero-bottom { display: flex; align-items: center; justify-content: space-between; margin-top: 43px; padding-top: 20px; border-top: 1px solid #e4e5dc; color: #78817a; font-size: 10px; }
+    .hero-bottom strong { color: #46524a; font-weight: 650; }
+    .mini-avatars { display: flex; align-items: center; }
+    .mini-avatars span { width: 23px; height: 23px; margin-left: -5px; display: grid; place-items: center; border: 2px solid var(--paper); border-radius: 50%; background: #d9e2d8; color: #536452; font-size: 8px; font-weight: 700; }
+    .mini-avatars span:first-child { margin-left: 0; background: #f0d5c5; color: #795846; }
+    .mini-avatars span:nth-child(2) { background: #cbd9d9; color: #4c6765; }
+    .mini-avatars span:nth-child(3) { background: #e8dfbd; color: #766943; }
+    .social-proof { display: flex; align-items: center; gap: 9px; }
+    .social-proof p { margin: 0; }
+    .social-proof .stars { color: #b67d47; letter-spacing: 2px; font-size: 11px; }
+    .section-pad { padding: 90px 38px; }
+    .section-inner { max-width: 1170px; margin: 0 auto; }
+    .section-heading { max-width: 570px; margin-bottom: 39px; }
+    .section-heading h2 { margin: 11px 0 10px; font-family: var(--serif); font-weight: 400; font-size: clamp(34px, 4vw, 48px); letter-spacing: -.05em; line-height: 1.02; }
+    .section-heading p { max-width: 485px; margin: 0; color: var(--muted); font-size: 13px; line-height: 1.7; }
+    .how-section { background: #eeefe8; }
+    .steps-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .landing-step { min-height: 194px; padding: 24px 23px; border: 1px solid rgba(55,78,61,.09); border-radius: 10px; background: rgba(255,254,250,.63); }
+    .step-number { width: 29px; height: 29px; display: grid; place-items: center; border-radius: 8px; color: var(--green); background: #e3ece3; font-family: var(--serif); font-size: 15px; }
+    .landing-step h3 { margin: 21px 0 8px; font-size: 13px; letter-spacing: -.02em; }
+    .landing-step p { max-width: 290px; margin: 0; color: #6e7870; font-size: 11px; line-height: 1.65; }
+    .count-section { display: grid; grid-template-columns: .8fr 1.2fr; gap: 75px; align-items: start; }
+    .count-section .section-heading { margin: 0; }
+    .count-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; }
+    .count-card { min-height: 133px; padding: 19px; border: 1px solid var(--line); border-radius: 9px; background: #fffefa; }
+    .count-card .count-icon { color: var(--green); font-size: 15px; }
+    .count-card h3 { margin: 17px 0 6px; font-size: 11px; }
+    .count-card p { margin: 0; color: #7b847d; font-size: 10px; line-height: 1.6; }
+    .design-section { background: #f1f0ea; }
+    .design-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+    .design-card { border: 1px solid #e0e1d9; background: #fffefa; border-radius: 10px; padding: 11px; transition: transform .2s, box-shadow .2s; }
+    .design-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-soft); }
+    .mini-site { height: 149px; overflow: hidden; padding: 17px; border-radius: 6px; background: #f8f7f2; position: relative; }
+    .mini-site:before { content: ""; position: absolute; left: 17px; right: 17px; top: 14px; border-top: 1px solid #e1e1d8; }
+    .mini-site .mini-eyebrow { margin-top: 10px; color: var(--green); font-size: 6px; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+    .mini-site h4 { margin: 10px 0 6px; color: #2c332e; font-family: var(--serif); font-size: 27px; font-weight: 400; letter-spacing: -.06em; line-height: 1; }
+    .mini-site p { max-width: 195px; margin: 0; color: #7d857e; font-size: 7px; line-height: 1.45; }
+    .mini-site.minimal { padding-left: 30px; }
+    .mini-site.editorial { background: #f4eee8; }
+    .mini-site.editorial:after { content: "01"; position: absolute; top: 31px; right: 20px; color: #c67b5f; font-family: var(--serif); font-size: 35px; }
+    .mini-site.project { background: #e9eee8; }
+    .mini-site.project:after { content: "Selected work"; position: absolute; left: 17px; right: 17px; bottom: 14px; height: 23px; padding: 7px 8px; border-radius: 3px; background: #fffefa; color: #7b827c; font-size: 7px; }
+    .design-card-bottom { display: flex; align-items: center; justify-content: space-between; padding: 13px 8px 6px; }
+    .design-card-bottom strong { font-size: 11px; }
+    .design-card-bottom span { color: #858d86; font-size: 9px; }
+    .final-cta { padding: 78px 30px; text-align: center; background: var(--green); color: #f9f8f1; }
+    .final-cta .eyebrow { color: #c9dccb; }
+    .final-cta h2 { max-width: 570px; margin: 14px auto 12px; font-family: var(--serif); font-size: clamp(38px, 5vw, 56px); line-height: .99; font-weight: 400; letter-spacing: -.055em; }
+    .final-cta p { max-width: 390px; margin: 0 auto; color: #d4dfd5; font-size: 12px; line-height: 1.7; }
+    .final-cta .button { margin-top: 23px; }
+    .footer { min-height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 15px; max-width: 1260px; margin: 0 auto; padding: 20px 38px; color: #818981; font-size: 9px; }
+    .footer .logo { font-size: 16px; }
+    .footer .logo-mark { width: 20px; height: 20px; border-radius: 6px 6px 6px 2px; }
+    .footer .logo-mark svg { width: 12px; height: 12px; }
+
+    /* Editor app */
+    .studio { min-height: 100vh; background: #f4f5f1; }
+    .studio-bar { height: 64px; position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 0 25px; border-bottom: 1px solid #e5e8e1; background: rgba(255,255,252,.93); backdrop-filter: blur(14px); }
+    .studio-brand { display: flex; align-items: center; gap: 19px; min-width: 210px; }
+    .studio-brand .logo { font-size: 18px; }
+    .bar-separator { width: 1px; height: 22px; background: var(--line); }
+    .draft-label { color: #7b857d; font-size: 10px; }
+    .studio-center { display: flex; align-items: center; justify-content: center; gap: 8px; color: #747e76; font-size: 10px; }
+    .save-dot { width: 6px; height: 6px; border-radius: 50%; background: #6a9875; }
+    .studio-actions { min-width: 230px; display: flex; justify-content: flex-end; align-items: center; gap: 10px; }
+    .mobile-switch { display: none; align-items: center; padding: 3px; border: 1px solid #e2e4dd; border-radius: 8px; background: #f7f8f4; }
+    .mobile-switch button { min-height: 29px; padding: 6px 10px; border: 0; border-radius: 6px; background: transparent; color: #69736c; font-size: 10px; font-weight: 650; }
+    .mobile-switch button.active { background: #fffefa; color: var(--ink); box-shadow: 0 1px 4px rgba(31,42,35,.1); }
+    .studio-layout { max-width: 1580px; min-height: calc(100vh - 64px); margin: 0 auto; padding: 24px 24px 32px; display: grid; grid-template-columns: 190px minmax(320px, 440px) minmax(410px, 1fr); align-items: start; gap: 22px; }
+    .steps-rail { padding: 17px 6px; position: sticky; top: 84px; }
+    .rail-title { margin: 0 0 8px 9px; color: #929a93; font-size: 9px; font-weight: 750; text-transform: uppercase; letter-spacing: .12em; }
+    .rail-progress { height: 3px; margin: 12px 9px 20px; border-radius: 99px; background: #e1e5dd; overflow: hidden; }
+    .rail-progress span { display: block; height: 100%; border-radius: inherit; background: var(--green); transition: width .25s; }
+    .step-list { display: grid; gap: 4px; }
+    .rail-step { width: 100%; display: flex; align-items: center; gap: 10px; padding: 10px 9px; border: 0; border-radius: 8px; background: transparent; color: #778078; text-align: left; font-size: 10px; font-weight: 600; transition: background .2s, color .2s; }
+    .rail-step:hover { background: #ebeee8; color: var(--ink); }
+    .rail-step.active { background: #e7eee7; color: var(--green-dark); }
+    .rail-step.done .step-mini-number { color: var(--green); background: #d6e5d8; }
+    .step-mini-number { width: 21px; height: 21px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 50%; background: #eceee8; color: #929991; font-size: 9px; font-weight: 750; }
+    .rail-tip { margin: 34px 7px 0; padding: 13px; border: 1px solid #e3e6dc; border-radius: 8px; background: rgba(255,255,252,.72); }
+    .rail-tip svg { width: 15px; height: 15px; color: var(--apricot); }
+    .rail-tip p { margin: 8px 0 0; color: #7a837b; font-size: 9px; line-height: 1.65; }
+    .form-panel { min-width: 0; padding: 23px 25px 21px; border: 1px solid #e4e7df; border-radius: 12px; background: #fffefa; box-shadow: 0 7px 22px rgba(42,53,45,.025); }
+    .step-overline { display: flex; align-items: center; gap: 8px; color: var(--green); font-size: 9px; font-weight: 750; letter-spacing: .11em; text-transform: uppercase; }
+    .step-overline .tiny-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--apricot); }
+    .form-panel h1 { margin: 14px 0 8px; font-family: var(--serif); font-size: 34px; line-height: 1.03; letter-spacing: -.055em; font-weight: 400; }
+    .step-intro { max-width: 380px; margin: 0 0 22px; color: #7b847d; font-size: 11px; line-height: 1.65; }
+    .form-stack { display: grid; gap: 15px; }
+    .field { display: grid; gap: 6px; }
+    .field label, .field-label { color: #444f47; font-size: 10px; font-weight: 700; }
+    .optional { margin-left: 4px; color: #9ba29c; font-size: 9px; font-weight: 450; }
+    .field input, .field textarea, .field select { width: 100%; min-height: 39px; border: 1px solid #e2e5dd; border-radius: 7px; outline: none; padding: 10px 11px; color: #344039; background: #fff; font-size: 10px; transition: border .15s, box-shadow .15s; }
+    .field input::placeholder, .field textarea::placeholder { color: #b0b6b0; }
+    .field input:focus, .field textarea:focus, .field select:focus { border-color: #90a695; box-shadow: 0 0 0 3px rgba(76,119,87,.09); }
+    .field textarea { min-height: 86px; resize: vertical; line-height: 1.6; }
+    .field textarea.tall { min-height: 112px; }
+    .field-help { color: #929b93; font-size: 9px; line-height: 1.5; }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+    .helper-box { display: flex; gap: 10px; padding: 12px 12px 12px 11px; border: 1px solid #e1e9df; border-radius: 8px; background: #f2f6ef; color: #6e7e70; font-size: 9px; line-height: 1.55; }
+    .helper-box .helper-mark { width: 20px; height: 20px; flex: 0 0 auto; display: grid; place-items: center; border-radius: 6px; background: #e1ebdf; color: var(--green); }
+    .helper-mark svg { width: 12px; height: 12px; }
+    .helper-box strong { display: block; margin-bottom: 2px; color: #47604c; font-size: 9px; }
+    .field-title-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+    .hint-button { border: 0; padding: 3px 0; background: transparent; color: var(--green); font-size: 9px; font-weight: 700; }
+    .hint-button:hover { text-decoration: underline; }
+    .chip-entry { display: flex; gap: 7px; }
+    .chip-entry input { flex: 1; min-width: 0; }
+    .chip-entry button { width: 39px; border: 1px solid #dce3da; border-radius: 7px; background: #f1f5ef; color: var(--green); font-size: 17px; }
+    .chip-entry button:hover { background: #e5eee4; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .chip { display: inline-flex; align-items: center; gap: 6px; padding: 6px 8px 6px 9px; border: 1px solid #e3e7df; border-radius: 99px; background: #f9faf6; color: #66736a; font-size: 9px; }
+    .chip button { width: 12px; height: 12px; padding: 0; display: grid; place-items: center; border: 0; background: transparent; color: #9aa39a; line-height: 1; font-size: 13px; }
+    .chip button:hover { color: #aa5a43; }
+    .empty-note { padding: 17px; border: 1px dashed #dce2d9; border-radius: 8px; background: #fbfcf8; text-align: center; }
+    .empty-note .empty-illustration { width: 32px; height: 32px; display: grid; place-items: center; margin: 0 auto 9px; border-radius: 10px; color: var(--green); background: #e9f0e8; }
+    .empty-note .empty-illustration svg { width: 16px; height: 16px; }
+    .empty-note strong { display: block; color: #526056; font-family: var(--serif); font-size: 16px; font-weight: 400; }
+    .empty-note p { max-width: 260px; margin: 5px auto 11px; color: #89938b; font-size: 9px; line-height: 1.55; }
+    .project-card { position: relative; padding: 14px; border: 1px solid #e5e7df; border-radius: 8px; background: #fff; }
+    .project-card + .project-card { margin-top: 11px; }
+    .project-card-head { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; color: #67746a; font-size: 9px; font-weight: 750; }
+    .remove-button { border: 0; background: transparent; color: #9ba39b; font-size: 9px; }
+    .remove-button:hover { color: #b7523b; }
+    .project-fields { display: grid; gap: 11px; }
+    .project-fields .field textarea { min-height: 62px; }
+    .add-row { display: flex; align-items: center; gap: 7px; border: 0; padding: 8px 2px; background: transparent; color: var(--green); font-size: 10px; font-weight: 700; }
+    .add-row:hover { color: var(--green-dark); }
+    .add-row span { width: 19px; height: 19px; display: grid; place-items: center; border: 1px solid #d8e3d8; border-radius: 6px; background: #f0f5ef; font-size: 14px; }
+    .section-divider { height: 1px; margin: 4px 0; background: #eef0eb; }
+    .form-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 24px; padding-top: 16px; border-top: 1px solid #eef0e9; }
+    .form-footer .button { min-width: 95px; }
+    .skip-note { color: #9aa199; font-size: 9px; }
+    .preview-column { position: sticky; top: 82px; min-width: 0; }
+    .preview-toolbar { min-height: 41px; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 0 2px 11px; }
+    .preview-label { display: flex; align-items: center; gap: 7px; color: #68756b; font-size: 9px; font-weight: 760; letter-spacing: .1em; }
+    .preview-live-dot { width: 6px; height: 6px; border-radius: 50%; background: #62926d; box-shadow: 0 0 0 3px #e3eee4; }
+    .viewport-switch { display: inline-flex; align-items: center; padding: 3px; border: 1px solid #e0e4dc; border-radius: 7px; background: #fffefa; }
+    .viewport-switch button { width: 30px; height: 25px; display: grid; place-items: center; border: 0; border-radius: 5px; color: #9aa29a; background: transparent; }
+    .viewport-switch button svg { width: 13px; height: 13px; }
+    .viewport-switch button.active { color: var(--green); background: #eaf0e8; }
+    .preview-frame { height: min(690px, calc(100vh - 150px)); min-height: 510px; overflow: auto; border: 1px solid #dde1d9; border-radius: 11px; background: #fffefa; box-shadow: 0 12px 35px rgba(43,56,46,.07); transition: max-width .25s, width .25s; margin: 0 auto; }
+    .preview-frame.is-mobile { width: 375px; max-width: 100%; min-height: 600px; height: min(690px, calc(100vh - 150px)); border-radius: 19px; border: 5px solid #303a34; box-shadow: 0 12px 30px rgba(43,56,46,.14); }
+    .preview-browserbar { height: 28px; display: flex; align-items: center; justify-content: center; position: sticky; top: 0; z-index: 2; border-bottom: 1px solid #eeefe9; background: rgba(255,254,250,.93); color: #a1a8a1; font-size: 7px; backdrop-filter: blur(9px); }
+    .preview-frame.is-mobile .preview-browserbar { height: 21px; }
+    .preview-content { min-height: 100%; background: #fffefa; }
+    .preview-tip { display: flex; align-items: center; justify-content: center; gap: 7px; padding: 11px 5px 0; color: #949c94; font-size: 9px; }
+    .preview-tip svg { width: 12px; height: 12px; color: #718a73; }
+    .portfolio-site { --site-ink: #2b332d; --site-muted: #768078; --site-line: #e9e9e2; --site-bg: #fffefa; --site-accent: #45634d; min-height: 100%; padding: 27px clamp(20px, 5%, 43px) 36px; color: var(--site-ink); background: var(--site-bg); }
+    .portfolio-site.theme-editorial { --site-bg: #f8f4ee; --site-accent: #a86148; --site-line: #e8dfd5; }
+    .portfolio-site.theme-project { --site-bg: #f5f7f3; --site-accent: #365d4a; --site-line: #e1e7df; }
+    .site-nav { display: flex; align-items: center; justify-content: space-between; padding-bottom: 12px; border-bottom: 1px solid var(--site-line); color: #929991; font-size: 7px; letter-spacing: .09em; text-transform: uppercase; }
+    .site-nav strong { color: var(--site-accent); font-size: 7px; font-weight: 750; letter-spacing: .12em; }
+    .site-hero { padding: 35px 0 28px; border-bottom: 1px solid var(--site-line); }
+    .site-hero-grid { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 16px; align-items: center; }
+    .site-kicker { color: var(--site-accent); font-size: 7px; letter-spacing: .16em; font-weight: 750; text-transform: uppercase; }
+    .site-hero h2 { max-width: 390px; margin: 10px 0 9px; color: var(--site-ink); font-family: var(--serif); font-size: clamp(28px, 4.2vw, 42px); line-height: .94; font-weight: 400; letter-spacing: -.065em; overflow-wrap: anywhere; }
+    .site-headline { max-width: 370px; margin: 0; color: var(--site-muted); font-size: 9px; line-height: 1.6; }
+    .site-avatar { width: 48px; height: 54px; display: grid; place-items: center; flex: 0 0 auto; border-radius: 45% 45% 7px 7px; background: #dce4d9; color: #46624d; font-family: var(--serif); font-size: 16px; }
+    .site-meta { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 13px; }
+    .site-meta span { padding: 4px 7px; border: 1px solid var(--site-line); border-radius: 99px; color: var(--site-muted); font-size: 7px; }
+    .site-sections { padding-top: 5px; }
+    .site-section { display: grid; grid-template-columns: 88px 1fr; gap: 11px; padding: 16px 0; border-bottom: 1px solid var(--site-line); }
+    .site-section-label { padding-top: 2px; color: var(--site-accent); font-size: 7px; line-height: 1.4; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+    .site-section-body { min-width: 0; }
+    .site-section h3 { margin: 0 0 7px; color: var(--site-ink); font-family: var(--serif); font-size: 16px; line-height: 1.1; font-weight: 400; letter-spacing: -.03em; overflow-wrap: anywhere; }
+    .site-section p { margin: 0; color: var(--site-muted); font-size: 8px; line-height: 1.65; white-space: pre-line; overflow-wrap: anywhere; }
+    .site-project { padding: 10px 11px; margin-bottom: 7px; border: 1px solid var(--site-line); border-radius: 5px; background: rgba(255,255,255,.55); }
+    .site-project:last-child { margin-bottom: 0; }
+    .site-project h4 { margin: 0 0 4px; font-family: var(--serif); font-size: 13px; font-weight: 400; letter-spacing: -.02em; }
+    .site-project p { margin: 0; color: var(--site-muted); font-size: 7px; line-height: 1.5; }
+    .site-project-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 7px; }
+    .site-project-tags span { color: var(--site-accent); font-size: 6px; }
+    .site-project-tags span + span:before { content: "·"; margin-right: 4px; color: #afb5ad; }
+    .site-link-list { display: flex; flex-wrap: wrap; gap: 8px; }
+    .site-link-list a { color: var(--site-accent); text-decoration: none; font-size: 8px; border-bottom: 1px solid rgba(69,99,77,.22); padding-bottom: 2px; overflow-wrap: anywhere; }
+    .site-empty { color: #aab0a8 !important; font-style: italic; }
+    .theme-editorial .site-hero { display: grid; grid-template-columns: minmax(0,1fr) 42px; gap: 12px; }
+    .theme-editorial .site-hero:before { content: "01 / INTRO"; grid-column: 1 / -1; color: #a86148; font-size: 7px; letter-spacing: .14em; }
+    .theme-editorial .site-hero .site-hero-grid { display: contents; }
+    .theme-editorial .site-avatar { grid-column: 2; grid-row: 2; width: 39px; height: 44px; background: #ead8c8; color: #966146; }
+    .theme-editorial .site-hero h2 { font-size: clamp(32px, 5vw, 50px); }
+    .theme-editorial .site-hero .site-meta { grid-column: 1 / -1; }
+    .theme-editorial .site-section { grid-template-columns: 54px 1fr; gap: 15px; }
+    .theme-editorial .site-section-label { font-family: var(--serif); font-size: 10px; font-weight: 400; letter-spacing: -.02em; text-transform: none; }
+    .theme-project .site-hero { padding: 27px 15px 24px; border: 1px solid var(--site-line); border-radius: 8px; background: #edf2ec; }
+    .theme-project .site-hero h2 { font-size: clamp(27px, 4vw, 39px); }
+    .theme-project .site-section { grid-template-columns: 1fr; gap: 8px; padding: 17px 0; }
+    .theme-project .site-section-label { padding-bottom: 4px; }
+    .theme-project .site-section[data-section="projects"] .site-project { background: #fffefa; border-radius: 7px; padding: 13px; }
+    .theme-project .site-section[data-section="projects"] .site-project h4 { font-size: 16px; }
+
+    .style-choice-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; }
+    .style-choice { min-width: 0; padding: 8px; text-align: left; border: 1px solid #e1e5dc; border-radius: 8px; background: #fff; color: var(--ink); transition: border .15s, box-shadow .15s, transform .15s; }
+    .style-choice:hover { transform: translateY(-1px); border-color: #b9c9bb; }
+    .style-choice.selected { border-color: #62816a; box-shadow: 0 0 0 2px rgba(67,105,76,.1); background: #fbfdf9; }
+    .style-thumb { height: 65px; position: relative; overflow: hidden; border-radius: 5px; background: #f6f5ef; }
+    .style-thumb:before { content: ""; position: absolute; left: 11px; right: 11px; top: 12px; height: 1px; background: #e1e2da; }
+    .style-thumb:after { content: ""; position: absolute; left: 12px; top: 23px; width: 54%; height: 22px; background: rgba(70,97,75,.18); border-radius: 3px; }
+    .style-thumb.editorial { background: #f3ece5; }
+    .style-thumb.editorial:after { left: auto; right: 12px; width: 24px; height: 38px; top: 17px; background: #c87a5b; opacity: .7; border-radius: 14px 14px 2px 2px; }
+    .style-thumb.project { background: #e9efe8; }
+    .style-thumb.project:after { left: 11px; right: 11px; top: 39px; width: auto; height: 15px; background: #fffefa; border: 1px solid #dfe5dc; }
+    .style-choice strong { display: block; margin: 8px 0 3px; font-size: 9px; }
+    .style-choice small { display: block; color: #879087; font-size: 7px; line-height: 1.4; }
+    .visibility-list { display: grid; gap: 2px; }
+    .visibility-row { display: flex; align-items: center; justify-content: space-between; gap: 9px; padding: 8px 0; border-bottom: 1px solid #eff1ec; color: #5c685e; font-size: 9px; }
+    .toggle { position: relative; width: 31px; height: 18px; border: 0; border-radius: 99px; background: #dfe3dc; transition: background .2s; }
+    .toggle:after { content: ""; position: absolute; width: 12px; height: 12px; left: 3px; top: 3px; border-radius: 50%; background: white; box-shadow: 0 1px 3px rgba(0,0,0,.12); transition: transform .2s; }
+    .toggle.on { background: var(--green); }
+    .toggle.on:after { transform: translateX(13px); }
+    .toast { position: fixed; left: 50%; bottom: 24px; z-index: 50; transform: translate(-50%, 20px); padding: 11px 16px; border: 1px solid rgba(255,255,255,.16); border-radius: 9px; background: #2e4638; color: white; box-shadow: 0 12px 30px rgba(23,38,28,.2); opacity: 0; pointer-events: none; font-size: 11px; transition: all .22s; }
+    .toast.show { transform: translate(-50%, 0); opacity: 1; }
+    .modal-backdrop { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 20px; background: rgba(29,38,32,.38); backdrop-filter: blur(3px); }
+    .modal { width: min(100%, 440px); padding: 25px; border: 1px solid #e7e9e2; border-radius: 14px; background: #fffefa; box-shadow: 0 28px 80px rgba(19,32,23,.2); animation: modalIn .2s ease-out; }
+    @keyframes modalIn { from { opacity: 0; transform: translateY(8px) scale(.99); } to { opacity: 1; transform: none; } }
+    .modal-icon { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 11px; background: #e9f0e8; color: var(--green); }
+    .modal-icon svg { width: 18px; height: 18px; }
+    .modal h2 { margin: 16px 0 8px; font-family: var(--serif); font-size: 27px; font-weight: 400; letter-spacing: -.04em; }
+    .modal p { margin: 0; color: #748078; font-size: 11px; line-height: 1.7; }
+    .modal .modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 22px; }
+    .modal-note { margin-top: 15px !important; padding: 10px 11px; border-radius: 7px; background: #f1f3ef; color: #778078 !important; font-size: 9px !important; }
+    .toast-root { position: relative; z-index: 999; }
+    .screen-fade { animation: fadeIn .22s ease-out; }
+    @keyframes fadeIn { from { opacity: .6; transform: translateY(2px); } to { opacity: 1; transform: none; } }
+    .tag-line { display: flex; align-items: center; gap: 9px; color: #929a93; font-size: 9px; }
+    .tag-line:before { content: ""; width: 20px; height: 1px; background: #b3beb2; }
+
+    @media (max-width: 1120px) {
+      .hero-wrap { padding-top: 55px; }
+      .hero-grid { gap: 46px; grid-template-columns: minmax(330px, .9fr) minmax(380px, 1.1fr); }
+      .hero-art { min-height: 370px; }
+      .folio-sample { min-height: 350px; }
+      .studio-layout { grid-template-columns: 168px minmax(300px, 410px) minmax(350px,1fr); gap: 14px; padding-left: 15px; padding-right: 15px; }
+      .form-panel { padding: 21px 19px; }
+    }
+    @media (max-width: 930px) {
+      .hero-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+      .hero-copy h1 { font-size: 53px; }
+      .folio-sample { width: 100%; }
+      .sample-page { padding-left: 25px; padding-right: 25px; }
+      .float-note.note-one { left: -8px; }
+      .float-note.note-two { right: -5px; }
+      .studio-layout { grid-template-columns: 155px minmax(300px,1fr); }
+      .preview-column { position: relative; top: auto; grid-column: 2; }
+      .steps-rail { grid-row: 1 / span 2; }
+      .preview-frame { height: 620px; }
+      .count-section { gap: 35px; }
+    }
+    @media (max-width: 700px) {
+      .topbar { height: 62px; padding: 0 18px; }
+      .nav-links { display: none; }
+      .nav-actions .text-button { display: none; }
+      .nav-actions .button { min-height: 37px; padding: 9px 12px; font-size: 10px; }
+      .hero-wrap { padding: 45px 21px 39px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 15px; }
+      .hero-copy { padding: 0; }
+      .hero-copy h1 { max-width: 460px; margin-top: 19px; font-size: clamp(46px, 13vw, 64px); }
+      .hero-copy > p { font-size: 13px; }
+      .hero-actions { gap: 10px; }
+      .hero-actions .button { min-height: 45px; padding: 12px 15px; font-size: 11px; }
+      .hero-art { min-height: 340px; margin-top: 0; }
+      .art-wash { width: 88%; height: 82%; right: 4%; }
+      .folio-sample { width: min(100%, 470px); min-height: 318px; }
+      .sample-browser { height: 29px; }
+      .sample-page { padding: 21px 22px 20px; }
+      .sample-hero { padding: 20px 0; grid-template-columns: 1fr 60px; }
+      .sample-hero h2 { font-size: 34px; }
+      .sample-avatar { width: 54px; height: 66px; font-size: 20px; }
+      .sample-rule { gap: 11px; padding-top: 13px; }
+      .float-note { padding: 8px 9px; }
+      .float-note.note-one { bottom: 2px; left: -7px; }
+      .float-note.note-two { top: 0; right: -4px; }
+      .float-icon { width: 21px; height: 21px; }
+      .hero-bottom { margin-top: 26px; font-size: 9px; }
+      .section-pad { padding: 62px 21px; }
+      .steps-grid, .design-grid { grid-template-columns: 1fr; }
+      .landing-step { min-height: 0; }
+      .landing-step h3 { margin-top: 14px; }
+      .count-section { grid-template-columns: 1fr; gap: 26px; }
+      .count-cards { gap: 9px; }
+      .count-card { min-height: 125px; padding: 14px; }
+      .mini-site { height: 145px; }
+      .design-card { display: grid; grid-template-columns: 145px 1fr; align-items: center; gap: 8px; }
+      .design-card-bottom { display: block; padding: 10px; }
+      .design-card-bottom strong, .design-card-bottom span { display: block; }
+      .design-card-bottom span { margin-top: 6px; }
+      .footer { padding: 20px 21px; }
+      .footer > span:last-child { max-width: 160px; text-align: right; line-height: 1.5; }
+
+      .studio-bar { height: 58px; padding: 0 13px; gap: 7px; }
+      .studio-brand { min-width: auto; gap: 9px; }
+      .studio-brand .logo { font-size: 16px; }
+      .studio-brand .logo-mark { width: 22px; height: 22px; }
+      .bar-separator, .draft-label, .studio-center { display: none; }
+      .studio-actions { min-width: auto; gap: 6px; }
+      .studio-actions .button { min-height: 35px; padding: 8px 10px; font-size: 9px; }
+      .studio-actions .button.subtle { display: none; }
+      .mobile-switch { display: inline-flex; }
+      .mobile-switch button { font-size: 9px; }
+      .studio-layout { display: block; min-height: calc(100vh - 58px); padding: 13px 12px 24px; }
+      .steps-rail { position: static; padding: 0 0 12px; }
+      .rail-title { margin: 0 0 8px 2px; }
+      .rail-progress { margin: 0 2px 9px; }
+      .step-list { display: flex; gap: 5px; overflow-x: auto; padding: 1px 0 4px; scrollbar-width: none; }
+      .step-list::-webkit-scrollbar { display: none; }
+      .rail-step { width: auto; flex: 0 0 auto; padding: 7px 8px; gap: 6px; border: 1px solid #e6e9e2; background: #fffefa; font-size: 9px; }
+      .rail-step.active { border-color: #c6d6c7; }
+      .step-mini-number { width: 18px; height: 18px; font-size: 8px; }
+      .rail-tip { display: none; }
+      .form-panel { padding: 20px 17px 16px; border-radius: 10px; }
+      .form-panel h1 { font-size: 30px; }
+      .step-intro { margin-bottom: 19px; }
+      .preview-column { display: none; margin-top: 0; }
+      .studio-layout.mobile-preview .form-panel { display: none; }
+      .studio-layout.mobile-preview .steps-rail { display: none; }
+      .studio-layout.mobile-preview .preview-column { display: block; }
+      .studio-layout.mobile-preview { padding-top: 13px; }
+      .preview-toolbar { padding-bottom: 10px; }
+      .preview-frame { height: calc(100vh - 165px); min-height: 530px; }
+      .preview-frame.is-mobile { height: calc(100vh - 165px); min-height: 530px; }
+      .site-section { grid-template-columns: 68px 1fr; gap: 8px; }
+      .style-choice-grid { gap: 6px; }
+      .style-choice { padding: 6px; }
+      .style-thumb { height: 54px; }
+      .style-choice strong { font-size: 8px; }
+      .style-choice small { font-size: 6px; }
+    }
+    @media (max-width: 390px) {
+      .field-row { grid-template-columns: 1fr; }
+      .sample-page { padding-left: 16px; padding-right: 16px; }
+      .hero-art { min-height: 300px; }
+      .float-note.note-one { left: -2px; }
+      .float-note.note-two { right: -2px; }
+      .count-cards { grid-template-columns: 1fr; }
+      .count-card { min-height: 0; }
+      .count-card h3 { margin-top: 9px; }
+      .style-choice small { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script>
+    const app = document.getElementById('app');
+    const STORAGE_KEY = 'folio-studio-draft-v1';
+    const STEP_LABELS = ['About you', 'Education', 'Skills', 'Projects', 'Highlights & links', 'Design'];
+    const SECTION_LABELS = [
+      ['about', 'About'], ['education', 'Education'], ['skills', 'Skills'],
+      ['projects', 'Projects'], ['highlights', 'Highlights'], ['contact', 'Contact']
+    ];
+
+    function freshProfile() {
+      return {
+        name: '', role: '', about: '', location: '', college: '', degree: '', branch: '', gradYear: '',
+        skills: [], interests: [], projects: [], achievements: [], email: '', github: '', linkedin: '',
+        visible: { about: true, education: true, skills: true, projects: true, highlights: true, contact: true },
+        sectionOrder: ['about', 'education', 'skills', 'projects', 'highlights', 'contact']
+      };
+    }
+    const state = { screen: 'landing', step: 0, design: 'minimal', viewport: 'desktop', mobilePane: 'edit', modal: false, profile: freshProfile(), saved: false };
+
+    function restoreDraft() {
+      try {
+        const parsed = JSON.parse(localStorage.getItem(STORAGE_KEY) || 'null');
+        if (parsed && parsed.profile) {
+          state.profile = Object.assign(freshProfile(), parsed.profile);
+          state.profile.visible = Object.assign(freshProfile().visible, parsed.profile.visible || {});
+          state.profile.sectionOrder = parsed.profile.sectionOrder || freshProfile().sectionOrder;
+          state.design = parsed.design || 'minimal';
+          state.saved = true;
+        }
+      } catch (_) { /* Ignore invalid or unavailable local storage. */ }
+    }
+    restoreDraft();
+
+    const icon = (name, size = 16) => {
+      const attrs = `width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"`;
+      const paths = {
+        arrow: '<path d="M5 12h14M13 6l6 6-6 6"/>',
+        arrowLeft: '<path d="M19 12H5m6 6-6-6 6-6"/>',
+        check: '<path d="m5 12 4 4L19 6"/>',
+        spark: '<path d="m12 3 1.9 5.8L20 11l-6.1 2.2L12 19l-1.9-5.8L4 11l6.1-2.2L12 3Z"/><path d="m19 14 1 2.5 2.5 1-2.5 1L19 21l-1-2.5-2.5-1 2.5-1L19 14Z"/>',
+        book: '<path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/><path d="M8 7h8M8 11h7"/>',
+        layers: '<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/>',
+        globe: '<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>',
+        pencil: '<path d="m16 4 4 4M4 20l4-.8L19.1 8.1a2.1 2.1 0 0 0-3-3L5 16.2 4 20Z"/>',
+        user: '<circle cx="12" cy="8" r="3.5"/><path d="M5 21a7 7 0 0 1 14 0"/>',
+        pin: '<path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>',
+        mail: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
+        monitor: '<rect x="3" y="4" width="18" height="13" rx="2"/><path d="M8 21h8M12 17v4"/>',
+        phone: '<rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/>',
+        light: '<path d="M9 18h6M10 22h4M8 14a6 6 0 1 1 8 0c-.8.7-1 1.3-1 2h-6c0-.7-.2-1.3-1-2Z"/>',
+        heart: '<path d="M20.8 8.7c0 4.3-8.8 10.2-8.8 10.2S3.2 13 3.2 8.7A4.7 4.7 0 0 1 12 6.4a4.7 4.7 0 0 1 8.8 2.3Z"/>',
+        external: '<path d="M14 4h6v6M20 4l-9 9"/><path d="M18 13v5a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h5"/>',
+        image: '<rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/>',
+        plus: '<path d="M12 5v14M5 12h14"/>',
+        leaf: '<path d="M20 4c-8 0-14 3.5-14 10a6 6 0 0 0 6 6c6.5 0 8-8 8-16Z"/><path d="M4 21c2-6 6-9 12-12"/>',
+        lock: '<rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>',
+        close: '<path d="m6 6 12 12M18 6 6 18"/>',
+        eye: '<path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/>',
+      };
+      return `<svg ${attrs}>${paths[name] || ''}</svg>`;
+    };
+
+    function esc(value) {
+      return String(value == null ? '' : value).replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
+    }
+    function safeUrl(raw) {
+      const value = String(raw || '').trim();
+      if (!value) return '';
+      const candidate = /^https?:\/\//i.test(value) ? value : `https://${value}`;
+      try {
+        const url = new URL(candidate);
+        if (url.protocol !== 'https:' && url.protocol !== 'http:') return '';
+        return url.href;
+      } catch (_) { return ''; }
+    }
+    function initials(name) {
+      const parts = String(name || '').trim().split(/\s+/).filter(Boolean);
+      if (!parts.length) return 'Y';
+      return (parts[0][0] + (parts.length > 1 ? parts[parts.length - 1][0] : '')).toUpperCase();
+    }
+    function persistDraft() {
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({ profile: state.profile, design: state.design, updatedAt: Date.now() }));
+        state.saved = true;
+      } catch (_) { state.saved = false; }
+      const label = document.getElementById('save-label');
+      if (label) label.textContent = state.saved ? 'Saved on this device' : 'Changes not saved';
+      const dot = document.getElementById('save-dot');
+      if (dot) dot.style.background = state.saved ? '#6a9875' : '#c8795d';
+    }
+    let toastTimer;
+    function toast(message) {
+      const el = document.getElementById('toast');
+      el.textContent = message;
+      el.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => el.classList.remove('show'), 2400);
+    }
+    function goToBuilder() {
+      state.screen = 'builder'; state.step = 0; state.mobilePane = 'edit'; state.modal = false; render(); window.scrollTo(0, 0);
+    }
+    function resetDraft() {
+      state.profile = freshProfile(); state.design = 'minimal'; state.step = 0; state.saved = false;
+      try { localStorage.removeItem(STORAGE_KEY); } catch (_) {}
+      goToBuilder();
+    }
+    function loadExample() {
+      state.profile = {
+        name: 'Maya Raman', role: 'First-year engineering student',
+        about: 'I enjoy turning small ideas into practical projects. Right now, I’m building my fundamentals in web development and Python.',
+        location: 'Bengaluru', college: 'Your college', degree: 'Engineering', branch: 'Computer Science', gradYear: '2029',
+        skills: ['Python', 'Figma', 'HTML & CSS'], interests: ['Accessible technology', 'Learning by building'],
+        projects: [{ id: 'sample-1', title: 'Campus Question Box', description: 'A simple concept for helping juniors ask seniors questions and find useful campus resources.', tools: 'HTML, CSS, JavaScript', link: '' }],
+        achievements: [], email: '', github: '', linkedin: '',
+        visible: { about: true, education: true, skills: true, projects: true, highlights: true, contact: true },
+        sectionOrder: ['about', 'education', 'skills', 'projects', 'highlights', 'contact']
+      };
+      state.design = 'minimal'; state.step = 0; state.screen = 'builder'; persistDraft(); render(); window.scrollTo(0,0);
+    }
+
+    function landingMarkup() {
+      const hasDraft = !!(state.profile.name || state.profile.about || state.profile.projects.length || state.profile.skills.length);
+      return `
+        <div class="landing screen-fade">
+          <header class="topbar">
+            <a class="logo" href="#top" data-action="home"><span class="logo-mark">${icon('leaf', 15)}</span><span>folio</span></a>
+            <nav class="nav-links" aria-label="Main navigation">
+              <a href="#how">How it works</a><a href="#what-counts">What counts?</a><a href="#designs">Designs</a>
+            </nav>
+            <div class="nav-actions">
+              <button class="text-button" data-action="resume">${hasDraft ? 'Continue draft' : 'Log in'}</button>
+              <button class="button small" data-action="start">Create my portfolio ${icon('arrow', 13)}</button>
+            </div>
+          </header>
+          <main id="top">
+            <section class="hero-wrap">
+              <div class="hero-grid">
+                <div class="hero-copy">
+                  <div class="hero-kicker"><span class="kicker-dot"></span> Your first portfolio, made simple</div>
+                  <h1>Your story deserves a place to <em>begin.</em></h1>
+                  <p>Turn class assignments, small builds, and the things you’re learning into a polished link. No code. No perfect-project requirement.</p>
+                  <div class="hero-actions">
+                    <button class="button" data-action="start">Create my portfolio ${icon('arrow', 15)}</button>
+                    <a class="button secondary" href="#how">See how it works</a>
+                  </div>
+                  <div class="hero-note">${icon('lock', 13)} Free to start <span>·</span> About 5 minutes <span>·</span> You stay in control</div>
+                </div>
+                <div class="hero-art" aria-label="Example portfolio preview">
+                  <div class="art-wash"></div>
+                  <div class="folio-sample">
+                    <div class="sample-browser"><span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span><span class="sample-url">maya.folio.site</span></div>
+                    <div class="sample-page">
+                      <div class="sample-topline"><span>PORTFOLIO · 2026</span><span class="sample-availability"><i></i> Open to opportunities</span></div>
+                      <div class="sample-hero">
+                        <div><div class="eyebrow">A little about me</div><h2>Maya<br>Raman</h2><p>First-year engineering student curious about thoughtful technology.</p>
+                          <div class="sample-facts"><span>Bengaluru</span><span>Learning by building</span></div>
+                        </div><div class="sample-avatar">MR</div>
+                      </div>
+                      <div class="sample-rule">
+                        <div><h3>Currently exploring</h3><p>Web development · Python · Accessible design</p></div>
+                        <div class="sample-project"><small>A small project</small><strong>Campus Question Box</strong></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="float-note note-one"><span class="float-icon">${icon('spark', 14)}</span><span><strong>Small things count</strong>Start with what you’ve done.</span></div>
+                  <div class="float-note note-two"><span class="float-icon">${icon('eye', 14)}</span><span><strong>See it as you build</strong>Your preview updates live.</span></div>
+                </div>
+              </div>
+              <div class="hero-bottom">
+                <div class="social-proof"><div class="mini-avatars"><span>A</span><span>J</span><span>M</span></div><p><strong>Made for first-timers</strong><br>Students, freshers, and curious people</p></div>
+                <div class="tag-line">No coding or design experience needed</div>
+              </div>
+            </section>
+            <section class="section-pad how-section" id="how">
+              <div class="section-inner">
+                <div class="section-heading"><span class="eyebrow">A calmer way to get started</span><h2>From rough notes to a link you’re proud to share.</h2><p>You don’t need to know what a portfolio “should” look like. We’ll help you work it out one small step at a time.</p></div>
+                <div class="steps-grid">
+                  <article class="landing-step"><div class="step-number">01</div><h3>Tell us what you’ve done</h3><p>Answer a few simple questions about what you’re learning, making, or helping with.</p></article>
+                  <article class="landing-step"><div class="step-number">02</div><h3>Make it sound like you</h3><p>Get help making your ideas clearer. Review every suggestion and change whatever you like.</p></article>
+                  <article class="landing-step"><div class="step-number">03</div><h3>Choose a look and share</h3><p>See your site as it takes shape, pick a design, and get a link when you’re ready.</p></article>
+                </div>
+              </div>
+            </section>
+            <section class="section-pad" id="what-counts">
+              <div class="section-inner count-section">
+                <div class="section-heading"><span class="eyebrow">You have more to show than you think</span><h2>No “big project” required.</h2><p>A first portfolio is a starting point, not a test of how much experience you already have.</p></div>
+                <div class="count-cards">
+                  <article class="count-card"><span class="count-icon">✳</span><h3>Classwork & experiments</h3><p>A small assignment, Python program, or idea you tried while learning.</p></article>
+                  <article class="count-card"><span class="count-icon">⌘</span><h3>Things you helped make happen</h3><p>Organizing an event, volunteering, or helping a team solve a problem.</p></article>
+                  <article class="count-card"><span class="count-icon">◌</span><h3>Designs & prototypes</h3><p>A Figma exploration, sketch, app idea, or hackathon prototype.</p></article>
+                  <article class="count-card"><span class="count-icon">↗</span><h3>What you’re learning now</h3><p>Show the direction you’re exploring—even while you’re still a beginner.</p></article>
+                </div>
+              </div>
+            </section>
+            <section class="section-pad design-section" id="designs">
+              <div class="section-inner">
+                <div class="section-heading"><span class="eyebrow">Three different starting points</span><h2>A design that feels like you.</h2><p>Not just new colors. Pick a layout that suits the story you want to tell.</p></div>
+                <div class="design-grid">
+                  <article class="design-card"><div class="mini-site minimal"><div class="mini-eyebrow">A little about me</div><h4>Alex Morgan</h4><p>Curious about making everyday tools easier to use.</p></div><div class="design-card-bottom"><strong>Quiet & minimal</strong><span>For a clean first impression</span></div></article>
+                  <article class="design-card"><div class="mini-site editorial"><div class="mini-eyebrow">Notes from the journey</div><h4>Alex<br>Morgan</h4><p>Learning out loud, one small idea at a time.</p></div><div class="design-card-bottom"><strong>Story-led</strong><span>For a more personal feel</span></div></article>
+                  <article class="design-card"><div class="mini-site project"><div class="mini-eyebrow">Selected work</div><h4>Alex Morgan</h4><p>Small builds. Useful questions. Room to grow.</p></div><div class="design-card-bottom"><strong>Project-forward</strong><span>For work that leads the way</span></div></article>
+                </div>
+              </div>
+            </section>
+            <section class="final-cta"><span class="eyebrow">Your next step can be small</span><h2>Start with what you have.</h2><p>Make a first version today. You can always add more as you learn and build.</p><button class="button light" data-action="start">Create my portfolio ${icon('arrow', 14)}</button></section>
+          </main>
+          <footer class="footer"><a class="logo" href="#top" data-action="home"><span class="logo-mark">${icon('leaf', 12)}</span><span>folio</span></a><span>A first portfolio, for wherever you’re starting.</span></footer>
+        </div>`;
+    }
+
+    function field(label, key, placeholder, value, options = {}) {
+      const control = options.textarea
+        ? `<textarea class="${options.tall ? 'tall' : ''}" data-field="${key}" placeholder="${esc(placeholder)}" ${options.max ? `maxlength="${options.max}"` : ''}>${esc(value || '')}</textarea>`
+        : `<input type="${options.type || 'text'}" data-field="${key}" value="${esc(value || '')}" placeholder="${esc(placeholder)}" ${options.max ? `maxlength="${options.max}"` : ''} autocomplete="${options.autocomplete || 'off'}" />`;
+      return `<div class="field"><label>${label}${options.optional ? '<span class="optional">optional</span>' : ''}</label>${control}${options.help ? `<div class="field-help">${options.help}</div>` : ''}</div>`;
+    }
+    function projectCard(project, index) {
+      return `<article class="project-card"><div class="project-card-head"><span>Project ${index + 1}</span><button class="remove-button" data-action="remove-project" data-id="${esc(project.id)}">Remove</button></div><div class="project-fields">
+        <div class="field"><label>What did you call it?</label><input data-project-field="title" data-id="${esc(project.id)}" value="${esc(project.title)}" placeholder="e.g. A tiny weather app" /></div>
+        <div class="field"><label>What does it do, or what did you learn?</label><textarea data-project-field="description" data-id="${esc(project.id)}" placeholder="A rough explanation is perfect. We’ll help you make it clearer later.">${esc(project.description)}</textarea></div>
+        <div class="field-row"><div class="field"><label>Tools you used<span class="optional">optional</span></label><input data-project-field="tools" data-id="${esc(project.id)}" value="${esc(project.tools)}" placeholder="e.g. Python, Figma" /></div><div class="field"><label>Link<span class="optional">optional</span></label><input data-project-field="link" data-id="${esc(project.id)}" value="${esc(project.link)}" placeholder="GitHub or demo" /></div></div>
+      </div></article>`;
+    }
+    function renderStepContent() {
+      const p = state.profile;
+      if (state.step === 0) return `
+        <div class="step-overline"><span class="tiny-dot"></span> Step 1 · About you</div><h1>Let’s start with you.</h1><p class="step-intro">A few honest details are enough. You can skip anything that doesn’t feel right.</p>
+        <div class="form-stack">
+          ${field('What should we call you?', 'name', 'Your name', p.name, { autocomplete: 'name' })}
+          ${field('What are you learning or curious about?', 'role', 'e.g. First-year engineering student', p.role)}
+          <div class="field"><div class="field-title-row"><label for="about-field">A little about you<span class="optional">optional</span></label><button class="hint-button" data-action="writing-help">Need a starting point?</button></div><textarea id="about-field" class="tall" data-field="about" placeholder="What are you exploring, building, or hoping to do next? A rough note is fine.">${esc(p.about)}</textarea><div class="field-help">Write it the way you’d say it. You can polish it later.</div></div>
+          ${field(`Where are you based? <span class="optional">optional</span>`, 'location', 'City or region', p.location)}
+          <div class="helper-box"><span class="helper-mark">${icon('light', 12)}</span><span><strong>You don’t need a polished bio.</strong> A sentence about what you’re learning or interested in is a great start.</span></div>
+        </div>`;
+      if (state.step === 1) return `
+        <div class="step-overline"><span class="tiny-dot"></span> Step 2 · Education</div><h1>Your learning, so far.</h1><p class="step-intro">Add your college or course if it helps people understand where you’re coming from. You can leave anything blank.</p>
+        <div class="form-stack">
+          ${field('College or university', 'college', 'Name of your college', p.college, { optional: true })}
+          <div class="field-row">${field('Degree or course', 'degree', 'e.g. B.E.', p.degree, { optional: true })}${field('Branch or subject', 'branch', 'e.g. Computer Science', p.branch, { optional: true })}</div>
+          ${field('Expected graduation year', 'gradYear', 'e.g. 2029', p.gradYear, { optional: true })}
+          <div class="field"><div class="field-title-row"><label for="education-note">Anything else about your studies?<span class="optional">optional</span></label></div><textarea id="education-note" data-field="educationNote" placeholder="A class, topic, or activity you’ve enjoyed so far.">${esc(p.educationNote || '')}</textarea></div>
+          <div class="helper-box"><span class="helper-mark">${icon('book', 12)}</span><span><strong>Still in your first year?</strong> That’s completely fine. You can add more as you go.</span></div>
+        </div>`;
+      if (state.step === 2) return `
+        <div class="step-overline"><span class="tiny-dot"></span> Step 3 · Skills & interests</div><h1>What are you exploring?</h1><p class="step-intro">List skills you’re learning or using. You don’t need to rate yourself or be an expert.</p>
+        <div class="form-stack">
+          <div class="field"><label>Skills and tools</label><div class="chip-entry"><input id="skill-input" data-skill-input placeholder="Type one skill, then press Enter" /><button type="button" aria-label="Add skill" data-action="add-skill">+</button></div><div class="chips">${p.skills.map((s,i) => `<span class="chip">${esc(s)}<button aria-label="Remove ${esc(s)}" data-action="remove-skill" data-index="${i}">×</button></span>`).join('') || '<span class="field-help">Your skills will appear here. Start with one you’re learning.</span>'}</div></div>
+          <div class="section-divider"></div>
+          <div class="field"><label>Things you’re curious about<span class="optional">optional</span></label><div class="chip-entry"><input id="interest-input" data-interest-input placeholder="e.g. Accessible design" /><button type="button" aria-label="Add interest" data-action="add-interest">+</button></div><div class="chips">${p.interests.map((s,i) => `<span class="chip">${esc(s)}<button aria-label="Remove ${esc(s)}" data-action="remove-interest" data-index="${i}">×</button></span>`).join('') || '<span class="field-help">Interests are welcome too—not everything has to be a technical skill.</span>'}</div></div>
+          <div class="helper-box"><span class="helper-mark">${icon('spark', 12)}</span><span><strong>No skill scores or percentages.</strong> Just name the tools and topics you’ve actually spent time with.</span></div>
+        </div>`;
+      if (state.step === 3) return `
+        <div class="step-overline"><span class="tiny-dot"></span> Step 4 · Projects & practice</div><h1>Show what you’ve tried.</h1><p class="step-intro">Small builds, class assignments, prototypes, and learning experiments all belong here.</p>
+        <div class="form-stack">
+          <div class="helper-box"><span class="helper-mark">${icon('light', 12)}</span><span><strong>Don’t have a “professional” project?</strong> A Python program, college assignment, Figma idea, hackathon prototype, or a small thing you made while learning can count.</span></div>
+          ${p.projects.length ? p.projects.map(projectCard).join('') : `<div class="empty-note"><span class="empty-illustration">${icon('layers', 16)}</span><strong>It’s okay to start small.</strong><p>Add something you’ve tried, even if it’s unfinished—or keep going without a project for now.</p></div>`}
+          <button class="add-row" data-action="add-project"><span>+</span> Add a project or class assignment</button>
+          ${field('What are you learning right now?', 'learning', 'e.g. I’m practicing Python basics and exploring web design.', p.learning, { optional: true })}
+        </div>`;
+      if (state.step === 4) return `
+        <div class="step-overline"><span class="tiny-dot"></span> Step 5 · Highlights & links</div><h1>The other things you do.</h1><p class="step-intro">A club role, event, course, certificate, or a way for people to reach you. All optional.</p>
+        <div class="form-stack">
+          <div class="field"><label>Achievements, activities, or certificates<span class="optional">optional</span></label><div class="chip-entry"><input id="achievement-input" data-achievement-input placeholder="e.g. Helped organize a college event" /><button type="button" aria-label="Add highlight" data-action="add-achievement">+</button></div><div class="chips">${p.achievements.map((s,i) => `<span class="chip">${esc(s)}<button aria-label="Remove ${esc(s)}" data-action="remove-achievement" data-index="${i}">×</button></span>`).join('') || '<span class="field-help">Small responsibilities and contributions count too.</span>'}</div></div>
+          <div class="section-divider"></div>
+          ${field('Email', 'email', 'you@example.com', p.email, { type: 'email', optional: true })}
+          <div class="field-row">${field('GitHub', 'github', 'github.com/you', p.github, { optional: true })}${field('LinkedIn', 'linkedin', 'linkedin.com/in/you', p.linkedin, { optional: true })}</div>
+          <div class="helper-box"><span class="helper-mark">${icon('lock', 12)}</span><span><strong>You decide what’s public.</strong> Only the links you add here can appear on your portfolio.</span></div>
+        </div>`;
+      return `
+        <div class="step-overline"><span class="tiny-dot"></span> Step 6 · Make it yours</div><h1>Choose a starting style.</h1><p class="step-intro">These layouts have different rhythms—not just different colors. You can change your choice later.</p>
+        <div class="form-stack">
+          <div class="style-choice-grid">
+            <button class="style-choice ${state.design === 'minimal' ? 'selected' : ''}" data-action="set-design" data-design="minimal"><div class="style-thumb"></div><strong>Quiet & minimal</strong><small>Clear, calm, and spacious.</small></button>
+            <button class="style-choice ${state.design === 'editorial' ? 'selected' : ''}" data-action="set-design" data-design="editorial"><div class="style-thumb editorial"></div><strong>Story-led</strong><small>Personal and expressive.</small></button>
+            <button class="style-choice ${state.design === 'project' ? 'selected' : ''}" data-action="set-design" data-design="project"><div class="style-thumb project"></div><strong>Project-forward</strong><small>Work takes the lead.</small></button>
+          </div>
+          <div class="section-divider"></div>
+          <div class="field"><label>Choose what to show</label><div class="visibility-list">${SECTION_LABELS.map(([key,label]) => `<div class="visibility-row"><span>${label}</span><button class="toggle ${p.visible[key] ? 'on' : ''}" role="switch" aria-checked="${p.visible[key]}" aria-label="Show ${label}" data-section-toggle="${key}"></button></div>`).join('')}</div><div class="field-help">Empty sections stay hidden automatically.</div></div>
+          <div class="helper-box"><span class="helper-mark">${icon('eye', 12)}</span><span><strong>Look at the preview as you choose.</strong> Your page updates here with your details.</span></div>
+        </div>`;
+    }
+
+    function stepHeading() {
+      const titles = [
+        ['About you', 'A few details to make the page feel like you.'],
+        ['Education', 'Your learning, so far.'], ['Skills', 'Tools and topics you’re exploring.'],
+        ['Projects', 'Small builds and real practice.'], ['Highlights & links', 'The other things you do.'], ['Design', 'Choose a starting style.']
+      ];
+      return titles[state.step];
+    }
+
+    function hasSectionContent(key) {
+      const p = state.profile;
+      if (key === 'about') return !!(p.about || p.role || p.location);
+      if (key === 'education') return !!(p.college || p.degree || p.branch || p.gradYear || p.educationNote);
+      if (key === 'skills') return !!(p.skills.length || p.interests.length);
+      if (key === 'projects') return p.projects.some(x => x.title || x.description);
+      if (key === 'highlights') return p.achievements.length > 0;
+      if (key === 'contact') return !!(p.email || p.github || p.linkedin);
+      return false;
+    }
+    function siteSection(key) {
+      const p = state.profile;
+      if (!p.visible[key] || !hasSectionContent(key)) return '';
+      let body = '';
+      let label = '';
+      if (key === 'about') {
+        label = 'A little about me';
+        body = `<h3>What I’m curious about</h3><p>${esc(p.about || p.role)}</p>${p.location ? `<p style="margin-top:5px">Based in ${esc(p.location)}</p>` : ''}`;
+      } else if (key === 'education') {
+        label = 'Education';
+        const title = [p.degree, p.branch].filter(Boolean).join(' · ') || p.college;
+        const detail = [p.college && title !== p.college ? p.college : '', p.gradYear ? `Expected ${p.gradYear}` : '', p.educationNote].filter(Boolean).join(' · ');
+        body = `<h3>${esc(title || 'Learning')}</h3>${detail ? `<p>${esc(detail)}</p>` : ''}`;
+      } else if (key === 'skills') {
+        label = 'Things I use';
+        const all = [...p.skills, ...p.interests];
+        body = `<div class="site-link-list">${all.map(s => `<a href="#skills">${esc(s)}</a>`).join('')}</div>`;
+      } else if (key === 'projects') {
+        label = 'Selected work';
+        body = p.projects.filter(x => x.title || x.description).map(project => `<article class="site-project"><h4>${esc(project.title || 'A project in progress')}</h4>${project.description ? `<p>${esc(project.description)}</p>` : ''}${project.tools ? `<div class="site-project-tags">${project.tools.split(/[,·]/).map(t => t.trim()).filter(Boolean).map(t => `<span>${esc(t)}</span>`).join('')}</div>` : ''}${safeUrl(project.link) ? `<div class="site-project-tags"><a href="${esc(safeUrl(project.link))}" target="_blank" rel="noopener noreferrer">View project ↗</a></div>` : ''}</article>`).join('');
+      } else if (key === 'highlights') {
+        label = 'Along the way';
+        body = `<div class="site-link-list">${p.achievements.map(a => `<a href="#highlights">${esc(a)}</a>`).join('')}</div>`;
+      } else if (key === 'contact') {
+        label = 'Find me';
+        const links = [];
+        if (p.email) links.push(`<a href="mailto:${esc(p.email)}">Email me ↗</a>`);
+        if (safeUrl(p.github)) links.push(`<a href="${esc(safeUrl(p.github))}" target="_blank" rel="noopener noreferrer">GitHub ↗</a>`);
+        if (safeUrl(p.linkedin)) links.push(`<a href="${esc(safeUrl(p.linkedin))}" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>`);
+        body = `<div class="site-link-list">${links.join('')}</div>`;
+      }
+      return `<section class="site-section" data-section="${key}"><div class="site-section-label">${label}</div><div class="site-section-body">${body}</div></section>`;
+    }
+    function portfolioMarkup() {
+      const p = state.profile;
+      const title = p.name ? esc(p.name) : 'Your name';
+      const role = p.role ? esc(p.role) : 'What you’re learning or curious about';
+      const meta = [p.location, p.degree || p.branch, p.gradYear ? `Class of ${p.gradYear}` : ''].filter(Boolean).slice(0,3);
+      const ordered = p.sectionOrder || SECTION_LABELS.map(x => x[0]);
+      const sections = ordered.map(siteSection).join('');
+      return `<div class="portfolio-site theme-${state.design}">
+        <div class="site-nav"><strong>PORTFOLIO</strong><span>${p.name ? esc(p.name.split(' ')[0]) : 'YOUR NAME'}</span></div>
+        <header class="site-hero"><div class="site-hero-grid"><div><div class="site-kicker">${p.role ? 'A LITTLE ABOUT ME' : 'YOUR FIRST PORTFOLIO'}</div><h2>${title}</h2><p class="site-headline ${!p.role ? 'site-empty' : ''}">${role}</p></div><div class="site-avatar">${esc(initials(p.name))}</div></div>
+          ${meta.length ? `<div class="site-meta">${meta.map(m => `<span>${esc(m)}</span>`).join('')}</div>` : (p.name ? '' : `<div class="site-meta"><span>Your city</span><span>Your course</span></div>`)}
+        </header>
+        <div class="site-sections">${sections || `<section class="site-section"><div class="site-section-label">Coming together</div><div class="site-section-body"><h3>Your story starts here.</h3><p class="site-empty">Add a few details on the left and your portfolio will take shape.</p></div></section>`}</div>
+        <div style="padding-top:14px;color:#9ca39a;font-size:7px;text-align:center">Made with care · folio</div>
+      </div>`;
+    }
+    function builderMarkup() {
+      const current = stepHeading();
+      const progress = Math.round(((state.step + 1) / STEP_LABELS.length) * 100);
+      const isMobilePreview = state.viewport === 'mobile';
+      return `
+        <div class="studio screen-fade">
+          <header class="studio-bar">
+            <div class="studio-brand"><a class="logo" href="#" data-action="home"><span class="logo-mark">${icon('leaf', 14)}</span><span>folio</span></a><span class="bar-separator"></span><span class="draft-label">New portfolio</span></div>
+            <div class="studio-center"><span id="save-dot" class="save-dot"></span><span id="save-label">${state.saved ? 'Saved on this device' : 'Draft not saved yet'}</span></div>
+            <div class="studio-actions">
+              <div class="mobile-switch"><button class="${state.mobilePane === 'edit' ? 'active' : ''}" data-action="mobile-edit">Edit</button><button class="${state.mobilePane === 'preview' ? 'active' : ''}" data-action="mobile-preview">Preview</button></div>
+              <button class="button subtle small" data-action="home">Save & exit</button>
+              <button class="button small" data-action="publish">Publish ${icon('arrow', 12)}</button>
+            </div>
+          </header>
+          <main class="studio-layout ${state.mobilePane === 'preview' ? 'mobile-preview' : ''}">
+            <aside class="steps-rail">
+              <div class="rail-title">Your portfolio</div><div class="rail-progress"><span style="width:${progress}%"></span></div>
+              <nav class="step-list" aria-label="Portfolio setup steps">${STEP_LABELS.map((label, i) => `<button class="rail-step ${state.step === i ? 'active' : ''} ${i < state.step ? 'done' : ''}" data-action="go-step" data-step="${i}"><span class="step-mini-number">${i < state.step ? '✓' : i + 1}</span><span>${label}</span></button>`).join('')}</nav>
+              <div class="rail-tip">${icon('light', 14)}<p>You can skip a step and come back later. A first version is allowed to be a work in progress.</p></div>
+            </aside>
+            <section class="form-panel" aria-label="Portfolio details">
+              ${renderStepContent()}
+              <div class="form-footer"><button class="button secondary small" data-action="previous" ${state.step === 0 ? 'disabled style="opacity:.45;cursor:default"' : ''}>${icon('arrowLeft', 12)} Back</button><span class="skip-note">${current[1]}</span><button class="button small" data-action="next">${state.step === STEP_LABELS.length - 1 ? 'Done' : 'Continue'} ${icon('arrow', 12)}</button></div>
+            </section>
+            <aside class="preview-column" aria-label="Live portfolio preview">
+              <div class="preview-toolbar"><div class="preview-label"><span class="preview-live-dot"></span> LIVE PREVIEW</div><div class="viewport-switch"><button class="${!isMobilePreview ? 'active' : ''}" aria-label="Desktop preview" data-action="viewport-desktop">${icon('monitor', 14)}</button><button class="${isMobilePreview ? 'active' : ''}" aria-label="Mobile preview" data-action="viewport-mobile">${icon('phone', 14)}</button></div></div>
+              <div class="preview-frame ${isMobilePreview ? 'is-mobile' : ''}"><div class="preview-browserbar"><span>${esc(state.profile.name ? state.profile.name.toLowerCase().replace(/\s+/g,'') : 'yourname')}.folio.site</span></div><div id="preview-content" class="preview-content">${portfolioMarkup()}</div></div>
+              <div class="preview-tip">${icon('eye', 12)} This is how your site will look on the web.</div>
+            </aside>
+          </main>
+        </div>
+        ${state.modal ? publishModal() : ''}`;
+    }
+    function publishModal() {
+      const hasName = !!state.profile.name.trim();
+      return `<div class="modal-backdrop" data-action="close-modal"><div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"><div class="modal-icon">${icon('globe', 18)}</div><h2 id="modal-title">Your first version is taking shape.</h2><p>${hasName ? `You’ve got a draft for <strong>${esc(state.profile.name)}</strong>.` : 'Add your name when you’re ready—your draft will be here.'} The next step will connect your portfolio to an account and a public link.</p><p class="modal-note">This frontend prototype saves your draft only in this browser. Real sign-in and public publishing aren’t connected yet, so nothing is online.</p><div class="modal-actions"><button class="button secondary small" data-action="close-modal">Keep editing</button><button class="button small" data-action="finish-modal">Got it ${icon('check', 12)}</button></div></div></div>`;
+    }
+
+    function render() {
+      app.innerHTML = state.screen === 'landing' ? landingMarkup() : builderMarkup();
+    }
+    function updatePreview() {
+      const preview = document.getElementById('preview-content');
+      if (preview) preview.innerHTML = portfolioMarkup();
+      const browserbar = document.querySelector('.preview-browserbar');
+      if (browserbar) browserbar.innerHTML = `<span>${esc(state.profile.name ? state.profile.name.toLowerCase().replace(/\s+/g,'') : 'yourname')}.folio.site</span>`;
+    }
+    function currentField(fieldName, value) {
+      state.profile[fieldName] = value;
+      persistDraft();
+      updatePreview();
+    }
+    function addChip(fieldName, inputId) {
+      const input = document.getElementById(inputId);
+      if (!input) return;
+      const value = input.value.trim();
+      if (!value) { input.focus(); return; }
+      const list = state.profile[fieldName];
+      if (!list.some(x => x.toLowerCase() === value.toLowerCase())) list.push(value);
+      persistDraft(); render();
+      const newInput = document.getElementById(inputId);
+      if (newInput) newInput.focus();
+    }
+    function moveStep(n) {
+      state.step = Math.max(0, Math.min(STEP_LABELS.length - 1, n));
+      state.mobilePane = 'edit';
+      render();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    function handleAction(button) {
+      const action = button.dataset.action;
+      if (!action) return;
+      if (action === 'start') { state.profile = freshProfile(); state.design = 'minimal'; state.saved = false; goToBuilder(); }
+      else if (action === 'resume') { if (state.saved || state.profile.name || state.profile.about) goToBuilder(); else toast('Sign-in will be available when accounts are connected.'); }
+      else if (action === 'home') { state.screen = 'landing'; state.modal = false; render(); window.scrollTo(0,0); }
+      else if (action === 'next') { if (state.step < STEP_LABELS.length - 1) moveStep(state.step + 1); else { toast('Your design is ready to review.'); state.mobilePane = 'preview'; render(); } }
+      else if (action === 'previous') { if (state.step > 0) moveStep(state.step - 1); }
+      else if (action === 'go-step') moveStep(Number(button.dataset.step));
+      else if (action === 'add-project') { state.profile.projects.push({ id: `p-${Date.now()}-${Math.random().toString(16).slice(2,6)}`, title: '', description: '', tools: '', link: '' }); persistDraft(); render(); const inputs = app.querySelectorAll('[data-project-field="title"]'); if (inputs.length) inputs[inputs.length - 1].focus(); }
+      else if (action === 'remove-project') { state.profile.projects = state.profile.projects.filter(p => p.id !== button.dataset.id); persistDraft(); render(); }
+      else if (action === 'add-skill') addChip('skills', 'skill-input');
+      else if (action === 'add-interest') addChip('interests', 'interest-input');
+      else if (action === 'add-achievement') addChip('achievements', 'achievement-input');
+      else if (action === 'remove-skill') { state.profile.skills.splice(Number(button.dataset.index), 1); persistDraft(); render(); }
+      else if (action === 'remove-interest') { state.profile.interests.splice(Number(button.dataset.index), 1); persistDraft(); render(); }
+      else if (action === 'remove-achievement') { state.profile.achievements.splice(Number(button.dataset.index), 1); persistDraft(); render(); }
+      else if (action === 'set-design') { state.design = button.dataset.design; persistDraft(); render(); }
+      else if (action === 'viewport-desktop') { state.viewport = 'desktop'; render(); }
+      else if (action === 'viewport-mobile') { state.viewport = 'mobile'; render(); }
+      else if (action === 'mobile-edit') { state.mobilePane = 'edit'; render(); }
+      else if (action === 'mobile-preview') { state.mobilePane = 'preview'; render(); }
+      else if (action === 'publish') { state.modal = true; render(); }
+      else if (action === 'close-modal') { state.modal = false; render(); }
+      else if (action === 'finish-modal') { state.modal = false; state.mobilePane = 'preview'; render(); toast('Draft saved on this device. Publishing is not connected yet.'); }
+      else if (action === 'writing-help') { toast('Try: “I’m learning ___ and I’m curious about ___.”'); }
+      else if (action === 'try-sample') loadExample();
+      else if (action === 'reset') resetDraft();
+    }
+
+    app.addEventListener('click', event => {
+      if (event.target.closest('.modal') && !event.target.closest('.modal [data-action]')) return;
+      const actionButton = event.target.closest('[data-action]');
+      if (actionButton) { event.preventDefault(); handleAction(actionButton); return; }
+      const stepToggle = event.target.closest('[data-section-toggle]');
+      if (stepToggle) {
+        const key = stepToggle.dataset.sectionToggle;
+        state.profile.visible[key] = !state.profile.visible[key];
+        persistDraft(); render();
+      }
+    });
+    app.addEventListener('input', event => {
+      const target = event.target;
+      if (target.dataset.field) currentField(target.dataset.field, target.value);
+      if (target.dataset.projectField) {
+        const project = state.profile.projects.find(x => x.id === target.dataset.id);
+        if (project) { project[target.dataset.projectField] = target.value; persistDraft(); updatePreview(); }
+      }
+    });
+    app.addEventListener('change', event => {
+      const target = event.target;
+      if (target.dataset.sectionToggle) {
+        state.profile.visible[target.dataset.sectionToggle] = !state.profile.visible[target.dataset.sectionToggle];
+        persistDraft(); render();
+      }
+    });
+    app.addEventListener('keydown', event => {
+      if (event.key === 'Enter' && event.target.matches('[data-skill-input]')) { event.preventDefault(); addChip('skills', 'skill-input'); }
+      if (event.key === 'Enter' && event.target.matches('[data-interest-input]')) { event.preventDefault(); addChip('interests', 'interest-input'); }
+      if (event.key === 'Enter' && event.target.matches('[data-achievement-input]')) { event.preventDefault(); addChip('achievements', 'achievement-input'); }
+      if (event.key === 'Escape' && state.modal) { state.modal = false; render(); }
+    });
+    render();
+  </script>
+</body>
+</html>

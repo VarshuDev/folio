@@ -1,0 +1,24 @@
+{
+  "checkpoint": "6",
+  "checks": {
+    "aiDefaultUnavailable": true,
+    "tellUsToReview": true,
+    "reviewToDesign": true,
+    "localSave": true,
+    "localResume": true,
+    "pasteNotesPreserved": true,
+    "legacyDraft": true,
+    "all22Styles": true,
+    "clientBundleSecretScan": true,
+    "envLocalIgnored": true,
+    "flowSummary": "Tell us → Review → Design → Edit → localSave → localResume → legacyDraft"
+  },
+  "browserErrors": [],
+  "failedChecks": [],
+  "summary": {
+    "passed": 10,
+    "total": 10,
+    "browserErrors": 0,
+    "failedChecks": 0
+  }
+}

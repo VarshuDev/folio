@@ -1,0 +1,16 @@
+{
+  "checkpoint": "8H",
+  "checks": {},
+  "browserErrors": [],
+  "axeViolations": [
+    {
+      "label": "Project Inspector Modal",
+      "violations": []
+    },
+    {
+      "label": "Mobile Modal (390px)",
+      "violations": []
+    }
+  ],
+  "failedChecks": []
+}

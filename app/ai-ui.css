@@ -1,0 +1,93 @@
+/* Checkpoint 7A: consent, fallback, and reviewable extraction suggestions. */
+.studio.profile-review-screen .profile-review-progress li > b,
+.studio.profile-review-screen .profile-review-progress li > span { color: #59665c; }
+.studio.profile-review-screen .review-item-label,
+.studio.profile-review-screen .review-source-label { color: #556258; }
+.studio .ai-processing-status { display: flex; align-items: center; gap: 10px; margin: 0; padding: 12px 14px; border: 1px solid #d4e0d0; border-radius: 8px; color: #314e3d; background: #f1f6ef; font-size: 14px; line-height: 1.5; }
+.studio .ai-loading-dot { width: 10px; height: 10px; flex: 0 0 auto; border-radius: 50%; background: #4d7655; animation: ai-loading-pulse 1.15s ease-in-out infinite; }
+@keyframes ai-loading-pulse { 50% { opacity: .38; transform: scale(.78); } }
+.studio .ai-fallback-box,
+.studio .ai-empty-box { display: grid; gap: 10px; padding: 14px; border: 1px solid #e5d5bc; border-radius: 8px; color: #554534; background: #fbf6eb; font-size: 14px; line-height: 1.55; }
+.studio .ai-fallback-box > p,
+.studio .ai-empty-box > p { margin: 0; }
+.studio .ai-empty-question { padding-top: 7px; border-top: 1px solid #e6dac5; color: #604f3e; }
+.studio .ai-fallback-actions,
+.studio .ai-consent-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.studio .ai-consent-panel { display: grid; gap: 10px; padding: 16px; border: 1px solid #cad8ca; border-radius: 8px; background: #f7faf5; }
+.studio .ai-consent-panel h2 { margin: 0; color: var(--studio-ink); font-size: 18px; line-height: 1.35; }
+.studio .ai-consent-panel p { max-width: 75ch; margin: 0; color: #435247; font-size: 13px; line-height: 1.6; }
+.studio .ai-consent-panel .ai-consent-caveat { color: #626a62; font-size: 12px; }
+.studio .ai-consent-actions { padding-top: 4px; }
+.studio .ai-consent-actions .button,
+.studio .ai-fallback-actions .button { min-height: 44px; }
+.studio .ai-suggestions-panel { display: grid; gap: 14px; margin-top: 22px; padding: clamp(15px, 2.7vw, 22px); border: 1px solid #cad8c9; border-radius: 10px; background: #f8faf6; }
+.studio .ai-suggestions-head { display: grid; gap: 6px; }
+.studio .ai-suggestions-head .eyebrow { color: var(--studio-evergreen); font-size: 11px; letter-spacing: .09em; }
+.studio .ai-suggestions-head h2 { margin: 0; color: var(--studio-ink); font-size: 20px; line-height: 1.35; }
+.studio .ai-suggestions-head p { max-width: 72ch; margin: 0; color: var(--studio-muted); font-size: 13px; line-height: 1.55; }
+.studio .ai-already-present { margin: 0; padding: 10px 12px; border-left: 3px solid #a7b9a3; color: #405348; background: #eef4eb; font-size: 13px; line-height: 1.55; overflow-wrap: anywhere; }
+.studio .ai-repeated-note { margin: 0; padding: 10px 12px; border-left: 3px solid #d0c2a6; color: #5e523d; background: #f9f5eb; font-size: 13px; line-height: 1.55; overflow-wrap: anywhere; }
+.studio .ai-suggestion-list { display: grid; gap: 10px; }
+.studio .ai-suggestion-card { min-width: 0; display: grid; gap: 10px; padding: 14px; border: 1px solid #dce3d9; border-radius: 8px; background: #fffefa; }
+.studio .ai-suggestion-card.has-warning { border-color: #dfcda9; }
+.studio .ai-suggestion-heading { min-width: 0; display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+.studio .ai-suggestion-heading > div { min-width: 0; }
+.studio .ai-field-name { color: #667268; font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.studio .ai-suggestion-heading h3 { margin: 3px 0 0; color: var(--studio-ink); font-size: 16px; line-height: 1.4; overflow-wrap: anywhere; }
+.studio .ai-confidence { flex: 0 0 auto; padding: 4px 7px; border: 1px solid #d9e1d6; border-radius: 999px; color: #425747; background: #f2f6f0; font-size: 10px; font-weight: 650; line-height: 1.3; }
+.studio .ai-confidence-medium { border-color: #e5d9bb; color: #6a5535; background: #faf5e9; }
+.studio .ai-confidence-low { border-color: #e3c9be; color: #794b3b; background: #fbf2ed; }
+.studio .ai-suggestion-value { display: grid; gap: 8px; }
+.studio .ai-proposed-value { margin: 0; color: var(--studio-ink); font-size: 14px; line-height: 1.55; white-space: pre-wrap; overflow-wrap: anywhere; }
+.studio .ai-proposed-fields { display: grid; gap: 7px; }
+.studio .ai-proposed-fields > div { display: grid; gap: 2px; }
+.studio .ai-proposed-fields span { color: #6b766d; font-size: 10px; font-weight: 650; letter-spacing: .035em; text-transform: uppercase; }
+.studio .ai-proposed-fields p { margin: 0; color: var(--studio-ink); font-size: 13px; line-height: 1.5; white-space: pre-wrap; overflow-wrap: anywhere; }
+.studio .ai-suggestion-reason { margin: 0; color: #59665c; font-size: 12px; line-height: 1.5; }
+.studio .ai-merge-warning { display: grid; gap: 4px; padding: 9px 10px; border: 1px solid #e7dabc; border-radius: 6px; color: #665334; background: #fbf6e9; font-size: 12px; line-height: 1.5; }
+.studio .ai-merge-warning strong { color: #5c4a2d; font-size: 11px; }
+.studio .ai-merge-conflict { border-color: #e5c5b9; color: #724735; background: #fbf1ec; }
+.studio .ai-merge-conflict strong { color: #6d3f2d; }
+.studio .ai-merge-duplicate { border-color: #cddbc9; color: #405747; background: #f1f6ef; }
+.studio .ai-merge-warning blockquote { margin: 3px 0 0; padding-left: 9px; border-left: 2px solid currentColor; white-space: pre-wrap; overflow-wrap: anywhere; }
+.studio .ai-source-excerpt { color: #526358; font-size: 11px; line-height: 1.5; }
+.studio .ai-source-excerpt summary { width: fit-content; min-height: 36px; display: flex; align-items: center; color: var(--studio-evergreen); font-weight: 600; cursor: pointer; }
+.studio .ai-source-excerpt blockquote { max-height: 160px; overflow: auto; margin: 2px 0 0; padding: 8px 10px; border-left: 2px solid #bfd0bd; color: #55645a; background: #f4f7f2; white-space: pre-wrap; overflow-wrap: anywhere; }
+.studio .ai-source-unavailable { margin: 0; color: #7d563f; font-size: 11px; line-height: 1.5; }
+.studio .ai-suggestion-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; padding-top: 3px; border-top: 1px solid #e8ece5; }
+.studio .ai-suggestion-actions .button { min-height: 44px; }
+.studio .ai-edit-form { display: grid; gap: 9px; padding-top: 4px; }
+.studio .ai-edit-field { display: grid; gap: 6px; }
+.studio .ai-edit-field label { color: var(--studio-ink); font-size: 13px; font-weight: 650; }
+.studio .ai-edit-field input,
+.studio .ai-edit-field textarea,
+.studio .ai-edit-form .review-field input,
+.studio .ai-edit-form .review-field textarea { width: 100%; min-width: 0; min-height: 44px; padding: 10px 12px; border: 1px solid var(--studio-line-strong); border-radius: 7px; color: var(--studio-ink); background: #fff; font: inherit; font-size: 16px; line-height: 1.5; }
+.studio .ai-edit-field textarea,
+.studio .ai-edit-form .review-field textarea { min-height: 92px; resize: vertical; }
+.studio .ai-clarifying-box { padding: 12px 13px; border: 1px solid #dedfc8; border-radius: 7px; background: #fbfaef; }
+.studio .ai-clarifying-box h3 { margin: 0 0 6px; color: #4e5646; font-size: 13px; }
+.studio .ai-clarifying-box ul { display: grid; gap: 8px; margin: 0; padding-left: 19px; color: var(--studio-ink); font-size: 13px; line-height: 1.5; }
+.studio .ai-clarifying-box li p { margin: 0; }
+.studio .ai-clarifying-manual { margin: 8px 0 0; color: var(--studio-muted); font-size: 11px; line-height: 1.5; }
+.studio .ai-suggestions-complete,
+.studio .ai-decision-summary,
+.studio .ai-resolved-note { margin: 0; color: #405747; font-size: 12px; line-height: 1.5; }
+.studio .ai-decision-summary { padding-top: 8px; border-top: 1px solid #dce3d9; }
+.studio :is(.ai-suggestions-panel, .ai-consent-panel, .ai-fallback-box, .ai-empty-box) :is(button, input, textarea, summary):focus-visible { outline: 3px solid var(--studio-focus); outline-offset: 2px; }
+
+@media (max-width: 700px) {
+  .studio .ai-consent-actions,
+  .studio .ai-fallback-actions { display: grid; grid-template-columns: 1fr; }
+  .studio .ai-consent-actions .button,
+  .studio .ai-fallback-actions .button { width: 100%; }
+  .studio .ai-suggestions-panel { gap: 11px; margin-top: 17px; padding: 13px; }
+  .studio .ai-suggestion-card { padding: 12px; }
+  .studio .ai-suggestion-heading { align-items: flex-start; flex-direction: column; }
+  .studio .ai-suggestion-actions { display: grid; grid-template-columns: 1fr; }
+  .studio .ai-suggestion-actions .button { width: 100%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .studio .ai-loading-dot { animation: none; }
+}
