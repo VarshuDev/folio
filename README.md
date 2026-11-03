@@ -67,44 +67,49 @@ Folio operates as an end-to-end compilation pipeline. The diagram below illustra
 
 Folio rejects homogenous design. Each theme represents an intentional visual philosophy with distinct layout rhythms, custom typographic pairings, and bespoke micro-interactions:
 
+> [!TIP]
+> **Complete Visual Showcase &amp; High-Res Screenshots**: View full desktop (1440 × 900) and mobile (390 × 844) side-by-side screenshots, typography stacks, and design philosophies in **[THEMES.md](THEMES.md)**.
+
 <table align="center" width="100%">
-  <tr>
-    <td width="50%" align="center">
-      <strong><img src="assets/icons/theme-editorial.svg" width="18" height="18" align="center" /> Editorial Minimalist</strong><br>
-      <em>Asymmetric contents rail, literary hierarchy, quiet pacing.</em><br><br>
-      <img src="qa-5a-editorial-desktop.png" alt="Editorial Theme" width="100%" />
-    </td>
-    <td width="50%" align="center">
-      <strong><img src="assets/icons/theme-arcade.svg" width="18" height="18" align="center" /> Arcade &amp; Cyberpunk</strong><br>
-      <em>High-contrast neon accents, glowing status grid, phosphor glow.</em><br><br>
-      <img src="qa-5b-arcade-desktop.png" alt="Arcade Cyberpunk Theme" width="100%" />
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center">
-      <strong><img src="assets/icons/theme-swiss.svg" width="18" height="18" align="center" /> Swiss Modernist</strong><br>
-      <em>Strict typographic grid, bold sans-serif, asymmetric weight.</em><br><br>
-      <img src="qa-5b-swiss-desktop.png" alt="Swiss Modernist Theme" width="100%" />
-    </td>
-    <td width="50%" align="center">
-      <strong><img src="assets/icons/theme-terminal.svg" width="18" height="18" align="center" /> Terminal CLI</strong><br>
-      <em>Monospace hierarchy, green phosphor styling, ASCII accents.</em><br><br>
-      <img src="qa-5c-terminal-desktop.png" alt="Terminal CLI Theme" width="100%" />
-    </td>
-  </tr>
-  <tr>
-    <td width="50%" align="center">
-      <strong><img src="assets/icons/theme-blueprint.svg" width="18" height="18" align="center" /> Technical Blueprint</strong><br>
-      <em>Engineering cad-lines, cyan drafting grid, measurement markers.</em><br><br>
-      <img src="qa-5d-blueprint-desktop.png" alt="Blueprint Theme" width="100%" />
-    </td>
-    <td width="50%" align="center">
-      <strong><img src="assets/icons/theme-brutalist.svg" width="18" height="18" align="center" /> Neo-Brutalist</strong><br>
-      <em>High-impact borders, hard offset drop shadows, expressive contrast.</em><br><br>
-      <img src="qa-5c-brutalist-desktop.png" alt="Neo-Brutalist Theme" width="100%" />
-    </td>
-  </tr>
+  <thead>
+    <tr>
+      <th align="left">Aesthetic Family</th>
+      <th align="left">Design Philosophy</th>
+      <th align="left">Key Included Themes</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong><img src="assets/icons/theme-editorial.svg" width="16" height="16" align="center" /> Core &amp; Editorial</strong></td>
+      <td>Clean reading measures, literary rail navigation, quiet pacing</td>
+      <td><code>minimal</code>, <code>editorial</code>, <code>project</code></td>
+    </tr>
+    <tr>
+      <td><strong><img src="assets/icons/theme-swiss.svg" width="16" height="16" align="center" /> Modernist &amp; Structured</strong></td>
+      <td>1950s International Typographic Style, mathematical grids</td>
+      <td><code>swiss</code>, <code>bauhaus</code>, <code>gallery</code></td>
+    </tr>
+    <tr>
+      <td><strong><img src="assets/icons/theme-terminal.svg" width="16" height="16" align="center" /> Technical &amp; Systems</strong></td>
+      <td>Monospace hierarchy, green CRT phosphor, engineering blueprints</td>
+      <td><code>terminal</code>, <code>blueprint</code>, <code>academic</code></td>
+    </tr>
+    <tr>
+      <td><strong><img src="assets/icons/theme-arcade.svg" width="16" height="16" align="center" /> Creative &amp; Cyberpunk</strong></td>
+      <td>Scanline telemetry, ambient neon grids, midnight jazz vibes</td>
+      <td><code>arcade</code>, <code>after-hours</code>, <code>retro</code>, <code>y2k</code></td>
+    </tr>
+    <tr>
+      <td><strong><img src="assets/icons/theme-brutalist.svg" width="16" height="16" align="center" /> High-Impact Visual</strong></td>
+      <td>Solid black borders, raw offset shadows, archival broadsheet</td>
+      <td><code>brutalist</code>, <code>newsprint</code>, <code>botanical</code>, <code>zine</code></td>
+    </tr>
+  </tbody>
 </table>
+
+<p align="center">
+  <a href="THEMES.md"><strong>👉 Explore the Full 22-Theme Visual Showcase with Screenshots in THEMES.md →</strong></a>
+</p>
 
 <details>
 <summary><strong><img src="assets/icons/search-expand.svg" width="18" height="18" align="center" /> Click to expand the full 22-Theme Catalog &amp; Typography Specs</strong></summary>
