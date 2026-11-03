@@ -31,7 +31,7 @@ Centered reading measure, distraction-free typographic hierarchy, quiet dividers
   </tr>
 </table>
 
-- **Typography**: Inter / System UI with generous line height ($1.65$).
+- **Typography**: Inter / System UI with generous line height (1.65).
 - **Palette**: Monochromatic slate (`#0f172a` text, `#f8fafc` surface).
 - **Archetype**: Single Column Classic with sticky anchor navigation.
 
@@ -421,7 +421,7 @@ Every theme in Folio is validated against strict WCAG AA / AAA contrast standard
   <img src="assets/screenshots/qa-5e-grayscale-comparison-desktop.png" alt="Folio Grayscale Contrast Verification Suite" width="100%" />
 </p>
 
-- **Contrast Ratios**: Body text maintains $\ge 4.5:1$ contrast against backgrounds; large headers maintain $\ge 3:1$.
+- **Contrast Ratios**: Body text maintains ≥ 4.5:1 contrast against backgrounds; large headers maintain ≥ 3:1.
 - **Reduced Motion**: Respects `@media (prefers-reduced-motion: reduce)` by neutralizing all non-essential kinetic transforms.
 - **Focus Indicators**: 2px high-visibility focus rings on all interactive elements for keyboard and screen reader accessibility.
 

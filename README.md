@@ -183,7 +183,7 @@ Folio guarantees complete ownership of your work. You can export or deploy your 
 
 Unlike traditional analytics platforms that rely on invasive third-party cookies and persistent cross-site tracking, Folio incorporates a **zero-cookie, privacy-first telemetry engine**:
 
-$$\text{Visitor Token} = \operatorname{HMAC-SHA256}\Big(\text{Salt}_{\text{daily}},\; \text{IP Address} \;\parallel\; \text{User-Agent}\Big)$$
+$$\text{Visitor Token} = \text{HMAC-SHA256}\left(\text{Salt}_{\text{daily}} \parallel \text{IP Address} \parallel \text{User-Agent}\right)$$
 
 - **Zero Cookie Banners Required**: Because no identifier is written to the visitor's device, your portfolio is 100% compliant with GDPR, ePrivacy, and CCPA out of the box.
 - **Daily Salt Rotation**: Telemetry salts rotate every 24 hours. A visitor today cannot be tracked or correlated against their visit tomorrow.
