@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://github.com/VarshuDev/folio">
-    <img src="assets/hero-banner.svg" alt="Folio Studio &amp; Publishing Engine Header" width="100%" />
+    <img src="assets/banner.svg" alt="Folio Studio &amp; Publishing Engine Header" width="100%" />
   </a>
 </p>
 

@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 310" width="100%" height="100%">
+  <defs>
+    <!-- Dark luxury ambient glow -->
+    <radialGradient id="glow" cx="45%" cy="45%" r="60%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.32"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#090a0f" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Animated laser beam gradient -->
+    <linearGradient id="beam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#60a5fa" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#c084fc" stop-opacity="1"/>
+      <stop offset="70%" stop-color="#ec4899" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Subtle circuit grid -->
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#1c2234" stroke-width="0.8" opacity="0.7"/>
+      <circle cx="0" cy="0" r="1" fill="#334155" opacity="0.7"/>
+    </pattern>
+
+    <!-- Card border clip -->
+    <clipPath id="card-clip">
+      <rect width="920" height="310" rx="16"/>
+    </clipPath>
+
+    <style>
+      @keyframes sweep {
+        0% { transform: translateX(-920px); }
+        100% { transform: translateX(920px); }
+      }
+      @keyframes pulse-dot {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.3; }
+      }
+      .beam-sweep {
+        animation: sweep 3.6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+      }
+      .pulse {
+        animation: pulse-dot 1.8s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Base background -->
+  <rect width="920" height="310" rx="16" fill="#090a0f"/>
+  <rect width="920" height="310" rx="16" fill="url(#grid)"/>
+  <rect width="920" height="310" rx="16" fill="url(#glow)"/>
+
+  <!-- Top animated laser beam border -->
+  <g clip-path="url(#card-clip)">
+    <rect x="0" y="0" width="920" height="1" fill="#1e293b"/>
+    <rect class="beam-sweep" x="0" y="0" width="460" height="2.5" fill="url(#beam)"/>
+  </g>
+
+  <!-- Precision Corner Tech Accents -->
+  <path d="M 24 36 L 24 24 L 36 24" fill="none" stroke="#334155" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 896 36 L 896 24 L 884 24" fill="none" stroke="#334155" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 24 274 L 24 286 L 36 286" fill="none" stroke="#334155" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M 896 274 L 896 286 L 884 286" fill="none" stroke="#334155" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Top Status Pill (Left) -->
+  <g transform="translate(48, 30)">
+    <rect width="186" height="28" rx="14" fill="#0f1320" stroke="#1e263d" stroke-width="1"/>
+    <circle class="pulse" cx="16" cy="14" r="4.5" fill="#10b981"/>
+    <text x="30" y="18" fill="#9ca3af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'JetBrains Mono', monospace" font-size="11" font-weight="600" letter-spacing="0.5">ENGINE V1.0 // ACTIVE</text>
+  </g>
+
+  <!-- Author Stamp (Right) -->
+  <g transform="translate(680, 30)">
+    <rect width="192" height="28" rx="14" fill="#111526" stroke="#252d47" stroke-width="1"/>
+    <text x="16" y="18" fill="#a5b4fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'JetBrains Mono', monospace" font-size="11" font-weight="700" letter-spacing="0.8">CRAFTED BY VARSHUDEV</text>
+  </g>
+
+  <!-- Main Hero Title & Tagline -->
+  <text x="48" y="132" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'SF Pro Display', 'Segoe UI', Roboto, sans-serif" font-size="54" font-weight="900" letter-spacing="-1">
+    FOLIO <tspan fill="#818cf8">STUDIO</tspan>
+  </text>
+  <text x="50" y="166" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif" font-size="15.5" font-weight="400" letter-spacing="0.2">
+    The Opinionated Developer Portfolio Studio &amp; Zero-Dependency Static Compiler
+  </text>
+
+  <!-- Bottom Specification Chips -->
+  <g transform="translate(48, 222)">
+    <!-- Chip 1 -->
+    <rect width="156" height="34" rx="8" fill="#0f1322" stroke="#1d243a" stroke-width="1"/>
+    <circle cx="16" cy="17" r="3.5" fill="#6366f1"/>
+    <text x="28" y="21" fill="#cbd5e1" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="600">NEXT.JS 16 (TURBO)</text>
+
+    <!-- Chip 2 -->
+    <rect x="168" y="0" width="164" height="34" rx="8" fill="#0f1322" stroke="#1d243a" stroke-width="1"/>
+    <circle cx="184" cy="17" r="3.5" fill="#ec4899"/>
+    <text x="196" y="21" fill="#cbd5e1" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="600">22 ART DIRECTIONS</text>
+
+    <!-- Chip 3 -->
+    <rect x="344" y="0" width="166" height="34" rx="8" fill="#0f1322" stroke="#1d243a" stroke-width="1"/>
+    <circle cx="360" cy="17" r="3.5" fill="#10b981"/>
+    <text x="372" y="21" fill="#cbd5e1" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="600">0-COOKIE TELEMETRY</text>
+
+    <!-- Chip 4 -->
+    <rect x="522" y="0" width="158" height="34" rx="8" fill="#0f1322" stroke="#1d243a" stroke-width="1"/>
+    <circle cx="538" cy="17" r="3.5" fill="#f59e0b"/>
+    <text x="550" y="21" fill="#cbd5e1" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="600">STANDALONE EXPORT</text>
+
+    <!-- Chip 5 -->
+    <rect x="692" y="0" width="180" height="34" rx="8" fill="#0f1322" stroke="#1d243a" stroke-width="1"/>
+    <circle cx="708" cy="17" r="3.5" fill="#06b6d4"/>
+    <text x="720" y="21" fill="#cbd5e1" font-family="'JetBrains Mono', Consolas, monospace" font-size="10.5" font-weight="600">1-CLICK VERCEL REST</text>
+  </g>
+</svg>
