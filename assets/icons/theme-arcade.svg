@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <defs>
+    <style>
+      @keyframes joy-sway {
+        0%, 100% { transform: rotate(-8deg); }
+        50% { transform: rotate(8deg); }
+      }
+      .stick {
+        animation: joy-sway 1.8s ease-in-out infinite;
+        transform-origin: 12px 18px;
+      }
+    </style>
+  </defs>
+  <!-- Console Base -->
+  <path d="M 4 17 L 20 17 L 18 21 L 6 21 Z" fill="#0d111d" stroke="#252b42" stroke-width="1.4"/>
+  <!-- Joystick Stem & Ball -->
+  <g class="stick">
+    <line x1="12" y1="8" x2="12" y2="18" stroke="#38bdf8" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="12" cy="7" r="4" fill="#ec4899"/>
+  </g>
+</svg>

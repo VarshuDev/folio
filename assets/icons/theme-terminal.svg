@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <defs>
+    <style>
+      @keyframes blk { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+      .cursor-block { animation: blk 1s step-end infinite; }
+    </style>
+  </defs>
+  <rect x="2" y="3" width="20" height="18" rx="3" fill="#090d16" stroke="#10b981" stroke-width="1.5"/>
+  <path d="M 6 10 L 9 12 L 6 14" fill="none" stroke="#10b981" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect class="cursor-block" x="11" y="10" width="3" height="4" fill="#10b981"/>
+</svg>

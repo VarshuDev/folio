@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <defs>
+    <style>
+      @keyframes star-pulse {
+        0%, 100% { filter: drop-shadow(0 0 2px rgba(236, 72, 153, 0.5)); stroke: #ec4899; }
+        50% { filter: drop-shadow(0 0 8px rgba(99, 102, 241, 0.9)); stroke: #6366f1; }
+      }
+      .star-c { animation: star-pulse 2s ease-in-out infinite; }
+    </style>
+  </defs>
+  <path class="star-c" d="M 12 2 L 15 8.5 L 22 9.5 L 17 14.5 L 18.5 21.5 L 12 18 L 5.5 21.5 L 7 14.5 L 2 9.5 L 9 8.5 Z" fill="#0d111d" stroke="#ec4899" stroke-width="1.6" stroke-linejoin="round"/>
+  <circle cx="12" cy="12" r="2" fill="#ffffff"/>
+</svg>

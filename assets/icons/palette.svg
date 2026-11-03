@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <defs>
+    <style>
+      @keyframes spin-pal {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      @keyframes shift-color {
+        0%, 100% { fill: #ec4899; }
+        33% { fill: #6366f1; }
+        66% { fill: #06b6d4; }
+      }
+      .rot-ring {
+        animation: spin-pal 6s linear infinite;
+        transform-origin: 12px 12px;
+      }
+      .shift-dot {
+        animation: shift-color 3s ease-in-out infinite;
+      }
+    </style>
+  </defs>
+  <!-- Palette ring -->
+  <path class="rot-ring" d="M 12 3 A 9 9 0 1 0 17 19.5 A 2.5 2.5 0 0 0 19 16 A 2.5 2.5 0 0 0 17 12 A 4 4 0 0 1 21 8 A 9 9 0 0 0 12 3 Z" fill="#0d111e" stroke="#6366f1" stroke-width="1.6"/>
+  <!-- Palette color dots -->
+  <circle cx="8" cy="8" r="1.8" fill="#ec4899"/>
+  <circle cx="14" cy="7" r="1.8" fill="#38bdf8"/>
+  <circle cx="8" cy="14" r="1.8" fill="#10b981"/>
+  <circle class="shift-dot" cx="13" cy="13" r="2.2"/>
+</svg>

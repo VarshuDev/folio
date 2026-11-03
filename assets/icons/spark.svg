@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <defs>
+    <linearGradient id="spkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="50%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <style>
+      @keyframes pulse-spark {
+        0%, 100% { filter: drop-shadow(0 0 2px rgba(6, 182, 212, 0.5)); transform: scale(1); }
+        50% { filter: drop-shadow(0 0 7px rgba(99, 102, 241, 0.9)); transform: scale(1.08); }
+      }
+      .spark {
+        animation: pulse-spark 1.4s ease-in-out infinite;
+        transform-origin: 12px 12px;
+      }
+    </style>
+  </defs>
+  <path class="spark" d="M 13 2 L 4 13 L 11 13 L 9 22 L 20 10 L 13 10 Z" fill="url(#spkGrad)"/>
+</svg>

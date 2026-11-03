@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <defs>
+    <style>
+      @keyframes grid-spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+      .gspin { animation: grid-spin 12s linear infinite; transform-origin: 12px 12px; }
+    </style>
+  </defs>
+  <circle class="gspin" cx="12" cy="12" r="10" fill="none" stroke="#6366f1" stroke-width="1.2" stroke-dasharray="3, 3" opacity="0.6"/>
+  <!-- Swiss Cross -->
+  <rect x="10" y="5" width="4" height="14" rx="1" fill="#ec4899"/>
+  <rect x="5" y="10" width="14" height="4" rx="1" fill="#ec4899"/>
+</svg>

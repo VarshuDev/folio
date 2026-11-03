@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <defs>
+    <style>
+      @keyframes scan-qr {
+        0% { transform: translateY(0); opacity: 0.3; }
+        50% { opacity: 1; }
+        100% { transform: translateY(18px); opacity: 0.3; }
+      }
+      .laser { animation: scan-qr 2s ease-in-out infinite; }
+    </style>
+  </defs>
+  <!-- QR position marks -->
+  <rect x="3" y="3" width="6" height="6" rx="1" fill="none" stroke="#6366f1" stroke-width="1.5"/>
+  <rect x="5" y="5" width="2" height="2" fill="#6366f1"/>
+  <rect x="15" y="3" width="6" height="6" rx="1" fill="none" stroke="#6366f1" stroke-width="1.5"/>
+  <rect x="17" y="5" width="2" height="2" fill="#6366f1"/>
+  <rect x="3" y="15" width="6" height="6" rx="1" fill="none" stroke="#6366f1" stroke-width="1.5"/>
+  <rect x="5" y="17" width="2" height="2" fill="#6366f1"/>
+  <!-- Internal pixel blocks -->
+  <rect x="11" y="5" width="2" height="2" fill="#38bdf8"/>
+  <rect x="11" y="11" width="2" height="2" fill="#38bdf8"/>
+  <rect x="15" y="11" width="2" height="2" fill="#38bdf8"/>
+  <rect x="17" y="15" width="2" height="2" fill="#38bdf8"/>
+  <rect x="15" y="19" width="2" height="2" fill="#38bdf8"/>
+  <rect x="11" y="17" width="2" height="2" fill="#38bdf8"/>
+  <!-- Animated Laser Sweep -->
+  <line class="laser" x1="2" y1="3" x2="22" y2="3" stroke="#ec4899" stroke-width="1.5"/>
+</svg>

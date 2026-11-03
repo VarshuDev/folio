@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+  <defs>
+    <style>
+      @keyframes pulse-lens {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+      }
+      .lens { animation: pulse-lens 1.8s ease-in-out infinite; transform-origin: 10px 10px; }
+    </style>
+  </defs>
+  <g class="lens">
+    <circle cx="10" cy="10" r="7" fill="#0d111d" stroke="#6366f1" stroke-width="1.8"/>
+    <circle cx="10" cy="10" r="3" fill="#38bdf8" opacity="0.6"/>
+  </g>
+  <line x1="15" y1="15" x2="21" y2="21" stroke="#6366f1" stroke-width="2.2" stroke-linecap="round"/>
+</svg>

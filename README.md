@@ -18,17 +18,17 @@
 </p>
 
 <p align="center">
-  <a href="#-quickstart">⚡ Quickstart</a> •
-  <a href="#-22-handcrafted-art-directions">🎨 22 Art Directions</a> •
-  <a href="#-compiler-pipeline--architecture">🧬 Architecture</a> •
-  <a href="#-zero-lock-in-compilation-targets">📦 Export Engine</a> •
-  <a href="#-privacy-first-cookieless-telemetry">🔒 Privacy Spec</a> •
-  <a href="#-test-suite--rigor">🧪 Test Suite</a>
+  <a href="#quickstart"><img src="assets/icons/spark.svg" width="16" height="16" align="center" /> Quickstart</a> &nbsp;&bull;&nbsp;
+  <a href="#22-handcrafted-art-directions"><img src="assets/icons/palette.svg" width="16" height="16" align="center" /> 22 Art Directions</a> &nbsp;&bull;&nbsp;
+  <a href="#compiler-pipeline--architecture"><img src="assets/icons/pipeline-node.svg" width="16" height="16" align="center" /> Architecture</a> &nbsp;&bull;&nbsp;
+  <a href="#zero-lock-in-compilation-targets"><img src="assets/icons/export-box.svg" width="16" height="16" align="center" /> Export Engine</a> &nbsp;&bull;&nbsp;
+  <a href="#privacy-first-cookieless-telemetry"><img src="assets/icons/shield-lock.svg" width="16" height="16" align="center" /> Privacy Spec</a> &nbsp;&bull;&nbsp;
+  <a href="#test-suite--rigor"><img src="assets/icons/flask-test.svg" width="16" height="16" align="center" /> Test Suite</a>
 </p>
 
 ---
 
-## ⚡ Why Folio?
+## <img src="assets/icons/spark.svg" width="22" height="22" align="center" /> Why Folio?
 
 Most modern portfolio solutions force developers into one of two compromises: **cookie-cutter templates** that look like generic SaaS marketing pages, or **proprietary hosting lock-ins** that inject invasive tracking scripts, pop-up consent banners, and recurring subscriptions.
 
@@ -42,7 +42,7 @@ Most modern portfolio solutions force developers into one of two compromises: **
 
 ---
 
-## 🧬 Compiler Pipeline & Architecture
+## <img src="assets/icons/pipeline-node.svg" width="22" height="22" align="center" /> Compiler Pipeline &amp; Architecture
 
 Folio operates as an end-to-end compilation pipeline. The diagram below illustrates how creator data flows from the visual studio into compiled static artifacts and edge distribution:
 
@@ -63,43 +63,43 @@ Folio operates as an end-to-end compilation pipeline. The diagram below illustra
 
 ---
 
-## 🎨 22 Handcrafted Art Directions
+## <img src="assets/icons/palette.svg" width="22" height="22" align="center" /> 22 Handcrafted Art Directions
 
 Folio rejects homogenous design. Each theme represents an intentional visual philosophy with distinct layout rhythms, custom typographic pairings, and bespoke micro-interactions:
 
 <table align="center" width="100%">
   <tr>
     <td width="50%" align="center">
-      <strong>📰 Editorial Minimalist</strong><br>
+      <strong><img src="assets/icons/theme-editorial.svg" width="18" height="18" align="center" /> Editorial Minimalist</strong><br>
       <em>Asymmetric contents rail, literary hierarchy, quiet pacing.</em><br><br>
       <img src="qa-5a-editorial-desktop.png" alt="Editorial Theme" width="100%" />
     </td>
     <td width="50%" align="center">
-      <strong>🕹️ Arcade &amp; Cyberpunk</strong><br>
+      <strong><img src="assets/icons/theme-arcade.svg" width="18" height="18" align="center" /> Arcade &amp; Cyberpunk</strong><br>
       <em>High-contrast neon accents, glowing status grid, phosphor glow.</em><br><br>
       <img src="qa-5b-arcade-desktop.png" alt="Arcade Cyberpunk Theme" width="100%" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center">
-      <strong>🇨🇭 Swiss Modernist</strong><br>
+      <strong><img src="assets/icons/theme-swiss.svg" width="18" height="18" align="center" /> Swiss Modernist</strong><br>
       <em>Strict typographic grid, bold sans-serif, asymmetric weight.</em><br><br>
       <img src="qa-5b-swiss-desktop.png" alt="Swiss Modernist Theme" width="100%" />
     </td>
     <td width="50%" align="center">
-      <strong>💻 Terminal CLI</strong><br>
+      <strong><img src="assets/icons/theme-terminal.svg" width="18" height="18" align="center" /> Terminal CLI</strong><br>
       <em>Monospace hierarchy, green phosphor styling, ASCII accents.</em><br><br>
       <img src="qa-5c-terminal-desktop.png" alt="Terminal CLI Theme" width="100%" />
     </td>
   </tr>
   <tr>
     <td width="50%" align="center">
-      <strong>📐 Technical Blueprint</strong><br>
+      <strong><img src="assets/icons/theme-blueprint.svg" width="18" height="18" align="center" /> Technical Blueprint</strong><br>
       <em>Engineering cad-lines, cyan drafting grid, measurement markers.</em><br><br>
       <img src="qa-5d-blueprint-desktop.png" alt="Blueprint Theme" width="100%" />
     </td>
     <td width="50%" align="center">
-      <strong>⚡ Neo-Brutalist</strong><br>
+      <strong><img src="assets/icons/theme-brutalist.svg" width="18" height="18" align="center" /> Neo-Brutalist</strong><br>
       <em>High-impact borders, hard offset drop shadows, expressive contrast.</em><br><br>
       <img src="qa-5c-brutalist-desktop.png" alt="Neo-Brutalist Theme" width="100%" />
     </td>
@@ -107,7 +107,7 @@ Folio rejects homogenous design. Each theme represents an intentional visual phi
 </table>
 
 <details>
-<summary><strong>🔍 Click to expand the full 22-Theme Catalog &amp; Typography Specs</strong></summary>
+<summary><strong><img src="assets/icons/search-expand.svg" width="18" height="18" align="center" /> Click to expand the full 22-Theme Catalog &amp; Typography Specs</strong></summary>
 <br>
 
 | Theme ID | Name | Category | Primary Mood &amp; Philosophy | Layout Archetype |
@@ -139,7 +139,7 @@ Folio rejects homogenous design. Each theme represents an intentional visual phi
 
 ---
 
-## 📦 Zero-Lock-In Compilation Targets
+## <img src="assets/icons/export-box.svg" width="22" height="22" align="center" /> Zero-Lock-In Compilation Targets
 
 Folio guarantees complete ownership of your work. You can export or deploy your portfolio through three distinct compilation targets:
 
@@ -174,7 +174,7 @@ Folio guarantees complete ownership of your work. You can export or deploy your 
 
 ---
 
-## 🔒 Privacy-First Cookieless Telemetry
+## <img src="assets/icons/shield-lock.svg" width="22" height="22" align="center" /> Privacy-First Cookieless Telemetry
 
 Unlike traditional analytics platforms that rely on invasive third-party cookies and persistent cross-site tracking, Folio incorporates a **zero-cookie, privacy-first telemetry engine**:
 
@@ -187,7 +187,7 @@ $$\text{Visitor Token} = \operatorname{HMAC-SHA256}\Big(\text{Salt}_{\text{daily
 
 ---
 
-## 🤖 Grounded AI Copy Assistance
+## <img src="assets/icons/ai-brain.svg" width="22" height="22" align="center" /> Grounded AI Copy Assistance
 
 Folio includes an integrated copy refinement assistant powered by **Google Gemini**, engineered with strict anti-hallucination boundaries:
 
@@ -200,7 +200,7 @@ Folio includes an integrated copy refinement assistant powered by **Google Gemin
 
 ---
 
-## 📱 Pure TypeScript Vector QR Engine
+## <img src="assets/icons/qr-matrix.svg" width="22" height="22" align="center" /> Pure TypeScript Vector QR Engine
 
 Folio features an internal, zero-dependency QR code generator built entirely in TypeScript:
 
@@ -211,7 +211,7 @@ Folio features an internal, zero-dependency QR code generator built entirely in 
 
 ---
 
-## 🚀 Headless Vercel Deployment
+## <img src="assets/icons/deploy-rocket.svg" width="22" height="22" align="center" /> Headless Vercel Deployment
 
 Deploy directly to your custom production domain on Vercel with zero friction:
 
@@ -225,13 +225,13 @@ Deploy directly to your custom production domain on Vercel with zero friction:
 
 ---
 
-## ⚡ Quickstart
+## <img src="assets/icons/spark.svg" width="22" height="22" align="center" /> Quickstart
 
 ### Prerequisites
 - **Node.js** 20.0 or higher
 - **npm** or **pnpm**
 
-### 1. Clone & Install
+### 1. Clone &amp; Install
 
 ```bash
 # Clone the repository
@@ -262,12 +262,12 @@ Open [http://localhost:3000](http://localhost:3000) in your browser:
 
 - **Studio Builder**: `http://localhost:3000/studio`
 - **Visual QA Theme Showcase**: `http://localhost:3000/template-demos`
-- **Account & Messages Inbox**: `http://localhost:3000/account`
+- **Account &amp; Messages Inbox**: `http://localhost:3000/account`
 - **Public Portfolio Route**: `http://localhost:3000/p/[slug]`
 
 ---
 
-## 🧪 Test Suite & Rigor
+## <img src="assets/icons/flask-test.svg" width="22" height="22" align="center" /> Test Suite &amp; Rigor
 
 Folio is backed by an automated test suite verifying compilers, security boundaries, and rendering engines:
 
@@ -284,7 +284,7 @@ npm run build
 
 | Engine Under Test | Test Command | Verification Scope |
 | :--- | :--- | :--- |
-| **Publishing & Deploy** | `npm run test:publishing` | Slug sanitization, OAuth replay protection, Vercel REST payload validation |
+| **Publishing &amp; Deploy** | `npm run test:publishing` | Slug sanitization, OAuth replay protection, Vercel REST payload validation |
 | **AI Boundaries** | `npm run test:ai` | Prompt injection defense, hallucination prevention, diff merging |
 | **Export Compiler** | `npm run test:export` | IEEE 802.3 CRC-32 integrity, PKZIP Deflate format, standalone HTML |
 | **Cookieless Analytics**| `npm run test:analytics` | Salt rotation lifecycle, hash collision prevention, zero IP leakage |
@@ -294,7 +294,7 @@ npm run build
 
 ---
 
-## 🛡️ Security & Integrity
+## <img src="assets/icons/shield-lock.svg" width="22" height="22" align="center" /> Security &amp; Integrity
 
 - **Zero Plaintext Secrets**: All sensitive secrets (`SUPABASE_SERVICE_ROLE_KEY`, `VERCEL_CLIENT_SECRET`) are enforced server-only.
 - **Bot Honeypot Defense**: Public portfolio contact endpoints feature silent honeypots (`hp_company`) and IP sliding-window limiters (maximum 3 messages per hour).
@@ -302,10 +302,10 @@ npm run build
 
 ---
 
-## 👨‍💻 Author & Credits
+## <img src="assets/icons/crown-author.svg" width="22" height="22" align="center" /> Author &amp; Credits
 
 Engineered and maintained with care by **[VarshuDev](https://github.com/VarshuDev)**.
 
-If you find Folio useful for your developer portfolio, consider starring ⭐ the repository!
+If you find Folio useful for your developer portfolio, consider starring <img src="assets/icons/crown-author.svg" width="16" height="16" align="center" /> the repository!
 
 Released under the **[MIT License](LICENSE)**.
