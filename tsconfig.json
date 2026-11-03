@@ -37,6 +37,6 @@
   ],
   "exclude": [
     "node_modules",
-    "prototype-v0.html"
+    "qa"
   ]
 }
