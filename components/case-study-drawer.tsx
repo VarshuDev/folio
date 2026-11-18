@@ -1,21 +1,35 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import type { Project } from '@/lib/profile-schema';
 import { safeExternalUrl } from '@/lib/profile-schema';
 import { GitHubStatsBadge } from './github-stats-badge';
+import { ProjectImage } from './project-image';
 
 interface CaseStudyDrawerProps {
   project: Project | null;
   isOpen: boolean;
   onClose: () => void;
+  onNextProject?: () => void;
+  onPrevProject?: () => void;
+  hasNextProject?: boolean;
+  hasPrevProject?: boolean;
 }
 
-export function CaseStudyDrawer({ project, isOpen, onClose }: CaseStudyDrawerProps) {
+export function CaseStudyDrawer({
+  project,
+  isOpen,
+  onClose,
+  onNextProject,
+  onPrevProject,
+  hasNextProject = false,
+  hasPrevProject = false,
+}: CaseStudyDrawerProps) {
   const drawerRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const [copiedLink, setCopiedLink] = useState(false);
 
-  // Close on Escape key and handle scroll lock
+  // Close on Escape key and handle keyboard arrow navigation + scroll lock
   useEffect(() => {
     if (!isOpen) return;
 
@@ -31,6 +45,12 @@ export function CaseStudyDrawer({ project, isOpen, onClose }: CaseStudyDrawerPro
       if (e.key === 'Escape') {
         e.preventDefault();
         onClose();
+      } else if (e.key === 'ArrowRight' && onNextProject && hasNextProject) {
+        e.preventDefault();
+        onNextProject();
+      } else if (e.key === 'ArrowLeft' && onPrevProject && hasPrevProject) {
+        e.preventDefault();
+        onPrevProject();
       }
     };
 
@@ -40,7 +60,7 @@ export function CaseStudyDrawer({ project, isOpen, onClose }: CaseStudyDrawerPro
       document.body.style.overflow = originalOverflow;
       window.removeEventListener('keydown', handleKeyDown);
     };
-  }, [isOpen, onClose]);
+  }, [isOpen, onClose, onNextProject, onPrevProject, hasNextProject, hasPrevProject]);
 
   if (!isOpen || !project) return null;
 
@@ -48,6 +68,18 @@ export function CaseStudyDrawer({ project, isOpen, onClose }: CaseStudyDrawerPro
   const liveDemoUrl = safeExternalUrl(caseStudy?.liveDemoUrl || project.link);
   const sourceCodeUrl = safeExternalUrl(project.githubUrl || (project.link.includes('github.com') ? project.link : ''));
   const toolsList = project.tools ? project.tools.split(/[,·]/).map((t) => t.trim()).filter(Boolean) : [];
+
+  const handleCopyLink = async () => {
+    if (typeof window === 'undefined') return;
+    const url = `${window.location.origin}${window.location.pathname}#study-${project.id}`;
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopiedLink(true);
+      setTimeout(() => setCopiedLink(false), 2000);
+    } catch {
+      // fallback
+    }
+  };
 
   return (
     <div
@@ -89,7 +121,7 @@ export function CaseStudyDrawer({ project, isOpen, onClose }: CaseStudyDrawerPro
         {/* Top Header */}
         <div
           style={{
-            padding: '1.5rem 1.75rem',
+            padding: '1.25rem 1.75rem',
             borderBottom: '1px solid #e7e5dc',
             display: 'flex',
             alignItems: 'flex-start',
@@ -107,9 +139,32 @@ export function CaseStudyDrawer({ project, isOpen, onClose }: CaseStudyDrawerPro
                 textTransform: 'uppercase',
                 color: '#355d48',
                 marginBottom: '0.35rem',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '0.5rem',
               }}
             >
-              TECHNICAL CASE STUDY
+              <span>TECHNICAL CASE STUDY</span>
+              <button
+                type="button"
+                onClick={handleCopyLink}
+                title="Copy shareable link to this case study"
+                style={{
+                  background: copiedLink ? '#dcfce7' : 'transparent',
+                  color: copiedLink ? '#166534' : '#5b6b61',
+                  border: '1px solid rgba(0,0,0,0.1)',
+                  borderRadius: '4px',
+                  padding: '1px 6px',
+                  fontSize: '0.68rem',
+                  fontWeight: 600,
+                  cursor: 'pointer',
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '3px',
+                }}
+              >
+                <span>{copiedLink ? '✓ Copied' : '🔗 Copy link'}</span>
+              </button>
             </div>
             <h2
               id="case-study-title"
@@ -126,36 +181,87 @@ export function CaseStudyDrawer({ project, isOpen, onClose }: CaseStudyDrawerPro
             </h2>
           </div>
 
-          <button
-            ref={closeButtonRef}
-            type="button"
-            onClick={onClose}
-            aria-label="Close case study drawer"
-            style={{
-              background: 'transparent',
-              border: '1px solid #dcdad2',
-              borderRadius: '50%',
-              width: '36px',
-              height: '36px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              cursor: 'pointer',
-              color: '#4a554e',
-              fontSize: '1.1rem',
-              lineHeight: 1,
-              flexShrink: 0,
-              transition: 'background-color 0.15s ease',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#eae7df';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = 'transparent';
-            }}
-          >
-            ✕
-          </button>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem' }}>
+            {/* Prev / Next project navigation */}
+            {hasPrevProject && onPrevProject && (
+              <button
+                type="button"
+                onClick={onPrevProject}
+                aria-label="Previous project (Left arrow)"
+                title="Previous project (←)"
+                style={{
+                  background: 'transparent',
+                  border: '1px solid #dcdad2',
+                  borderRadius: '50%',
+                  width: '32px',
+                  height: '32px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  cursor: 'pointer',
+                  color: '#4a554e',
+                  fontSize: '0.85rem',
+                }}
+              >
+                ←
+              </button>
+            )}
+
+            {hasNextProject && onNextProject && (
+              <button
+                type="button"
+                onClick={onNextProject}
+                aria-label="Next project (Right arrow)"
+                title="Next project (→)"
+                style={{
+                  background: 'transparent',
+                  border: '1px solid #dcdad2',
+                  borderRadius: '50%',
+                  width: '32px',
+                  height: '32px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  cursor: 'pointer',
+                  color: '#4a554e',
+                  fontSize: '0.85rem',
+                }}
+              >
+                →
+              </button>
+            )}
+
+            <button
+              ref={closeButtonRef}
+              type="button"
+              onClick={onClose}
+              aria-label="Close case study drawer (Esc)"
+              style={{
+                background: 'transparent',
+                border: '1px solid #dcdad2',
+                borderRadius: '50%',
+                width: '32px',
+                height: '32px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                cursor: 'pointer',
+                color: '#4a554e',
+                fontSize: '1rem',
+                lineHeight: 1,
+                flexShrink: 0,
+                transition: 'background-color 0.15s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = '#eae7df';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = 'transparent';
+              }}
+            >
+              ✕
+            </button>
+          </div>
         </div>
 
         {/* Scrollable Body */}
@@ -166,11 +272,22 @@ export function CaseStudyDrawer({ project, isOpen, onClose }: CaseStudyDrawerPro
             flex: 1,
             display: 'flex',
             flexDirection: 'column',
-            gap: '1.75rem',
+            gap: '1.5rem',
             fontSize: '0.95rem',
             lineHeight: 1.6,
           }}
         >
+          {/* Project Screenshot / Hero Image */}
+          {project.imageUrl && (
+            <div>
+              <ProjectImage
+                project={project}
+                aspectRatio="16 / 9"
+                style={{ maxHeight: '280px' }}
+              />
+            </div>
+          )}
+
           {/* GitHub Stats Badge if available */}
           <div>
             <GitHubStatsBadge project={project} />

@@ -40,6 +40,8 @@ export const ProjectSchema = z.object({
   description: z.string().max(3000),
   tools: z.string().max(240),
   link: z.string().max(500),
+  imageUrl: z.string().max(1000).optional(),
+  imageAlt: z.string().max(240).optional(),
   githubUrl: z.string().max(500).optional(),
   githubStats: ProjectGithubStatsSchema.optional(),
   caseStudy: ProjectCaseStudySchema.optional(),
@@ -88,11 +90,22 @@ export const ProfileDocumentSchema = z.object({
   }),
 });
 
+export const COLOR_MODES = ['light', 'dark', 'system'] as const;
+export const ACCENT_TONES = ['default', 'evergreen', 'terracotta', 'ocean', 'lavender', 'slate', 'amber'] as const;
+export const FONT_PAIRINGS = ['default', 'editorial-serif', 'modern-sans', 'technical-mono'] as const;
+
+export type ColorMode = (typeof COLOR_MODES)[number];
+export type AccentTone = (typeof ACCENT_TONES)[number];
+export type FontPairing = (typeof FONT_PAIRINGS)[number];
+
 export const DesignConfigSchema = z.object({
   templateId: z.enum(TEMPLATE_IDS),
   templateVersion: z.literal(1),
   visibleSections: z.record(SectionKeySchema, z.boolean()),
   sectionOrder: z.array(SectionKeySchema).length(6),
+  colorMode: z.enum(COLOR_MODES).optional(),
+  accentTone: z.enum(ACCENT_TONES).optional(),
+  fontPairing: z.enum(FONT_PAIRINGS).optional(),
 });
 
 import { PortfolioConfigSchema, type PortfolioConfig } from './portfolio-mode';

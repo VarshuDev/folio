@@ -23,7 +23,8 @@
     "test:contact": "tsx --test tests/contact/*.test.ts",
     "test:github": "tsx --test tests/github/*.test.ts",
     "test:projects": "tsx --test tests/projects/*.test.ts",
-    "test": "npm run test:ai && npm run test:publishing && npm run test:credits && npm run test:analytics && npm run test:export && npm run test:qr && npm run test:contact && npm run test:github && npm run test:projects"
+    "test:design": "tsx --test tests/design/*.test.ts",
+    "test": "npm run test:ai && npm run test:publishing && npm run test:credits && npm run test:analytics && npm run test:export && npm run test:qr && npm run test:contact && npm run test:github && npm run test:projects && npm run test:design"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.50.0",

@@ -7,8 +7,8 @@ import { AIServiceResultSchema, type ClarifyingQuestion, type ProfileSuggestion 
 import { prepareProposalReview } from '@/lib/ai/review-merge';
 import { type ProfileDocument, type Project } from '@/lib/profile-schema';
 
-type IntakeMethod = 'quick' | 'paste';
-type IntakeRoute = 'choice' | 'quick' | 'paste' | 'review';
+type IntakeMethod = 'quick' | 'paste' | 'resume';
+type IntakeRoute = 'choice' | 'quick' | 'paste' | 'resume' | 'review';
 type OtherLinkDraft = { id: string; label: string; url: string };
 type QuickAnswers = {
   name: string;
@@ -409,6 +409,9 @@ export function ContentIntake({ profile, saveStatus, onProfileChange, onIntakeSt
   const [aiClarifyingQuestions, setAIClarifyingQuestions] = useState<ClarifyingQuestion[]>([]);
   const [aiAlreadyPresent, setAIAlreadyPresent] = useState<string[]>([]);
   const [aiRepeatedSuggestions, setAIRepeatedSuggestions] = useState<string[]>([]);
+  const [resumeText, setResumeText] = useState('');
+  const [isParsingResume, setIsParsingResume] = useState(false);
+  const [resumeError, setResumeError] = useState('');
   const appliedPasteLines = useRef<Set<string>>(new Set());
   const linkId = useRef(0);
   const requestAbort = useRef<AbortController | null>(null);
@@ -473,9 +476,55 @@ export function ContentIntake({ profile, saveStatus, onProfileChange, onIntakeSt
     if (next === 'quick') {
       setQuestion(0);
       setRoute('quick');
-    } else {
+    } else if (next === 'paste') {
       setPasteNotes(profile.basics.originalNotes || profile.basics.about);
       setRoute('paste');
+    } else {
+      setRoute('resume');
+    }
+  };
+
+  const handleParseResume = async () => {
+    const text = resumeText.trim();
+    if (!text) {
+      setResumeError('Please paste your resume text or upload a document.');
+      return;
+    }
+    setResumeError('');
+    setIsParsingResume(true);
+    try {
+      const response = await fetch('/api/ai/resume-parse', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ resumeText: text }),
+      });
+      const data = await response.json();
+      if (!response.ok || !data.ok) {
+        throw new Error(data.error || 'Failed to extract details from resume.');
+      }
+      proceedToAIReview(data.suggestions || [], []);
+    } catch (err) {
+      setResumeError(err instanceof Error ? err.message : 'Could not parse resume.');
+    } finally {
+      setIsParsingResume(false);
+    }
+  };
+
+  const handleResumeFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    if (file.name.endsWith('.txt') || file.name.endsWith('.md')) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        const content = event.target?.result as string;
+        if (content) {
+          setResumeText(content);
+          setResumeError('');
+        }
+      };
+      reader.readAsText(file);
+    } else {
+      setResumeError('For PDF or Word documents, please copy and paste the text into the box below.');
     }
   };
 
@@ -783,7 +832,9 @@ export function ContentIntake({ profile, saveStatus, onProfileChange, onIntakeSt
     onMarkManualSource={(key) => setReviewManualSourceKeys((current) => new Set(current).add(key))}
     onBack={() => {
       setError('');
-      if (method === 'paste') {
+      if (method === 'resume') {
+        setRoute('resume');
+      } else if (method === 'paste') {
         setPasteNotes(profile.basics.originalNotes || profile.basics.about);
         setRoute('paste');
       } else {
@@ -791,7 +842,7 @@ export function ContentIntake({ profile, saveStatus, onProfileChange, onIntakeSt
         setRoute('quick');
       }
     }}
-    backLabel={method === 'paste' ? 'Back to my notes' : 'Back to my answers'}
+    backLabel={method === 'resume' ? 'Back to resume' : method === 'paste' ? 'Back to my notes' : 'Back to my answers'}
     onContinueToDesign={onChooseLook}
     onEditManually={onEditManually}
     onSaveExit={onSaveExit}
@@ -825,11 +876,17 @@ export function ContentIntake({ profile, saveStatus, onProfileChange, onIntakeSt
               <span className="intake-path-action">Paste my notes <Icon name="arrow" size={13} /></span>
             </button>
           </div>
-          <div className="intake-planned-card" role="note" aria-label="Resume import is planned and not available yet">
-            <span className="intake-planned-icon" aria-hidden="true"><Icon name="book" size={16} /></span>
-            <span><strong>Use a resume</strong><small>Coming soon — resume upload isn’t available yet.</small></span>
-            <span className="planned-label">Planned</span>
-          </div>
+          <button type="button" className="intake-path-card intake-resume-card" onClick={() => chooseMethod('resume')} style={{ width: '100%', marginTop: '12px', textAlign: 'left' }}>
+            <span className="intake-path-heading">
+              <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+                <Icon name="book" size={16} />
+                <strong>Use a resume</strong>
+              </span>
+              <span className="recommended-label" style={{ background: '#e1ede6', color: '#2b5c40' }}>Instant</span>
+            </span>
+            <span className="intake-path-copy">Have a resume or CV ready? Paste it to automatically extract education, skills, and projects into verified review.</span>
+            <span className="intake-path-action">Import resume <Icon name="arrow" size={13} /></span>
+          </button>
           <div className="intake-manual-callout"><span>Prefer to organize things yourself?</span><button className="text-button" type="button" onClick={onEditManually}>Edit your profile manually</button></div>
         </section>}
 
@@ -948,6 +1005,74 @@ export function ContentIntake({ profile, saveStatus, onProfileChange, onIntakeSt
               <div className="intake-question-actions-end"><button type="button" className="button subtle small" onClick={() => { setMethod('paste'); proceedToReview(); }}>Skip for now</button><button type="submit" className="button small">Continue <Icon name="arrow" size={12} /></button></div>
             </div>}
           </form>
+        </section>}
+
+        {route === 'resume' && <section className="intake-page intake-paste">
+          <div className="intake-flowline" role="group" aria-label="Your path: tell us, review, design, edit">
+            <span className="current">Tell us</span><b aria-hidden="true">→</b><span>Review</span><b aria-hidden="true">→</b><span>Design</span><b aria-hidden="true">→</b><span>Edit</span>
+          </div>
+          <span className="eyebrow">SMART INTAKE</span>
+          <h1 tabIndex={-1} id={`${rootId}-title`}>Import from your resume</h1>
+          <p className="intake-lead">Paste your resume text below. Folio extracts your education, projects, skills, and links for you to review and verify.</p>
+
+          <div className="intake-paste-layout">
+            <div className="intake-paste-card">
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.75rem', flexWrap: 'wrap', gap: '0.5rem' }}>
+                <label htmlFor="resume-textarea" style={{ fontSize: '0.88rem', fontWeight: 600, color: '#252d29' }}>Resume or CV text</label>
+                <label className="button secondary small" style={{ cursor: 'pointer', margin: 0 }}>
+                  <span>Upload .txt or .md</span>
+                  <input type="file" accept=".txt,.md" onChange={handleResumeFileUpload} style={{ display: 'none' }} />
+                </label>
+              </div>
+
+              <textarea
+                id="resume-textarea"
+                className="intake-paste-textarea"
+                rows={13}
+                value={resumeText}
+                onChange={(e) => { setResumeText(e.target.value); setResumeError(''); }}
+                placeholder="Paste your full resume, CV, or LinkedIn profile text here...&#10;&#10;e.g.&#10;Jane Doe&#10;Full Stack Developer&#10;jane@example.com | github.com/janedoe&#10;&#10;EDUCATION&#10;B.S. in Computer Science, State University, 2025&#10;&#10;SKILLS&#10;TypeScript, React, Python, PostgreSQL&#10;&#10;PROJECTS&#10;Folio App - Minimal portfolio generator"
+                aria-describedby={resumeError ? 'resume-error-msg' : undefined}
+              />
+
+              {resumeError && (
+                <div id="resume-error-msg" className="field-error" style={{ marginTop: '0.5rem' }} role="alert">
+                  {resumeError}
+                </div>
+              )}
+
+              <div className="intake-question-actions" style={{ marginTop: '1.25rem' }}>
+                <button
+                  type="button"
+                  className="button secondary small"
+                  onClick={() => { setRoute('choice'); setResumeError(''); }}
+                >
+                  <Icon name="arrowLeft" size={12} /> Back
+                </button>
+                <div className="intake-question-actions-end">
+                  <button
+                    type="button"
+                    className="button small"
+                    disabled={isParsingResume || !resumeText.trim()}
+                    onClick={handleParseResume}
+                  >
+                    {isParsingResume ? 'Extracting facts…' : 'Extract facts & review'} <Icon name="arrow" size={12} />
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <aside className="intake-paste-sidebar">
+              <div className="helper-box">
+                <span className="helper-mark"><Icon name="lock" size={14} /></span>
+                <span><strong>Zero invented facts.</strong> Folio only extracts what is written in your resume. Nothing is published or saved until you approve each item in the review stage.</span>
+              </div>
+              <div className="helper-box" style={{ marginTop: '0.75rem' }}>
+                <span className="helper-mark"><Icon name="light" size={14} /></span>
+                <span><strong>Tip:</strong> Plain text copied from a PDF, Word doc, or LinkedIn profile works great.</span>
+              </div>
+            </aside>
+          </div>
         </section>}
 
 

@@ -4,6 +4,8 @@ import React from 'react';
 import { SECTION_LABELS, type DesignConfig, type ProfileDocument, type SectionKey, type TemplateId, type Project } from '@/lib/profile-schema';
 import { GitHubStatsBadge } from './github-stats-badge';
 import { CaseStudyProvider, useCaseStudy } from './case-study-provider';
+import { ProjectImage } from './project-image';
+import { getCustomizerTheme } from '@/lib/theme-customizer';
 
 export const CORE_TEMPLATE_IDS: TemplateId[] = ['minimal', 'editorial', 'project'];
 export type CoreTemplateId = 'minimal' | 'editorial' | 'project';
@@ -142,6 +144,13 @@ function CoreSection({ section, profile, templateId }: { section: SectionKey; pr
                 </div>
               </div>
               {project.description && <p>{project.description}</p>}
+              {project.imageUrl && (
+                <ProjectImage
+                  project={project}
+                  aspectRatio="16 / 9"
+                  style={{ maxWidth: '420px', marginTop: '0.65rem', marginBottom: '0.35rem' }}
+                />
+              )}
               <GitHubStatsBadge project={project} />
               <ProjectTools tools={project.tools} className="core-minimal-tools"/>
             </article>)}
@@ -155,7 +164,12 @@ function CoreSection({ section, profile, templateId }: { section: SectionKey; pr
         <div className="core-editorial-section-content">
           <div className="core-editorial-project-list">
             {projects.map((project, index) => <article className={`core-editorial-project ${index === 0 ? 'is-featured' : index % 2 === 0 ? 'is-reversed' : ''}`} key={project.id}>
-              <div className="core-editorial-project-art" aria-hidden="true"><i/><b/><span/></div>
+              <ProjectImage
+                project={project}
+                aspectRatio="16 / 10"
+                className="core-editorial-project-media"
+                fallbackArt={<div className="core-editorial-project-art" aria-hidden="true"><i/><b/><span/></div>}
+              />
               <div className="core-editorial-project-copy">
                 <span className="core-editorial-project-index">{index === 0 ? 'FEATURED WORK' : `PROJECT ${String(index + 1).padStart(2, '0')}`}</span>
                 {project.title && <h3>{project.title}</h3>}
@@ -180,7 +194,12 @@ function CoreSection({ section, profile, templateId }: { section: SectionKey; pr
           <p>You can add projects later.</p>
         </div> : <>
           <article className="core-project-feature">
-            <div className="core-project-feature-art" aria-hidden="true"><i/><b/><span/></div>
+            <ProjectImage
+              project={projects[0]}
+              aspectRatio="16 / 10"
+              className="core-project-feature-media"
+              fallbackArt={<div className="core-project-feature-art" aria-hidden="true"><i/><b/><span/></div>}
+            />
             <div className="core-project-feature-copy">
               <span className="core-project-kicker">FEATURED PROJECT</span>
               {projects[0].title && <h3>{projects[0].title}</h3>}
@@ -195,7 +214,12 @@ function CoreSection({ section, profile, templateId }: { section: SectionKey; pr
           </article>
           {projects.length > 1 && <div className="core-project-archive">
             {projects.slice(1).map((project) => <article className="core-project-card" key={project.id}>
-              <div className="core-project-card-art" aria-hidden="true"><i/><b/></div>
+              <ProjectImage
+                project={project}
+                aspectRatio="16 / 10"
+                className="core-project-card-media"
+                fallbackArt={<div className="core-project-card-art" aria-hidden="true"><i/><b/></div>}
+              />
               <div className="core-project-card-copy">
                 {project.title && <h3>{project.title}</h3>}
                 {project.description && <p>{project.description}</p>}
@@ -306,10 +330,11 @@ export function CorePortfolio({ profile, design }: { profile: ProfileDocument; d
     profile.education.gradYear ? { label: 'Year', value: profile.education.gradYear } : null,
   ].filter((item): item is { label: string; value: string } => Boolean(item?.value));
   const id = topAnchorId(templateId);
+  const customizer = getCustomizerTheme(design);
 
   if (templateId === 'minimal') {
-    return <CaseStudyProvider>
-      <div className="portfolio-site core-portfolio core-minimal theme-minimal" data-template={templateId}>
+    return <CaseStudyProvider projects={profile.projects}>
+      <div className={`portfolio-site core-portfolio core-minimal theme-minimal ${customizer.className}`.trim()} style={customizer.style} data-template={templateId}>
         <div className="core-minimal-shell">
           <header className="core-minimal-header" id={id}>
             <a className="core-minimal-wordmark" href={`#${id}`}>{name}</a>
@@ -329,8 +354,8 @@ export function CorePortfolio({ profile, design }: { profile: ProfileDocument; d
   }
 
   if (templateId === 'editorial') {
-    return <CaseStudyProvider>
-      <div className="portfolio-site core-portfolio core-editorial theme-editorial" data-template={templateId}>
+    return <CaseStudyProvider projects={profile.projects}>
+      <div className={`portfolio-site core-portfolio core-editorial theme-editorial ${customizer.className}`.trim()} style={customizer.style} data-template={templateId}>
         <div className="core-editorial-shell">
           <div className="core-editorial-kicker">PORTFOLIO</div>
           <header className="core-editorial-hero" id={id}>
@@ -361,8 +386,8 @@ export function CorePortfolio({ profile, design }: { profile: ProfileDocument; d
     </CaseStudyProvider>;
   }
 
-  return <CaseStudyProvider>
-    <div className="portfolio-site core-portfolio core-project theme-project" data-template={templateId}>
+  return <CaseStudyProvider projects={profile.projects}>
+    <div className={`portfolio-site core-portfolio core-project theme-project ${customizer.className}`.trim()} style={customizer.style} data-template={templateId}>
       <div className="core-project-shell">
         <header className="core-project-header" id={id}>
           <div className="core-project-brand-group">

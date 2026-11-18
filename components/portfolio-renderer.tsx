@@ -5,6 +5,8 @@ import { SECTION_LABELS, type DesignConfig, type ProfileDocument, type SectionKe
 import { CorePortfolio } from './core-portfolio';
 import { GitHubStatsBadge } from './github-stats-badge';
 import { CaseStudyProvider, useCaseStudy } from './case-study-provider';
+import { ProjectImage } from './project-image';
+import { getCustomizerTheme } from '@/lib/theme-customizer';
 
 function initials(name: string) {
   const parts = name.trim().split(/\s+/).filter(Boolean);
@@ -147,7 +149,10 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
       if (projects.length === 0) return <ProjectEmptyState className="zine"/>;
       return <div className="zine-project-list">
         {projects.map((project, index) => <article className="zine-project" key={project.id}>
-          <div className={`zine-project-art zine-project-art--${index % 3}`} aria-hidden="true"><i/><b/><span>ABSTRACT CUT-PAPER</span></div>
+          <ProjectImage
+            project={project}
+            fallbackArt={<div className={`zine-project-art zine-project-art--${index % 3}`} aria-hidden="true"><i/><b/><span>ABSTRACT CUT-PAPER</span></div>}
+          />
           <div className="zine-project-copy">
             <span className="zine-project-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
             {project.title && <h3>{project.title}</h3>}
@@ -163,7 +168,10 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
       if (projects.length === 0) return <ProjectEmptyState className="documentary"/>;
       return <div className="documentary-project-sequence">
         {projects.map((project, index) => <article className="documentary-project" key={project.id}>
-          <div className={`documentary-project-art documentary-project-art--${index % 3}`} aria-hidden="true"><i/><b/><span>ABSTRACT DECORATION</span></div>
+          <ProjectImage
+            project={project}
+            fallbackArt={<div className={`documentary-project-art documentary-project-art--${index % 3}`} aria-hidden="true"><i/><b/><span>ABSTRACT DECORATION</span></div>}
+          />
           <div className="documentary-project-caption">
             <span className="documentary-project-number" aria-hidden="true">PROJECT {String(index + 1).padStart(2, '0')}</span>
             {project.title && <h3>{project.title}</h3>}
@@ -179,6 +187,7 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
       if (projects.length === 0) return <ProjectEmptyState className="community"/>;
       return <div className="community-project-list">
         {projects.map((project, index) => <article className="community-project" key={project.id}>
+          <ProjectImage project={project} />
           <span className="community-project-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
           <div className="community-project-copy">
             {project.title && <h3>{project.title}</h3>}
@@ -194,6 +203,7 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
       if (projects.length === 0) return <ProjectEmptyState className="case-study"/>;
       return <div className="case-study-project-list">
         {projects.map((project, index) => <article className={`case-study-project ${index === 0 ? 'is-featured' : 'is-supporting'}`} key={project.id}>
+          <ProjectImage project={project} />
           <div className="case-study-project-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</div>
           <div className="case-study-project-copy">
             <span className="case-study-project-label">{index === 0 ? 'FEATURED PROJECT' : 'SUPPORTING PROJECT'}</span>
@@ -208,7 +218,10 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
 
     if (templateId === 'newsprint') return <div className="newsprint-project-list">
       {projects.map((project) => <article className="newsprint-project" key={project.id}>
-        <div className="newsprint-project-art" aria-hidden="true"><i/><b/><span/></div>
+        <ProjectImage
+          project={project}
+          fallbackArt={<div className="newsprint-project-art" aria-hidden="true"><i/><b/><span/></div>}
+        />
         <div className="newsprint-project-copy">
           {project.title && <h3>{project.title}</h3>}
           {project.description && <p>{project.description}</p>}
@@ -220,6 +233,7 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
 
     if (templateId === 'brutalist') return <div className="brutalist-project-list">
       {projects.map((project) => <article className="brutalist-project" key={project.id}>
+        <ProjectImage project={project} />
         <div className="brutalist-project-copy">
           {project.title && <h3>{project.title}</h3>}
           {project.description && <p>{project.description}</p>}
@@ -231,6 +245,7 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
 
     if (templateId === 'botanical') return <div className="botanical-project-list">
       {projects.map((project, index) => <article className="botanical-project" key={project.id}>
+        <ProjectImage project={project} />
         <span className="botanical-project-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
         <div className="botanical-project-copy">
           {project.title && <h3>{project.title}</h3>}
@@ -243,7 +258,10 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
 
     if (templateId === 'gallery') return <div className="gallery-project-list">
       {projects.map((project, index) => <article className={`gallery-project ${index === 0 ? 'is-featured' : ''} ${index % 2 ? 'is-offset' : ''}`} key={project.id}>
-        <div className="gallery-project-art" aria-hidden="true"><i/><b/><span/></div>
+        <ProjectImage
+          project={project}
+          fallbackArt={<div className="gallery-project-art" aria-hidden="true"><i/><b/><span/></div>}
+        />
         <div className="gallery-project-copy">
           {project.title && <h3>{project.title}</h3>}
           {project.description && <p>{project.description}</p>}
@@ -255,6 +273,7 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
 
     if (templateId === 'terminal') return <div className="notebook-project-list">
       {projects.map((project, index) => <article className="notebook-project" key={project.id}>
+        <ProjectImage project={project} />
         <div className="notebook-project-mark"><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><small>PROJECT</small></div>
         <div className="notebook-project-copy">
           {project.title && <h3>{project.title}</h3>}
@@ -268,7 +287,10 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
     if (templateId === 'blueprint') return <div className="blueprint-project-list">
       {projects.map((project, index) => <article className="blueprint-project" key={project.id}>
         <span className="blueprint-project-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
-        <div className="blueprint-project-diagram"><BlueprintDiagram className="blueprint-drawing blueprint-drawing--project"/></div>
+        <ProjectImage
+          project={project}
+          fallbackArt={<div className="blueprint-project-diagram"><BlueprintDiagram className="blueprint-drawing blueprint-drawing--project"/></div>}
+        />
         <div className="blueprint-project-copy">
           {project.title && <h3>{project.title}</h3>}
           {project.description && <p>{project.description}</p>}
@@ -280,7 +302,10 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
 
     if (templateId === 'bauhaus') return <div className="bauhaus-project-list">
       {projects.map((project, index) => <article className="bauhaus-project" key={project.id}>
-        <div className={`bauhaus-project-composition bauhaus-project-composition--${index % 3}`} aria-hidden="true"><i/><b/><span/></div>
+        <ProjectImage
+          project={project}
+          fallbackArt={<div className={`bauhaus-project-composition bauhaus-project-composition--${index % 3}`} aria-hidden="true"><i/><b/><span/></div>}
+        />
         <div className="bauhaus-project-copy">
           <span className="bauhaus-project-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
           {project.title && <h3>{project.title}</h3>}
@@ -293,6 +318,7 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
 
     if (templateId === 'y2k') return <div className="y2k-project-list">
       {projects.map((project, index) => <article className="y2k-project" key={project.id}>
+        <ProjectImage project={project} />
         <div className="y2k-project-mark" aria-hidden="true"><span>✦</span><i/><b/></div>
         <div className="y2k-project-copy">
           <span className="y2k-project-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
@@ -306,6 +332,7 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
 
     if (templateId === 'pastel') return <div className="pastel-project-list">
       {projects.map((project, index) => <article className={`pastel-project pastel-project--${index % 3}`} key={project.id}>
+        <ProjectImage project={project} />
         <div className="pastel-project-mark" aria-hidden="true"><i/></div>
         <div className="pastel-project-copy">
           {project.title && <h3>{project.title}</h3>}
@@ -318,6 +345,7 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
 
     if (templateId === 'academic') return <div className="academic-project-list">
       {projects.map((project, index) => <article className="academic-project" key={project.id}>
+        <ProjectImage project={project} />
         <div className="academic-project-index"><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><small>PROJECT</small></div>
         <div className="academic-project-copy">
           {project.title && <h3>{project.title}</h3>}
@@ -330,7 +358,10 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
 
     if (templateId === 'retro') return <div className="retro-project-list">
       {projects.map((project, index) => <article className="retro-project" key={project.id}>
-        <div className="retro-project-art" aria-hidden="true"><span>{String(index + 1).padStart(2, '0')}</span><i/><b/></div>
+        <ProjectImage
+          project={project}
+          fallbackArt={<div className="retro-project-art" aria-hidden="true"><span>{String(index + 1).padStart(2, '0')}</span><i/><b/></div>}
+        />
         <div className="retro-project-copy">
           <span className="retro-project-label">PROJECT {String(index + 1).padStart(2, '0')}</span>
           {project.title && <h3>{project.title}</h3>}
@@ -343,7 +374,10 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
 
     if (templateId === 'pinboard') return <div className={`pinboard-projects ${projects.length === 1 ? 'is-single' : ''}`}>
       {projects.map((project, index) => <article className="pinboard-project" key={project.id}>
-        <div className="pinboard-project-art" aria-hidden="true"><i/><b/><span/></div>
+        <ProjectImage
+          project={project}
+          fallbackArt={<div className="pinboard-project-art" aria-hidden="true"><i/><b/><span/></div>}
+        />
         <div className="pinboard-project-copy">
           <span className="pinboard-project-label">PROJECT {String(index + 1).padStart(2, '0')}</span>
           {project.title && <h3>{project.title}</h3>}
@@ -356,7 +390,10 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
 
     if (templateId === 'arcade') return <div className="arcade-project-list">
       {projects.map((project, index) => <article className="arcade-project" key={project.id}>
-        <div className="arcade-project-art" aria-hidden="true"><i/><b/><span/></div>
+        <ProjectImage
+          project={project}
+          fallbackArt={<div className="arcade-project-art" aria-hidden="true"><i/><b/><span/></div>}
+        />
         <div className="arcade-project-copy">
           <span className="arcade-project-label">BUILD {String(index + 1).padStart(2, '0')}</span>
           {project.title && <h3>{project.title}</h3>}
@@ -369,7 +406,10 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
 
     if (templateId === 'after-hours') return <div className="afterhours-project-list">
       {projects.map((project, index) => <article className={`afterhours-project ${index % 2 ? 'is-reversed' : ''}`} key={project.id}>
-        <div className="afterhours-project-art" aria-hidden="true"><i/><b/><span/></div>
+        <ProjectImage
+          project={project}
+          fallbackArt={<div className="afterhours-project-art" aria-hidden="true"><i/><b/><span/></div>}
+        />
         <div className="afterhours-project-copy">
           {project.title && <h3>{project.title}</h3>}
           {project.description && <p>{project.description}</p>}
@@ -381,6 +421,7 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
 
     if (templateId === 'swiss') return <div className="swiss-project-list">
       {projects.map((project, index) => <article className="swiss-project-row" key={project.id}>
+        <ProjectImage project={project} />
         <span className="swiss-project-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>
         <div className="swiss-project-title">{project.title && <h3>{project.title}</h3>}</div>
         <div className="swiss-project-detail">
@@ -395,7 +436,10 @@ function SectionBody({ section, profile, templateId }: { section: SectionKey; pr
       {projects.map((project, index) => {
         const href = safeExternalUrl(project.link);
         return <article className="main-project-card" key={project.id}>
-          <div className="main-project-art" aria-hidden="true"><span>{String(index + 1).padStart(2, '0')}</span><i /></div>
+          <ProjectImage
+            project={project}
+            fallbackArt={<div className="main-project-art" aria-hidden="true"><span>{String(index + 1).padStart(2, '0')}</span><i /></div>}
+          />
           <div className="main-project-copy">
             {project.tools && <small>{project.tools}</small>}
             {project.title && <h3>{project.title}</h3>}
@@ -957,6 +1001,7 @@ export function PortfolioRenderer({ profile, design }: { profile: ProfileDocumen
     return <CorePortfolio profile={profile} design={design} />;
   }
 
+  const customizer = getCustomizerTheme(design);
   const name = profile.basics.name || 'Your name';
   const role = profile.basics.role && profile.basics.role !== profile.learning ? profile.basics.role : '';
   const hasHonestProjectEmptyState = id === 'zine' || id === 'documentary' || id === 'community' || id === 'case-study';
@@ -1017,5 +1062,11 @@ export function PortfolioRenderer({ profile, design }: { profile: ProfileDocumen
     </div>;
   })();
 
-  return <CaseStudyProvider>{content}</CaseStudyProvider>;
+  return (
+    <CaseStudyProvider projects={profile.projects}>
+      <div className={`portfolio-customizer-root ${customizer.className}`.trim()} style={customizer.style}>
+        {content}
+      </div>
+    </CaseStudyProvider>
+  );
 }

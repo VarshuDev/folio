@@ -1095,3 +1095,62 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
   text-decoration: underline;
 }
 
+/* Theme Customizer & Dark Mode overrides */
+.portfolio-customizer-root {
+  display: contents;
+}
+
+.theme-mode--dark,
+.portfolio-site.theme-mode--dark,
+.portfolio-customizer-root.theme-mode--dark .portfolio-site {
+  background-color: var(--theme-bg, #141715) !important;
+  color: var(--theme-text, #f4f6f4) !important;
+  color-scheme: dark;
+}
+
+.portfolio-site.theme-mode--dark h1,
+.portfolio-site.theme-mode--dark h2,
+.portfolio-site.theme-mode--dark h3,
+.portfolio-customizer-root.theme-mode--dark .portfolio-site h1,
+.portfolio-customizer-root.theme-mode--dark .portfolio-site h2,
+.portfolio-customizer-root.theme-mode--dark .portfolio-site h3 {
+  color: var(--theme-text, #f4f6f4);
+}
+
+.portfolio-site.theme-mode--dark p,
+.portfolio-site.theme-mode--dark span,
+.portfolio-customizer-root.theme-mode--dark .portfolio-site p,
+.portfolio-customizer-root.theme-mode--dark .portfolio-site span {
+  color: inherit;
+}
+
+.portfolio-site.theme-mode--dark a,
+.portfolio-customizer-root.theme-mode--dark .portfolio-site a {
+  color: var(--theme-accent, #68d391);
+}
+
+.portfolio-site.theme-mode--dark [class*="-card"],
+.portfolio-site.theme-mode--dark [class*="-project"],
+.portfolio-customizer-root.theme-mode--dark .portfolio-site [class*="-card"],
+.portfolio-customizer-root.theme-mode--dark .portfolio-site [class*="-project"] {
+  border-color: var(--theme-border, #2d3530);
+  background-color: var(--theme-surface, #1c211e);
+}
+
+/* Accent tone styling */
+[style*="--theme-accent"] .project-case-study-trigger,
+.portfolio-site[style*="--theme-accent"] .project-case-study-trigger {
+  color: var(--theme-accent) !important;
+  border-color: var(--theme-accent) !important;
+}
+
+/* Typography pairing overrides */
+[style*="--theme-font-heading"] h1,
+[style*="--theme-font-heading"] h2,
+[style*="--theme-font-heading"] h3,
+.portfolio-site[style*="--theme-font-heading"] h1,
+.portfolio-site[style*="--theme-font-heading"] h2,
+.portfolio-site[style*="--theme-font-heading"] h3 {
+  font-family: var(--theme-font-heading) !important;
+}
+

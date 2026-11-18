@@ -6,7 +6,7 @@ import { AIProposalReview } from '@/components/ai-proposal-review';
 import type { ClarifyingQuestion, ProfileSuggestion } from '@/lib/ai/contract';
 import { type ProfileDocument, type Project } from '@/lib/profile-schema';
 
-type ReviewOrigin = 'quick' | 'paste' | 'existing';
+type ReviewOrigin = 'quick' | 'paste' | 'existing' | 'resume';
 type MoveTarget = 'highlights' | 'activities';
 type ProfileListKey = 'skills' | 'interests' | 'highlights' | 'activities';
 
@@ -404,8 +404,8 @@ export function ProfileReview({
     if (localManualSourceKeys.has(key) || persistedManualSourceKeys.includes(key)) return { label: 'Added by you' };
     if (unavailableSourceKeys.includes(key)) return { label: 'Source excerpt not available' };
     const text = sourceTextByKey[key];
-    if (text) return { label: origin === 'paste' ? 'From your note' : 'From your answer', text };
-    return { label: origin === 'existing' ? 'From your profile' : origin === 'paste' ? 'From your note' : 'From your answers' };
+    if (text) return { label: origin === 'resume' ? 'From your resume' : origin === 'paste' ? 'From your note' : 'From your answer', text };
+    return { label: origin === 'existing' ? 'From your profile' : origin === 'resume' ? 'From your resume' : origin === 'paste' ? 'From your note' : 'From your answers' };
   };
   const markManual = (key: string) => {
     setLocalManualSourceKeys((current) => new Set(current).add(key));
@@ -551,7 +551,7 @@ export function ProfileReview({
   const hasIntro = Boolean(profile.basics.name || visibleRole || profile.basics.about || profile.basics.location);
   const hasEducation = Boolean(profile.education.college || profile.education.degree || profile.education.branch || profile.education.gradYear || profile.education.note);
 
-  const fallbackItemSource = origin === 'quick' ? 'From your answers' : origin === 'paste' ? 'From your note' : 'From your profile';
+  const fallbackItemSource = origin === 'quick' ? 'From your answers' : origin === 'resume' ? 'From your resume' : origin === 'paste' ? 'From your note' : 'From your profile';
 
   return (
     <div className="studio screen-fade content-intake profile-review-screen">

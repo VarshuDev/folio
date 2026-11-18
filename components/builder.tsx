@@ -19,7 +19,11 @@ import {
   type PortfolioMode,
   type Project,
   type ProjectCaseStudy,
+  type ColorMode,
+  type AccentTone,
+  type FontPairing,
 } from '@/lib/profile-schema';
+import { ACCENT_PRESETS, FONT_PRESETS } from '@/lib/theme-customizer';
 import { ADDITIONAL_TEMPLATE_IDS, TEMPLATE_CATALOG, TEMPLATE_CATEGORIES, getTemplateMeta } from '@/lib/template-catalog';
 
 const STEP_LABELS = ['About you', 'Education', 'Skills', 'Projects', 'Highlights & links', 'Design'];
@@ -172,7 +176,7 @@ export function Builder({
     setOtherLinkUrlDraft('');
   };
   const removeOtherLink = (index: number) => setProfile((current) => ({ ...current, links: { ...current.links, other: current.links.other.filter((_, linkIndex) => linkIndex !== index) } }));
-  const updateProject = (id: string, key: 'title' | 'description' | 'tools' | 'link' | 'githubUrl', value: string) => setProfile((current) => ({ ...current, projects: current.projects.map((project) => project.id === id ? { ...project, [key]: value } : project) }));
+  const updateProject = (id: string, key: 'title' | 'description' | 'tools' | 'link' | 'githubUrl' | 'imageUrl' | 'imageAlt', value: string) => setProfile((current) => ({ ...current, projects: current.projects.map((project) => project.id === id ? { ...project, [key]: value } : project) }));
 
   const updateCaseStudy = (id: string, key: keyof ProjectCaseStudy, value: unknown) => {
     setProfile((current) => ({
@@ -383,6 +387,31 @@ export function Builder({
             <Field label="What did you call it?" value={project.title} placeholder="e.g. A tiny weather app" onChange={(value) => updateProject(project.id, 'title', value)} />
             <div className="field"><label htmlFor={`project-description-${project.id}`}>What does it do, or what did you learn?</label><textarea id={`project-description-${project.id}`} value={project.description} maxLength={3000} placeholder="A rough explanation is perfect. You can clarify it in your profile editor whenever you’re ready." onChange={(event) => updateProject(project.id, 'description', event.target.value)} /><AIImproveCopy profile={profile} path={`projects[${index}].description`} localProjectId={project.id} text={project.description} label={`project ${index + 1} description`} onProfileChange={setProfile} /></div>
             <div className="field-row"><Field label="Tools you used" optional value={project.tools} placeholder="e.g. Python, Figma" onChange={(value) => updateProject(project.id, 'tools', value)} /><Field label="Link" optional value={project.link} placeholder="GitHub or demo" onChange={(value) => updateProject(project.id, 'link', value)} /></div>
+            <div className="field-row">
+              <Field
+                label="Screenshot or image URL"
+                optional
+                value={project.imageUrl || ''}
+                placeholder="https://... or /image.png"
+                onChange={(value) => updateProject(project.id, 'imageUrl', value)}
+              />
+              <Field
+                label="Image alt description"
+                optional
+                value={project.imageAlt || ''}
+                placeholder="e.g. Dashboard preview"
+                onChange={(value) => updateProject(project.id, 'imageAlt', value)}
+              />
+            </div>
+            {project.imageUrl && (
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.65rem', marginTop: '0.2rem', padding: '0.4rem 0.6rem', border: '1px dashed #d6d9cf', borderRadius: '6px', background: '#faf9f5' }}>
+                <div style={{ width: '44px', height: '28px', borderRadius: '4px', overflow: 'hidden', background: '#eee', flexShrink: 0 }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={project.imageUrl} alt={project.imageAlt || project.title || 'Screenshot'} style={{ width: '100%', height: '100%', objectFit: 'cover' }} onError={(e) => { (e.currentTarget as HTMLElement).style.display = 'none'; }} />
+                </div>
+                <span style={{ fontSize: '0.78rem', color: '#68776e' }}>Screenshot linked. Click project in preview to test full-screen lightbox zoom.</span>
+              </div>
+            )}
 
             {/* Live GitHub Stats Badge if detected */}
             {(project.githubUrl || (project.link && project.link.includes('github.com'))) && (
@@ -710,6 +739,108 @@ export function Builder({
           })}</div>
           {filteredTemplates.length === 0 && <p className="no-template-results">No styles match that search. Try another term.</p>}
         </div>}
+        <div className="section-divider" />
+        <div className="field">
+          <div className="picker-heading">
+            <div>
+              <span className="eyebrow">CUSTOMIZE</span>
+              <strong>Appearance &amp; Typography</strong>
+            </div>
+            <span>Palette &amp; font overrides</span>
+          </div>
+
+          <div style={{ marginBottom: '1.1rem' }}>
+            <span className="field-label" style={{ marginBottom: '0.4rem', display: 'block' }}>Color mode</span>
+            <div style={{ display: 'inline-flex', padding: '3px', background: '#eceae2', borderRadius: '8px', gap: '3px' }}>
+              {(['light', 'dark', 'system'] as ColorMode[]).map((mode) => {
+                const active = (design.colorMode || 'light') === mode;
+                return (
+                  <button
+                    type="button"
+                    key={mode}
+                    onClick={() => setDesign((current) => ({ ...current, colorMode: mode }))}
+                    style={{
+                      padding: '0.35rem 0.8rem',
+                      borderRadius: '6px',
+                      border: 'none',
+                      background: active ? '#fff' : 'transparent',
+                      color: active ? '#252d29' : '#69736d',
+                      fontWeight: active ? 600 : 500,
+                      fontSize: '0.8rem',
+                      boxShadow: active ? '0 1px 3px rgba(0,0,0,0.08)' : 'none',
+                      cursor: 'pointer',
+                      textTransform: 'capitalize',
+                    }}
+                  >
+                    {mode}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div style={{ marginBottom: '1.1rem' }}>
+            <span className="field-label" style={{ marginBottom: '0.4rem', display: 'block' }}>Accent tone</span>
+            <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap' }}>
+              {(Object.keys(ACCENT_PRESETS) as AccentTone[]).map((tone) => {
+                const preset = ACCENT_PRESETS[tone];
+                const active = (design.accentTone || 'default') === tone;
+                return (
+                  <button
+                    type="button"
+                    key={tone}
+                    onClick={() => setDesign((current) => ({ ...current, accentTone: tone }))}
+                    title={preset.label}
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '0.35rem',
+                      padding: '0.3rem 0.6rem',
+                      borderRadius: '6px',
+                      border: active ? `2px solid ${preset.primary}` : '1px solid #d6d9cf',
+                      background: active ? '#fff' : '#faf9f5',
+                      cursor: 'pointer',
+                      fontSize: '0.78rem',
+                      color: '#252d29',
+                      fontWeight: active ? 600 : 400,
+                    }}
+                  >
+                    <span style={{ width: '10px', height: '10px', borderRadius: '50%', background: preset.primary, display: 'inline-block' }} />
+                    <span>{preset.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div>
+            <span className="field-label" style={{ marginBottom: '0.4rem', display: 'block' }}>Typography pairing</span>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))', gap: '0.5rem' }}>
+              {(Object.keys(FONT_PRESETS) as FontPairing[]).map((pairing) => {
+                const preset = FONT_PRESETS[pairing];
+                const active = (design.fontPairing || 'default') === pairing;
+                return (
+                  <button
+                    type="button"
+                    key={pairing}
+                    onClick={() => setDesign((current) => ({ ...current, fontPairing: pairing }))}
+                    style={{
+                      textAlign: 'left',
+                      padding: '0.55rem 0.75rem',
+                      borderRadius: '8px',
+                      border: active ? '2px solid #355d48' : '1px solid #d6d9cf',
+                      background: active ? '#f4f8f5' : '#fff',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    <div style={{ fontWeight: 600, fontSize: '0.82rem', color: active ? '#1e4632' : '#252d29' }}>{preset.label}</div>
+                    <div style={{ fontSize: '0.72rem', color: '#69736d', marginTop: '2px' }}>{preset.description}</div>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        </div>
         <div className="section-divider" />
         <div className="field"><span className="field-label" id="visibility-options-label">Choose what to show</span><div className="visibility-list" role="group" aria-labelledby="visibility-options-label" aria-describedby="visibility-order-help">{design.sectionOrder.map((key) => {
           const item = SECTION_LABELS.find((section) => section.key === key)!;
